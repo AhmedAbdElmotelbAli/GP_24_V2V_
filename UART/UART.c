@@ -341,34 +341,34 @@ uint08_t UART_RX (uint08_t * bytePtr, uint08_t UART_n) {
         case UART_0:
             while(GET_BIT(UART0_FR_R,4)==0); // Wait for RXFE
 			* bytePtr = UART0_DR_R;
-            return bytePtr;
+            return UART_RX_UNAVAILABLE;
         case UART_1:
             while(GET_BIT(UART1_FR_R,4)==0); // Wait for RXFE
 			* bytePtr = UART1_DR_R;
-            return bytePtr;
+            return UART_RX_UNAVAILABLE;
         case UART_2:
             while(GET_BIT(UART2_FR_R,4)==0); // Wait for RXFE
 			* bytePtr = UART2_DR_R;
-            return bytePtr;
+            return UART_RX_UNAVAILABLE;
         case UART_3:
-            while(GET_BIT(UART3_FR_R,4)==0); // busy wait for RXFE
+            while(GET_BIT(UART3_FR_R,4)==0); // Wait for RXFE
 			* bytePtr = UART3_DR_R;
-            return bytePtr;
+            return UART_RX_UNAVAILABLE;
         case UART_4:
-            while(GET_BIT(UART4_FR_R,4)==0); // busy wait for RXFE
+            while(GET_BIT(UART4_FR_R,4)==0); // Wait for RXFE
 			* bytePtr = UART4_DR_R;
-            return bytePtr;
+            return UART_RX_UNAVAILABLE;
         case UART_5:
-            while(GET_BIT(UART5_FR_R,4)==0); // busy wait for RXFE
+            while(GET_BIT(UART5_FR_R,4)==0); // Wait for RXFE
 			* bytePtr = UART5_DR_R;
-            return bytePtr;
+            return UART_RX_UNAVAILABLE;
         case UART_6:
-            while(GET_BIT(UART6_FR_R,4)==0); // busy wait for RXFE
+            while(GET_BIT(UART6_FR_R,4)==0); // Wait for RXFE
 			* bytePtr = UART6_DR_R;
-            return bytePtr;
+            return UART_RX_UNAVAILABLE;
         case UART_7:
-            while(GET_BIT(UART7_FR_R,4)==0); // busy wait for RXFE
+            while(GET_BIT(UART7_FR_R,4)==0); // Wait for RXFE
 			* bytePtr = UART7_DR_R;
-            return bytePtr;
+            return UART_RX_UNAVAILABLE;
     }
 }
