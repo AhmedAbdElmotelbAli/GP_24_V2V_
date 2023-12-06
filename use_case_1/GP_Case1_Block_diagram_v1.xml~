@@ -7,7 +7,7 @@
 <MainCode value="void __user_init() {"/>
 <MainCode value="}"/>
 <Optimized value="true" />
-<Validated value="" />
+<Validated value="LCD_Print;controller;Rec_WIFI;" />
 <Ignored value="" />
 
 <CONNECTOR type="5002" id="2" >
@@ -1191,11 +1191,11 @@
 </COMPONENT>
 
 <COMPONENT type="5104" id="438" >
-<cdparam x="343" y="495" />
-<sizeparam width="128" height="20" minWidth="30" minHeight="0" maxWidth="2000" maxHeight="2000" minDesiredWidth="0" minDesiredHeight="0" />
+<cdparam x="339" y="495" />
+<sizeparam width="136" height="20" minWidth="30" minHeight="0" maxWidth="2000" maxHeight="2000" minDesiredWidth="0" minDesiredHeight="0" />
 <hidden value="false" />
 <cdrectangleparam minX="10" maxX="2500" minY="10" maxY="1500" />
-<infoparam name="Receive signal" value="WIFI_sendData(data)" />
+<infoparam name="Receive signal" value="RWIFI_sendData(data)" />
 <TGConnectingPoint num="0" id="428" />
 <TGConnectingPoint num="1" id="429" />
 <TGConnectingPoint num="2" id="430" />
@@ -1209,11 +1209,11 @@
 </COMPONENT>
 
 <COMPONENT type="5104" id="449" >
-<cdparam x="343" y="220" />
-<sizeparam width="128" height="20" minWidth="30" minHeight="0" maxWidth="2000" maxHeight="2000" minDesiredWidth="0" minDesiredHeight="0" />
+<cdparam x="339" y="220" />
+<sizeparam width="136" height="20" minWidth="30" minHeight="0" maxWidth="2000" maxHeight="2000" minDesiredWidth="0" minDesiredHeight="0" />
 <hidden value="false" />
 <cdrectangleparam minX="10" maxX="2500" minY="10" maxY="1500" />
-<infoparam name="Receive signal" value="WIFI_sendData(data)" />
+<infoparam name="Receive signal" value="RWIFI_sendData(data)" />
 <TGConnectingPoint num="0" id="439" />
 <TGConnectingPoint num="1" id="440" />
 <TGConnectingPoint num="2" id="441" />
@@ -1528,11 +1528,11 @@
 </SUBCOMPONENT>
 
 <COMPONENT type="5103" id="610" >
-<cdparam x="347" y="232" />
-<sizeparam width="121" height="20" minWidth="30" minHeight="0" maxWidth="2000" maxHeight="2000" minDesiredWidth="0" minDesiredHeight="0" />
+<cdparam x="342" y="232" />
+<sizeparam width="130" height="20" minWidth="30" minHeight="0" maxWidth="2000" maxHeight="2000" minDesiredWidth="0" minDesiredHeight="0" />
 <hidden value="false" />
 <cdrectangleparam minX="10" maxX="2500" minY="10" maxY="1500" />
-<infoparam name="Send signal" value="WIFI_sendData(data)" />
+<infoparam name="Send signal" value="RWIFI_sendData(data)" />
 <TGConnectingPoint num="0" id="600" />
 <TGConnectingPoint num="1" id="601" />
 <TGConnectingPoint num="2" id="602" />
