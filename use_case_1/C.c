@@ -48,7 +48,7 @@ void RWIFI_sendData(int local_data){
     }
 }
 STATE_define(C_normal){
-	fflush(stdout);
+	
     /* state name */
     C_state_id = C_normal;
 	/* state action */
@@ -57,7 +57,7 @@ STATE_define(C_normal){
     C_state = STATE(C_normal);
 }
 STATE_define(C_emergency){
-	fflush(stdout);
+	
     /* state name */
     C_state_id = C_emergency;
 	/* state action */
