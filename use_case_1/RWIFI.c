@@ -19,14 +19,17 @@ extern void (*RWIFI_state)();
 /* private attributes */
 static int data = 0;
 /* functions and states */
+void RWIFI_Read_Data(int* Pdata){
+	printf("Please Enter The WIFI data: ");
+    fflush(stdout);
+    scanf_s("%d",Pdata);
+    fflush(stdin);
+}
 STATE_define(RWIFI_busy){
     /* state name */
     RWIFI_state_id = RWIFI_busy;
     /* state action */
-    printf("Please Enter The WIFI data: ");
-    fflush(stdout);
-    scanf("%d",&data);
-    fflush(stdin);
+	RWIFI_Read_Data(&data);
     RWIFI_sendData(data);
     /* event check */
     RWIFI_state = STATE(RWIFI_busy);
