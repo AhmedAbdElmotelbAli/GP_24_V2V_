@@ -23,11 +23,9 @@ static void print_warning_state(int local_state){
     if(local_state == 1){
         printf("LCD: Warning The car is breaking\n");
         fflush(stdout);
-        
     }else if(local_state == 0){
         printf("LCD: Nothing to print\n");
         fflush(stdout);
-        
     }
 }
 void C_print_warning_state(int local_warning_state){
@@ -41,7 +39,6 @@ void C_print_warning_state(int local_warning_state){
     }
 }
 STATE_define(LCDP_normal){
-		
         /* state name */
         LCDP_state_id = LCDP_normal;
         /* state action */
@@ -50,7 +47,6 @@ STATE_define(LCDP_normal){
         LCDP_state = STATE(LCDP_normal);
 }
 STATE_define(LCDP_warning){
-		
         /* state name */
         LCDP_state_id = LCDP_warning;
         /* state action */
