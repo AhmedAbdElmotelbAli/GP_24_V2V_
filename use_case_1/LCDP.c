@@ -26,6 +26,8 @@ static void print_warning_state(int local_state){
     }else if(local_state == 0){
         printf("LCD: Nothing to print\n");
         fflush(stdout);
+    }else{
+        /* Misra Required */
     }
 }
 void C_print_warning_state(int local_warning_state){
@@ -36,6 +38,8 @@ void C_print_warning_state(int local_warning_state){
         LCDP_state = STATE(LCDP_normal);
     }else if(warning_state == 1){
         LCDP_state = STATE(LCDP_warning);
+    }else{
+        /* Misra required */
     }
 }
 STATE_define(LCDP_normal){
