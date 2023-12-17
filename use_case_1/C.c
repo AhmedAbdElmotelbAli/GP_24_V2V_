@@ -31,7 +31,9 @@ void RWIFI_sendData(int local_data){
         }else if(local_data == 1){
             warning_state = 1;
             C_state = STATE(C_emergency);
-        } 
+        }else{
+            /* Misra required */
+        }
         break;
     case C_emergency:
         if(local_data == 0){
@@ -40,7 +42,9 @@ void RWIFI_sendData(int local_data){
         }else if(local_data == 1){
             warning_state = 1;
             C_state = STATE(C_emergency);
-        } 
+        }else{
+            /* Misra required */
+        }
         break;
     
     default:
