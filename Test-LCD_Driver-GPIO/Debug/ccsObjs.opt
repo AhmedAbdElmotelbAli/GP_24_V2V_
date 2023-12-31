@@ -1,0 +1,6 @@
+"./main.obj"
+"./tm4c123gh6pm_startup_ccs.obj"
+"./GPIO/GPIO.obj"
+"./LCD/Lcd.obj"
+"../tm4c123gh6pm.cmd"
+-llibc.a
