@@ -7,6 +7,7 @@
         "lcd.h": "c",
         "bitmath.h": "c",
         "tm4c123gh6pm.h": "c",
-        "external_led.h": "c"
+        "external_led.h": "c",
+        "rgb_leds.h": "c"
     }
 }

@@ -16,6 +16,7 @@
 /* include HAL */
 #include "../ON_BOARD_SWITCHS/ON_BOARD_SWITCHS.h"
 #include "../LCD/Lcd.h"
+#include "../RGB_LEDS/RGB_LEDS.h"
 /* include the header file */
 #include "LCDP.h"
 /* extern state pointer */
@@ -26,11 +27,13 @@ static int warning_state;
 static void print_warning_state(int local_state){
     if(local_state == 1){
         /* LCD: Warning The car is breaking */
+        RGB_LEDS_State(LED_STATE_ON,LED_STATE_OFF,LED_STATE_OFF);
         LCD_clearScreen();
         LCD_moveCursorXY(0,0);
         LCD_displayString("Warning");
     }else if(local_state == 0){
         /* LCD: Nothing to print */
+        RGB_LEDS_State(LED_STATE_OFF,LED_STATE_OFF,LED_STATE_OFF);
         LCD_clearScreen();
         LCD_moveCursorXY(0,0);
         LCD_displayString("");
