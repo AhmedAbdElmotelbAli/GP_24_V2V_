@@ -4,12 +4,12 @@
  *  Created on: Dec 28, 2023
  *      Author: Ahmed Adel Hasssan
  */
-#include "config.h"
-#include "Type.h"
-#include "BITMATH.h"
-#include "GPIO.h"
+#include "../GPIO/config.h"
+#include "../GPIO/Type.h"
+#include "../GPIO/BITMATH.h"
+#include "../GPIO/GPIO.h"
 #include "RGB_LEDS.h"
-#include "tm4c123gh6pm.h"
+#include "../GPIO/tm4c123gh6pm.h"
 
 void RGB_LEDS_Init(void){
     GPIO_Init(GPIO_PORTF,GPIO_PIN_1);//init Red led

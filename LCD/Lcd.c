@@ -2,10 +2,9 @@
  * Lcd.c
  */
 
-#include "Type.h"
-#include "GPIO.h"
-#include "Lcd.h"
-
+#include "../GPIO/Type.h"
+#include "../GPIO/GPIO.h"
+#include "../LCD/Lcd.h"
 static void Cmd(uint08_t data);
 static void Write(uint08_t data);
 static void EnPulse(void);
@@ -143,9 +142,9 @@ static void EnPulse(void)
 
 
 /*  implement   itoa()   function
-value – Value to be converted to a string.
-buffer – Array to store the result.
-base – Numerical base used to represent the value as a string, between 2 and 16
+value ï¿½ Value to be converted to a string.
+buffer ï¿½ Array to store the result.
+base ï¿½ Numerical base used to represent the value as a string, between 2 and 16
 Return Value: a pointer to the resulting null-terminated string, same as parameter buffer.
 */
 static uint08_t* itoa(sint16_t value, uint08_t* buffer, uint16_t base)

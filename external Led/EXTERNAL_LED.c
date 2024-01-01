@@ -6,9 +6,9 @@
  */
 
 #include "EXTERNAL_LED.h"
-#include "GPIO.h"
-#include "Type.h"
-#include "BITMATH.h"
+#include "../GPIO/GPIO.h"
+#include "../GPIO/Type.h"
+#include "../GPIO/BITMATH.h"
 
 #define LED_PORT               (GPIO_PORTA)
 #define LED_PIN_NUMBER         (GPIO_PIN_0)

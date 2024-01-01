@@ -7,7 +7,7 @@
 
 #ifndef ON_BOARD_SWITCHS_ON_BOARD_SWITCHS_H_
 #define ON_BOARD_SWITCHS_ON_BOARD_SWITCHS_H_
-#include "GPIO.h"
+#include "../GPIO/GPIO.h"
 void ON_BOARD_SWITCHS_Init(void);
 GPIO_State_t SW1_State(void);
 GPIO_State_t SW2_State(void);

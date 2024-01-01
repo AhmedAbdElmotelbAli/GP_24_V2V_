@@ -10,8 +10,12 @@
  */
 
 /* include C liberaries to test*/
-#include "stdio.h"
-#include "stdlib.h"
+
+/* include MCAL */
+#include "../GPIO/GPIO.h"
+/* include HAL */
+#include "../ON_BOARD_SWITCHS/ON_BOARD_SWITCHS.h"
+#include "../LCD/Lcd.h"
 /* include the header file */
 #include "LCDP.h"
 /* extern state pointer */
@@ -21,11 +25,15 @@ static int warning_state;
 /* functions and states */
 static void print_warning_state(int local_state){
     if(local_state == 1){
-        printf("LCD: Warning The car is breaking\n");
-        fflush(stdout);
+        /* LCD: Warning The car is breaking */
+        LCD_clearScreen();
+        LCD_moveCursorXY(0,0);
+        LCD_displayString("Warning");
     }else if(local_state == 0){
-        printf("LCD: Nothing to print\n");
-        fflush(stdout);
+        /* LCD: Nothing to print */
+        LCD_clearScreen();
+        LCD_moveCursorXY(0,0);
+        LCD_displayString("");
     }else{
         /* Misra Required */
     }
