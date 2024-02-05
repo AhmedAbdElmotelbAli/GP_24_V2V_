@@ -17,6 +17,6 @@ typedef enum {
 
 void UART_INIT (uint08_t UART_n);
 void UART_TX (uint08_t byte, uint08_t UART_n);
-uint08_t UART_RX (uint08_t * bytePtr, uint08_t UART_n);
+void UART_RX (uint08_t * bytePtr, uint08_t UART_n);
 
 #endif
