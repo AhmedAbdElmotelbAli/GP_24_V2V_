@@ -1,6 +1,6 @@
 #ifndef _UART_H_
 #define _UART_H_
-
+#include "Type.h"
 #define UART_RX_AVAILABLE           (0xAB)
 #define UART_RX_UNAVAILABLE         (0xCD)
 
