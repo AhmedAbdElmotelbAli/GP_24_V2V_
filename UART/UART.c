@@ -40,8 +40,8 @@ void UART_INIT (uint08_t UART_n) {
 			SET_BIT(UART0_LCRH_R,6);
 			// UART0_LCRH_R |= 0x00000038 -> 1 Stop bit - Enable FIFO - 8 bit Data. (111000) 0-5 bits.
 			UART0_CTL_R = 0x0000; // Enable the UART by setting the UARTEN bit in the UARTCTL
-            UART0_IM_R |= 0x10;  // Enable receive interrupt
-            SET_BIT(NVIC_EN0_R, 5);  // Enable interrupt for UART0
+            // SET_BIT(NVIC_EN0_R, 5);  // Enable interrupt for UART0
+            UART0_IM_R |= 0x7F0;  // Enable Overrun, Break, Parity, Framing, Receive Timeout, receive, transmit interrupt
             SET_BIT(UART0_CTL_R, 0); // Enable UART
             SET_BIT(UART0_CTL_R, 8); // Enable TX
             SET_BIT(UART0_CTL_R, 9); // Enable RX
@@ -80,8 +80,8 @@ void UART_INIT (uint08_t UART_n) {
 			SET_BIT(UART1_LCRH_R,6);
 			// UART1_LCRH_R |= 0x00000038 -> 1 Stop bit - Enable FIFO - 8 bit Data. (111000) 0-5 bits.
 			UART1_CTL_R = 0x0000; // Enable the UART by setting the UARTEN bit in the UARTCTL
-            UART1_IM_R |= 0x10;  // Enable receive interrupt
-            SET_BIT(NVIC_EN0_R, 6);  // Enable interrupt for UART1
+            // SET_BIT(NVIC_EN0_R, 6);  // Enable interrupt for UART1
+            UART1_IM_R |= 0x7F0;  // Enable receive interrupt
             SET_BIT(UART1_CTL_R, 0); // Enable UART
             SET_BIT(UART1_CTL_R, 8); // Enable TX
             SET_BIT(UART1_CTL_R, 9); // Enable RX
@@ -118,8 +118,8 @@ void UART_INIT (uint08_t UART_n) {
 			SET_BIT(UART2_LCRH_R,6);
 			// UART2_LCRH_R |= 0x00000038 -> 1 Stop bit - Enable FIFO - 8 bit Data. (111000) 0-5 bits.
 			UART2_CTL_R = 0x0000; // Enable the UART by setting the UARTEN bit in the UARTCTL
-            UART2_IM_R |= 0x10;  // Enable receive interrupt
-            SET_BIT(NVIC_EN0_R, 7);  // Enable interrupt for UART2
+            // SET_BIT(NVIC_EN1_R, 1);  // Enable interrupt for UART2
+            UART2_IM_R |= 0x7F0;  // Enable receive interrupt
             SET_BIT(UART2_CTL_R, 0); // Enable UART
             SET_BIT(UART2_CTL_R, 8); // Enable TX
             SET_BIT(UART2_CTL_R, 9); // Enable RX
@@ -156,8 +156,8 @@ void UART_INIT (uint08_t UART_n) {
 			SET_BIT(UART3_LCRH_R,6);
 			// UART3_LCRH_R |= 0x00000038 -> 1 Stop bit - Enable FIFO - 8 bit Data. (111000) 0-5 bits.
 			UART3_CTL_R = 0x0000; // Enable the UART by setting the UARTEN bit in the UARTCTL
-            UART3_IM_R |= 0x10;  // Enable receive interrupt
-            SET_BIT(NVIC_EN0_R, 8);  // Enable interrupt for UART3
+            // SET_BIT(NVIC_EN1_R, 27);  // Enable interrupt for UART3
+            UART3_IM_R |= 0x7F0;  // Enable receive interrupt
             SET_BIT(UART3_CTL_R, 0); // Enable UART
             SET_BIT(UART3_CTL_R, 8); // Enable TX
             SET_BIT(UART3_CTL_R, 9); // Enable RX
@@ -194,8 +194,8 @@ void UART_INIT (uint08_t UART_n) {
 			SET_BIT(UART4_LCRH_R,6);
 			// UART4_LCRH_R |= 0x00000038 -> 1 Stop bit - Enable FIFO - 8 bit Data. (111000) 0-5 bits.
 			UART4_CTL_R = 0x0000; // Enable the UART by setting the UARTEN bit in the UARTCTL
-            UART4_IM_R |= 0x10;  // Enable receive interrupt
-            SET_BIT(NVIC_EN0_R, 9);  // Enable interrupt for UART4
+            // SET_BIT(NVIC_EN1_R, 28);  // Enable interrupt for UART4
+            UART4_IM_R |= 0x7F0;  // Enable receive interrupt
             SET_BIT(UART4_CTL_R, 0); // Enable UART
             SET_BIT(UART4_CTL_R, 8); // Enable TX
             SET_BIT(UART4_CTL_R, 9); // Enable RX
@@ -232,8 +232,8 @@ void UART_INIT (uint08_t UART_n) {
 			SET_BIT(UART5_LCRH_R,6);
 			// UART5_LCRH_R |= 0x00000038 -> 1 Stop bit - Enable FIFO - 8 bit Data. (111000) 0-5 bits.
 			UART5_CTL_R = 0x0000; // Enable the UART by setting the UARTEN bit in the UARTCTL
-            UART5_IM_R |= 0x10;  // Enable receive interrupt
-            SET_BIT(NVIC_EN0_R, 10);  // Enable interrupt for UART5
+            // SET_BIT(NVIC_EN1_R, 29);  // Enable interrupt for UART5
+            UART5_IM_R |= 0x7F0;  // Enable receive interrupt
             SET_BIT(UART5_CTL_R, 0); // Enable UART
             SET_BIT(UART5_CTL_R, 8); // Enable TX
             SET_BIT(UART5_CTL_R, 9); // Enable RX
@@ -270,8 +270,8 @@ void UART_INIT (uint08_t UART_n) {
 			SET_BIT(UART6_LCRH_R,6);
 			// UART6_LCRH_R |= 0x00000038 -> 1 Stop bit - Enable FIFO - 8 bit Data. (111000) 0-5 bits.
 			UART6_CTL_R = 0x0000; // Enable the UART by setting the UARTEN bit in the UARTCTL
-            UART6_IM_R |= 0x10;  // Enable receive interrupt
-            SET_BIT(NVIC_EN0_R, 24);  // Enable interrupt for UART6
+            // SET_BIT(NVIC_EN0_R, 30);  // Enable interrupt for UART6
+            UART6_IM_R |= 0x7F0;  // Enable receive interrupt
             SET_BIT(UART6_CTL_R, 0); // Enable UART
             SET_BIT(UART6_CTL_R, 8); // Enable TX
             SET_BIT(UART6_CTL_R, 9); // Enable RX
@@ -308,8 +308,8 @@ void UART_INIT (uint08_t UART_n) {
 			SET_BIT(UART7_LCRH_R,6);
 			// UART7_LCRH_R |= 0x00000038 -> 1 Stop bit - Enable FIFO - 8 bit Data. (111000) 0-5 bits.
 			UART7_CTL_R = 0x0000; // Enable the UART by setting the UARTEN bit in the UARTCTL
-            UART7_IM_R |= 0x10;  // Enable receive interrupt
-            SET_BIT(NVIC_EN0_R, 25);  // Enable interrupt for UART7
+            // SET_BIT(NVIC_EN1_R, 31);  // Enable interrupt for UART7
+            UART7_IM_R |= 0x7F0;  // Enable receive interrupt
             SET_BIT(UART7_CTL_R, 0); // Enable UART
             SET_BIT(UART7_CTL_R, 8); // Enable TX
             SET_BIT(UART7_CTL_R, 9); // Enable RX
@@ -358,35 +358,35 @@ void UART_RX (uint08_t * bytePtr, uint08_t UART_n) {
     switch (UART_n) {
         case UART_0:
             CLR_BIT(UART0_ICR_R, 5); // Clear Receive interrupt
-            while(GET_BIT(UART0_FR_R,4)==0); // Wait for RXFE
+            // while(GET_BIT(UART0_FR_R,4)==0); // Wait for RXFE
 			* bytePtr = UART0_DR_R;
         case UART_1:
             CLR_BIT(UART1_ICR_R, 5); // Clear Receive interrupt
-            while(GET_BIT(UART1_FR_R,4)==0); // Wait for RXFE
+            // while(GET_BIT(UART1_FR_R,4)==0); // Wait for RXFE
 			* bytePtr = UART1_DR_R;
         case UART_2:
             CLR_BIT(UART2_ICR_R, 5); // Clear Receive interrupt
-            while(GET_BIT(UART2_FR_R,4)==0); // Wait for RXFE
+            // while(GET_BIT(UART2_FR_R,4)==0); // Wait for RXFE
 			* bytePtr = UART2_DR_R;
         case UART_3:
             CLR_BIT(UART3_ICR_R, 5); // Clear Receive interrupt
-            while(GET_BIT(UART3_FR_R,4)==0); // Wait for RXFE
+            // while(GET_BIT(UART3_FR_R,4)==0); // Wait for RXFE
 			* bytePtr = UART3_DR_R;
         case UART_4:
             CLR_BIT(UART4_ICR_R, 5); // Clear Receive interrupt
-            while(GET_BIT(UART4_FR_R,4)==0); // Wait for RXFE
+            // while(GET_BIT(UART4_FR_R,4)==0); // Wait for RXFE
 			* bytePtr = UART4_DR_R;
         case UART_5:
             CLR_BIT(UART5_ICR_R, 5); // Clear Receive interrupt
-            while(GET_BIT(UART5_FR_R,4)==0); // Wait for RXFE
+            // while(GET_BIT(UART5_FR_R,4)==0); // Wait for RXFE
 			* bytePtr = UART5_DR_R;
         case UART_6:
             CLR_BIT(UART6_ICR_R, 5); // Clear Receive interrupt
-            while(GET_BIT(UART6_FR_R,4)==0); // Wait for RXFE
+            // while(GET_BIT(UART6_FR_R,4)==0); // Wait for RXFE
 			* bytePtr = UART6_DR_R;
         case UART_7:
             CLR_BIT(UART7_ICR_R, 5); // Clear Receive interrupt
-            while(GET_BIT(UART7_FR_R,4)==0); // Wait for RXFE
+            // while(GET_BIT(UART7_FR_R,4)==0); // Wait for RXFE
 			* bytePtr = UART7_DR_R;
     }
 }
