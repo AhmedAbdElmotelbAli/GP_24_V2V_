@@ -10,7 +10,8 @@
 #include <stdlib.h>
 #include <stdbool.h>
 #include "STD_TYPES.h"
-#include "../MCAL/UART.h"
+#include "../MCAL/UART/UART.h"
+#include "../HAL/Lcd.h"
 
 
 
@@ -24,4 +25,6 @@ void get_Longitude(u16 Longitude_Pointer);
 
 void get_Altitude(u16 Altitude_Pointer);
 
-void UART0_Handler(void);
+void process_UART_data(void);
+
+//void UART0_Polling(void);
