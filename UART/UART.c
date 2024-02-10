@@ -362,98 +362,108 @@ void UART_RX (uint08_t * bytePtr, uint08_t UART_n) {
     }
 }
 
-void UARTIntEnable(uint08_t UART_n, uint32_t UART_INT){
+void UARTIntEnable(uint08_t UART_n, uint08_t UART_INT){
+    uint08_t bit_no;
+    if (UART_INT == UART_RX_INT)
+        bit_no = 4; // Receive Interrupts
+    else if (UART_INT == UART_TX_INT)
+        bit_no = 5; // Transmit Interrupts
 	switch (UART_n) {
         case UART_0:
             /* Enable Interrupts */
-            CLR_BIT(UART0_ICR_R, UART_INT); // Clear interrupt
-            UART0_IM_R |= UART_INT  // Enable interrupt
+            CLR_BIT(UART0_ICR_R, bit_no); // Clear interrupt
+            SET_BIT(UART0_IM_R, bit_no);  // Enable interrupt
             SET_BIT(NVIC_EN0_R, 5);  // Enable interrupt for UART0
             break;
         case UART_1:
         	/* Enable Interrupts */
-            CLR_BIT(UART1_ICR_R, UART_INT); 
-            UART1_IM_R |= UART_INT;  
+            CLR_BIT(UART1_ICR_R, bit_no); 
+            SET_BIT(UART1_IM_R, bit_no); 
             SET_BIT(NVIC_EN0_R, 6);  // Enable interrupt for UART1
             break;
         case UART_2:
         	/* Enable Interrupts */
-        	CLR_BIT(UART2_ICR_R, UART_INT);
-        	UART2_IM_R |= UART_INT;  
+        	CLR_BIT(UART2_ICR_R, bit_no);
+        	SET_BIT(UART2_IM_R, bit_no);  
             SET_BIT(NVIC_EN1_R, 1);  // Enable interrupt for UART2
             break;
         case UART_3:
         	/* Enable Interrupts */
-        	CLR_BIT(UART3_ICR_R, UART_INT);
-            UART3_IM_R |= UART_INT; 
+        	CLR_BIT(UART3_ICR_R, bit_no);
+            SET_BIT(UART3_IM_R, bit_no);
             SET_BIT(NVIC_EN1_R, 27);  // Enable interrupt for UART3
             break;
         case UART_4:
         	/* Enable Interrupts */
-        	CLR_BIT(UART4_ICR_R, UART_INT);
-        	UART4_IM_R |= UART_INT; 
+        	CLR_BIT(UART4_ICR_R, bit_no);
+        	SET_BIT(UART4_IM_R, bit_no);
             SET_BIT(NVIC_EN1_R, 28);  // Enable interrupt for UART4
             break;
         case UART_5:
         	/* Enable Interrupts */
-        	CLR_BIT(UART5_ICR_R, UART_INT);
-            UART5_IM_R |= UART_INT;  
+        	CLR_BIT(UART5_ICR_R, bit_no);
+            SET_BIT(UART5_IM_R, bit_no); 
             SET_BIT(NVIC_EN1_R, 29);  // Enable interrupt for UART5
             break;
         case UART_6:
         	/* Enable Interrupts */
-        	CLR_BIT(UART6_ICR_R, UART_INT);
-        	UART6_IM_R |= UART_INT;
+        	CLR_BIT(UART6_ICR_R, bit_no);
+        	SET_BIT(UART6_IM_R, bit_no);
         	SET_BIT(NVIC_EN1_R, 30);  // Enable interrupt for UART6
             break;
         case UART_7:
         	/* Enable Interrupts */
-        	CLR_BIT(UART7_ICR_R, UART_INT);
-        	UART7_IM_R |= UART_INT;
+        	CLR_BIT(UART7_ICR_R, bit_no);
+        	SET_BIT(UART7_IM_R, bit_no);
         	SET_BIT(NVIC_EN1_R, 31);  // Enable interrupt for UART7
             break;
     }
 }
-void UARTIntDisable(uint08_t UART_n, uint32_t UART_INT) {
+void UARTIntDisable(uint08_t UART_n, uint08_t UART_INT) {
+    uint08_t bit_no;
+    if (UART_INT == UART_RX_INT)
+        bit_no = 4; // Receive Interrupts
+    else if (UART_INT == UART_TX_INT)
+        bit_no = 5; // Transmit Interrupts
 	switch (UART_n) {
         case UART_0:
             /* Disable Interrupts */
-            CLR_BIT(UART0_ICR_R, UART_INT); // Clear interrupt
+            CLR_BIT(UART0_ICR_R, bit_no); // Clear interrupt
             SET_BIT(NVIC_DIS0_R, 5);  // Disable interrupt for UART0
             break;
         case UART_1:
         	/* Disable Interrupts */
-            CLR_BIT(UART1_ICR_R, UART_INT); 
+            CLR_BIT(UART1_ICR_R, bit_no); 
             SET_BIT(NVIC_DIS0_R, 6);  // Disable interrupt for UART1
             break;
         case UART_2:
         	/* Disable Interrupts */
-        	CLR_BIT(UART2_ICR_R, UART_INT);
+        	CLR_BIT(UART2_ICR_R, bit_no);
             SET_BIT(NVIC_DIS1_R, 1);  // Disable interrupt for UART2
             break;
         case UART_3:
         	/* Disable Interrupts */
-        	CLR_BIT(UART3_ICR_R, UART_INT);
+        	CLR_BIT(UART3_ICR_R, bit_no);
             SET_BIT(NVIC_DIS1_R, 27);  // Disable interrupt for UART3
             break;
         case UART_4:
         	/* Disable Interrupts */
-        	CLR_BIT(UART4_ICR_R, UART_INT);
+        	CLR_BIT(UART4_ICR_R, bit_no);
             SET_BIT(NVIC_DIS1_R, 28);  // Disable interrupt for UART4
             break;
         case UART_5:
         	/* Disable Interrupts */
-        	CLR_BIT(UART5_ICR_R, UART_INT);
+        	CLR_BIT(UART5_ICR_R, bit_no);
             SET_BIT(NVIC_DIS1_R, 29);  // Disable interrupt for UART5
             break;
         case UART_6:
         	/* Disable Interrupts */
-        	CLR_BIT(UART6_ICR_R, UART_INT);
+        	CLR_BIT(UART6_ICR_R, bit_no);
         	SET_BIT(NVIC_DIS1_R, 30);  // Disable interrupt for UART6
             break;
         case UART_7:
         	/* Disable Interrupts */
-        	CLR_BIT(UART7_ICR_R, UART_INT);
+        	CLR_BIT(UART7_ICR_R, bit_no);
         	SET_BIT(NVIC_DIS1_R, 31);  // Disable interrupt for UART7
             break;
     }
