@@ -9,6 +9,7 @@
 
 #define UART_MODULE UART_0
 
+
 u8 Latitude_Buffer[15]; // Adjust the size based on your expected latitude format
 u8 Longitude_Buffer[15]; // Adjust the size based on your expected longitude format
 u8 Altitude_Buffer[8]; // Adjust the size based on your expected altitude format
@@ -67,7 +68,8 @@ void get_Latitude(u16 Latitude_Pointer)
     lat_decimal_value = (lat_decimal_value - lat_degrees)/0.6;  /* .mmmm/0.6 (Converting minutes to equivalent degrees) */ 
     lat_degrees_value = (float)(lat_degrees + lat_decimal_value);  /* Latitude in dd.dddd format */
 
-    sprintf(Latitude_Buffer, "%f", lat_degrees_value); //Replace with LCD
+    //sprintf(Latitude_Buffer, "%f", lat_degrees_value); //Replace with LCD
+    LCD_displayString(Latitude_Buffer);
 
     UARTIntEnable(UART_MODULE, UART_INT_RX); /* Enable RDA interrupts */
 }
@@ -94,8 +96,8 @@ void get_Longitude(u16 Longitude_Pointer) {
     long_decimal_value = (long_decimal_value - long_degrees)/0.6;  /* .mmmmmm/0.6 (Converting minutes to equivalent degrees) */
     long_degrees_value = (float)(long_degrees + long_decimal_value);  /* Longitude in dd.dddd format */
 
-    sprintf(Longitude_Buffer, "%f", long_degrees_value);  //Replace with LCD
-
+    //sprintf(Longitude_Buffer, "%f", long_degrees_value);  //Replace with LCD
+    LCD_displayString(Longitude_Buffer);
     UARTIntEnable(UART_MODULE, UART_INT_RX); /* Enable RDA interrupts */
 }
 
@@ -116,10 +118,12 @@ void get_Altitude(u16 Altitude_Pointer) {
 
 
 
-void UART0_Handler(void) {
+void process_UART_data(void) {
     u32 iir_value;
     u8* received_char_Pointer;
     u8 received_char;
+    // Disable UART RX interrupts
+    UARTIntDisable(UART_MODULE, UART_INT_RX);
 
     // Read the UART interrupt identification register
     iir_value = UARTIntStatus(UART_MODULE, true);
@@ -167,3 +171,33 @@ void UART0_Handler(void) {
         iir_value = UARTIntStatus(UART_MODULE, true);
     }
 }
+
+/*void UART0_Polling(void) {
+    u8 received_char;
+    u8* received_char_Pointer;
+    // Check if there is data available in the receive FIFO
+    while (UART_RX(&received_char, UART_0) == UART_RX_AVAILABLE) 
+    {
+        // Read the received character
+        received_char = UART_RX(received_char_Pointer,UART_MODULE);
+
+        // Process GGA string
+        if (received_char == '$') {
+            GGA_Index = 0;
+            CommaCounter = 0;
+            IsItGGAString = false;
+        } else if (IsItGGAString) {
+            if (received_char == ',') {
+                GGA_Comma_Pointers[CommaCounter++] = GGA_Index;
+            }
+            GGA_String[GGA_Index++] = received_char;
+        } else if ((GGA_String[0] == 'G') && (GGA_String[1] == 'G') && (GGA_String[2] == 'A')) {
+            IsItGGAString = true;
+            GGA_String[0] = GGA_String[1] = GGA_String[2] = 0;
+        } else {
+            GGA_String[0] = GGA_String[1];
+            GGA_String[1] = GGA_String[2];
+            GGA_String[2] = received_char;
+        }
+    }
+}*/
