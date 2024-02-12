@@ -1,8 +1,9 @@
 /*
  * Lcd.h
  *
- *  Created on: Apr 24, 2022
- *      Author: Eslam Ali
+ *  Created on: 12/2/2024
+ *      Author: Ahmed Adel
+ *      Author: Ahmed Abdelmotelb
  */
 
 #ifndef LCD_H_
@@ -25,7 +26,7 @@
 #define LCD_PORT_ID                    GPIO_PORTB
 
 #define LCD_RS_PORT_ID                 GPIO_PORTB
-#define LCD_RS_PIN_ID                  GPIO_PIN_0
+#define LCD_RS_PIN_ID                  GPIO_PIN_3
 
 #define LCD_E_PORT_ID                  GPIO_PORTB
 #define LCD_E_PIN_ID                   GPIO_PIN_1
