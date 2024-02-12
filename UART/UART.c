@@ -7,7 +7,7 @@ uint08_t data;
 
 void UART_INIT (uint08_t UART_n) {
     uint32_t delay;
-    /* Baudrate 115200 , Stop 1 , No Paritiy , 8 Bits Data , 16 MHz*/
+    /* Baudrate 9600 , Stop 1 , No Paritiy , 8 Bits Data , 16 MHz*/
     switch (UART_n)
     {
         case UART_0:
@@ -31,8 +31,8 @@ void UART_INIT (uint08_t UART_n) {
 
 			CLR_BIT(UART0_CTL_R,0); // Disable the UART by clearing the UARTEN bit in the UARTCTL register.
             /*Baud rate*/
-			UART0_IBRD_R =8;    //16000000/(16*115200) = 8.6805 Write the integer portion of the BRD to the UARTIBRD register
-			UART0_FBRD_R =44;    // 0.6805*64 + 0.5 = 44.05 Write the fractional portion of the BRD to the UARTFBRD register.
+			UART0_IBRD_R = 104;    // Write the integer portion of the BRD to the UARTIBRD register
+			UART0_FBRD_R = 11;    // Write the fractional portion of the BRD to the UARTFBRD register.
             /*1 STOP bit*/
 			CLR_BIT(UART0_LCRH_R,3); // 111000
 			/*FIFO enable*/
@@ -40,7 +40,6 @@ void UART_INIT (uint08_t UART_n) {
 			/*8 bit data*/
 			SET_BIT(UART0_LCRH_R,5);
 			SET_BIT(UART0_LCRH_R,6);
-			UART0_CTL_R = 0x0000; // Enable the UART by setting the UARTEN bit in the UARTCTL
 			
             SET_BIT(UART0_CTL_R, 0); // Enable UART
             SET_BIT(UART0_CTL_R, 8); // Enable TX
@@ -69,8 +68,8 @@ void UART_INIT (uint08_t UART_n) {
 
 			CLR_BIT(UART1_CTL_R,0); // Disable the UART by clearing the UARTEN bit in the UARTCTL register.
             /*Baud rate*/
-			UART1_IBRD_R =8;    
-			UART1_FBRD_R =44;   
+			UART1_IBRD_R = 104;    
+			UART1_FBRD_R = 11;   
             /*1 STOP bit*/
 			CLR_BIT(UART1_LCRH_R,3); // 111000
 			/*FIFO enable*/
@@ -78,7 +77,6 @@ void UART_INIT (uint08_t UART_n) {
 			/*8 bit data*/
 			SET_BIT(UART1_LCRH_R,5);
 			SET_BIT(UART1_LCRH_R,6);
-			UART1_CTL_R = 0x0000; // Enable the UART by setting the UARTEN bit in the UARTCTL
             SET_BIT(UART1_CTL_R, 0); 
             SET_BIT(UART1_CTL_R, 8); 
             SET_BIT(UART1_CTL_R, 9); 
@@ -104,8 +102,8 @@ void UART_INIT (uint08_t UART_n) {
 
 			CLR_BIT(UART2_CTL_R,0); // Disable the UART by clearing the UARTEN bit in the UARTCTL register.
             /*Baud rate*/
-			UART2_IBRD_R =8;   
-			UART2_FBRD_R =44;  
+			UART2_IBRD_R = 104;   
+			UART2_FBRD_R = 11;
             /*1 STOP bit*/
 			CLR_BIT(UART2_LCRH_R,3); // 111000
 			/*FIFO enable*/
@@ -113,7 +111,6 @@ void UART_INIT (uint08_t UART_n) {
 			/*8 bit data*/
 			SET_BIT(UART2_LCRH_R,5);
 			SET_BIT(UART2_LCRH_R,6);
-			UART2_CTL_R = 0x0000; // Enable the UART by setting the UARTEN bit in the UARTCTL
             SET_BIT(UART2_CTL_R, 0); 
             SET_BIT(UART2_CTL_R, 8); 
             SET_BIT(UART2_CTL_R, 9); 
@@ -139,16 +136,15 @@ void UART_INIT (uint08_t UART_n) {
 
 			CLR_BIT(UART3_CTL_R,0); // Disable the UART by clearing the UARTEN bit in the UARTCTL register.
             /*Baud rate*/
-			UART3_IBRD_R =8;
-			UART3_FBRD_R =44;
+			UART3_IBRD_R = 104;
+			UART3_FBRD_R = 11;
             /*1 STOP bit*/
 			CLR_BIT(UART3_LCRH_R,3); // 111000
 			/*FIFO enable*/
 			SET_BIT(UART3_LCRH_R,4);
 			/*8 bit data*/
 			SET_BIT(UART3_LCRH_R,5);
-			SET_BIT(UART3_LCRH_R,6);
-			UART3_CTL_R = 0x0000; // Enable the UART by setting the UARTEN bit in the UARTCTL 
+			SET_BIT(UART3_LCRH_R,6); 
             SET_BIT(UART3_CTL_R, 0); 
             SET_BIT(UART3_CTL_R, 8); 
             SET_BIT(UART3_CTL_R, 9); 
@@ -174,16 +170,15 @@ void UART_INIT (uint08_t UART_n) {
 
 			CLR_BIT(UART4_CTL_R,0); // Disable the UART by clearing the UARTEN bit in the UARTCTL register.
             /*Baud rate*/
-			UART4_IBRD_R =8;
-			UART4_FBRD_R =44;
+			UART4_IBRD_R = 104;
+			UART4_FBRD_R = 11;
             /*1 STOP bit*/
 			CLR_BIT(UART4_LCRH_R,3); // 111000
 			/*FIFO enable*/
 			SET_BIT(UART4_LCRH_R,4);
 			/*8 bit data*/
 			SET_BIT(UART4_LCRH_R,5);
-			SET_BIT(UART4_LCRH_R,6);
-			UART4_CTL_R = 0x0000; // Enable the UART by setting the UARTEN bit in the UARTCTL 
+			SET_BIT(UART4_LCRH_R,6); 
             SET_BIT(UART4_CTL_R, 0); 
             SET_BIT(UART4_CTL_R, 8); 
             SET_BIT(UART4_CTL_R, 9); 
@@ -209,8 +204,8 @@ void UART_INIT (uint08_t UART_n) {
 
 			CLR_BIT(UART5_CTL_R,0); // Disable the UART by clearing the UARTEN bit in the UARTCTL register.
             /*Baud rate*/
-			UART5_IBRD_R =8;
-			UART5_FBRD_R =44;
+			UART5_IBRD_R = 104;
+			UART5_FBRD_R = 11;
             /*1 STOP bit*/
 			CLR_BIT(UART5_LCRH_R,3); // 111000
 			/*FIFO enable*/
@@ -218,7 +213,6 @@ void UART_INIT (uint08_t UART_n) {
 			/*8 bit data*/
 			SET_BIT(UART5_LCRH_R,5);
 			SET_BIT(UART5_LCRH_R,6);
-			UART5_CTL_R = 0x0000; // Enable the UART by setting the UARTEN bit in the UARTCTL
             SET_BIT(UART5_CTL_R, 0); 
             SET_BIT(UART5_CTL_R, 8); 
             SET_BIT(UART5_CTL_R, 9); 
@@ -244,8 +238,8 @@ void UART_INIT (uint08_t UART_n) {
 
 			CLR_BIT(UART6_CTL_R,0); // Disable the UART by clearing the UARTEN bit in the UARTCTL register.
             /*Baud rate*/
-			UART6_IBRD_R =8;
-			UART6_FBRD_R =44;
+			UART6_IBRD_R = 104;
+			UART6_FBRD_R = 11;
             /*1 STOP bit*/
 			CLR_BIT(UART6_LCRH_R,3); // 111000
 			/*FIFO enable*/
@@ -253,7 +247,6 @@ void UART_INIT (uint08_t UART_n) {
 			/*8 bit data*/
 			SET_BIT(UART6_LCRH_R,5);
 			SET_BIT(UART6_LCRH_R,6);
-			UART6_CTL_R = 0x0000; // Enable the UART by setting the UARTEN bit in the UARTCTL
             SET_BIT(UART6_CTL_R, 0); 
             SET_BIT(UART6_CTL_R, 8); 
             SET_BIT(UART6_CTL_R, 9); 
@@ -279,8 +272,8 @@ void UART_INIT (uint08_t UART_n) {
 
 			CLR_BIT(UART7_CTL_R,0); // Disable the UART by clearing the UARTEN bit in the UARTCTL register.
             /*Baud rate*/
-			UART7_IBRD_R =8;
-			UART7_FBRD_R =44;
+			UART7_IBRD_R = 104;
+			UART7_FBRD_R = 11;
             /*1 STOP bit*/
 			CLR_BIT(UART7_LCRH_R,3); // 111000
 			/*FIFO enable*/
@@ -288,7 +281,6 @@ void UART_INIT (uint08_t UART_n) {
 			/*8 bit data*/
 			SET_BIT(UART7_LCRH_R,5);
 			SET_BIT(UART7_LCRH_R,6);
-			UART7_CTL_R = 0x0000; // Enable the UART by setting the UARTEN bit in the UARTCTL
             SET_BIT(UART7_CTL_R, 0); 
             SET_BIT(UART7_CTL_R, 8); 
             SET_BIT(UART7_CTL_R, 9); 
@@ -336,28 +328,28 @@ void UART_TX (uint08_t byte, uint08_t UART_n) {
 void UART_RX (uint08_t * bytePtr, uint08_t UART_n) {
     switch (UART_n) {
         case UART_0:
-            while(GET_BIT(UART0_FR_R,4)==0); // Wait for RXFE
+            while(GET_BIT(UART0_FR_R,4)==1); // Wait for RXFE
 			* bytePtr = UART0_DR_R;
         case UART_1: 
-            while(GET_BIT(UART1_FR_R,4)==0); // Wait for RXFE
+            while(GET_BIT(UART1_FR_R,4)==1); // Wait for RXFE
 			* bytePtr = UART1_DR_R;
         case UART_2: 
-            while(GET_BIT(UART2_FR_R,4)==0); // Wait for RXFE
+            while(GET_BIT(UART2_FR_R,4)==1); // Wait for RXFE
 			* bytePtr = UART2_DR_R;
         case UART_3: 
-            while(GET_BIT(UART3_FR_R,4)==0); // Wait for RXFE
+            while(GET_BIT(UART3_FR_R,4)==1); // Wait for RXFE
 			* bytePtr = UART3_DR_R;
         case UART_4: 
-            while(GET_BIT(UART4_FR_R,4)==0); // Wait for RXFE
+            while(GET_BIT(UART4_FR_R,4)==1); // Wait for RXFE
 			* bytePtr = UART4_DR_R;
         case UART_5: 
-            while(GET_BIT(UART5_FR_R,4)==0); // Wait for RXFE
+            while(GET_BIT(UART5_FR_R,4)==1); // Wait for RXFE
 			* bytePtr = UART5_DR_R;
         case UART_6: 
-            while(GET_BIT(UART6_FR_R,4)==0); // Wait for RXFE
+            while(GET_BIT(UART6_FR_R,4)==1); // Wait for RXFE
 			* bytePtr = UART6_DR_R;
         case UART_7: 
-            while(GET_BIT(UART7_FR_R,4)==0); // Wait for RXFE
+            while(GET_BIT(UART7_FR_R,4)==1); // Wait for RXFE
 			* bytePtr = UART7_DR_R;
     }
 }
