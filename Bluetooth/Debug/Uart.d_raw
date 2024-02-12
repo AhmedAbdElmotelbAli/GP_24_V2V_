@@ -1,0 +1,5 @@
+Uart.obj: ../Uart.c
+Uart.obj: ..\UART.h
+Uart.obj: ..\Type.h
+Uart.obj: ..\BITMATH.h
+Uart.obj: ..\tm4c123gh6pm.h
