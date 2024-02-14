@@ -33,5 +33,6 @@ void UART4_Handler(void);
 void UART5_Handler(void);
 void UART6_Handler(void);
 void UART7_Handler(void);
+void Uart_Write_String(char *str,uint08_t UART_n);
 
 #endif
