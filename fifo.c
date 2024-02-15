@@ -84,3 +84,6 @@ FIFO_Buf_Status FIFO_is_empty(FIFO_Buf_t* fifo){
 	return FIFO_no_error;
 }
 
+uint8_t FIFO_Get_Count(FIFO_Buf_t* fifo){
+	return fifo->count;
+}
