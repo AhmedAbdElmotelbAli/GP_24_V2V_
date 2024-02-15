@@ -1,0 +1,12 @@
+"./GPIO.obj"
+"./main.obj"
+"./tm4c123gh6pm_startup_ccs.obj"
+"./RTOS/event_groups.obj"
+"./RTOS/heap_2.obj"
+"./RTOS/list.obj"
+"./RTOS/port.obj"
+"./RTOS/portasm.obj"
+"./RTOS/queue.obj"
+"./RTOS/tasks.obj"
+"../tm4c123gh6pm.cmd"
+-llibc.a
