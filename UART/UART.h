@@ -1,9 +1,6 @@
 #ifndef _UART_H_
 #define _UART_H_
 
-#define UART_RX_AVAILABLE           (0xAB)
-#define UART_RX_UNAVAILABLE         (0xCD)
-
 typedef enum {
     UART_0,
     UART_1,
@@ -33,6 +30,5 @@ void UART4_Handler(void);
 void UART5_Handler(void);
 void UART6_Handler(void);
 void UART7_Handler(void);
-void Uart_Write_String(char *str,uint08_t UART_n);
 
 #endif
