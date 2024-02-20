@@ -17,7 +17,7 @@
 /*******************************************************/
 
 /**************APIs*************************************/
-void MQTT_Connect(u8* clientID,u8* username,u8* password);
+void MQTT_Connect(u8* clientID,u8* username,u8* password,u8* willTopic, u8* willMessage);
 
 void MQTT_Publish(u8* topic,u8* msg,u32 len,u8 QoS);
 
