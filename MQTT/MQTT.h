@@ -23,6 +23,12 @@ void MQTT_Publish(u8* topic,u8* msg,u32 len,u8 QoS);
 
 void MQTT_Subscribe(u8* topic);
 
+void MQTT_UnSubscribe(u8* topic);
+
+void MQTT_PINGREQ(void);
+
+void MQTT_Disconnect(void);
+
 /*******************************************************/
 
 #endif /* MQTT_H_ */
