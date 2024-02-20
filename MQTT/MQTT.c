@@ -136,3 +136,40 @@ void MQTT_Subscribe(u8* topic)
 	//Send Packet
 	Uart_Write_String(packet,packetInd,UART_7);
 }
+
+void MQTT_UnSubscribe(u8* topic)
+{
+	u8 remLen = (5 + strlen(topic));
+	//encode Packet
+	packetInd = 0;
+	packet[packetInd++] =0xA2; //type
+	packet[packetInd++] = remLen;
+
+	packet[packetInd++] = (u8)(packetID >> 8); //MSB of packID
+	packet[packetInd++] = (u8)(packetID); //LSB of packID
+	packetID++;
+
+	packet[packetInd++] = 0x00;
+	packet[packetInd++] =  strlen(topic);
+	strcpy(packet+packetInd,topic);
+	packetInd += strlen(topic);
+
+	//Send Packet
+	Uart_Write_String(packet,packetInd,UART_7);
+}
+
+void MQTT_PINGREQ(void)
+{
+	packetInd = 0;
+	packet[packetInd++] = 0xC0; //Type
+	//Send Packet
+	Uart_Write_String(packet,packetInd,UART_7);
+}
+
+void MQTT_Disconnect(void)
+{
+	packetInd = 0;
+	packet[packetInd++] = 0xE0; //Type
+	//Send Packet
+	Uart_Write_String(packet,packetInd,UART_7);
+}
