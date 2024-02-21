@@ -1,6 +1,7 @@
 /* include all C function to test */
 #include <stdio.h>
 #include <stdlib.h>
+#include <stdint.h>
 /* include state.h */
 #include "state.h"
 /* include all modules */
@@ -23,7 +24,7 @@ void setup(){
     LCDP_state = STATE(LCDP_normal);
 }
 
-int main(){
+int32_t main(){
     setup();
     while (1){
         /* write all states to be called sequencial */

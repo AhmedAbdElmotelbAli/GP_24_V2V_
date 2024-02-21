@@ -10,17 +10,18 @@
  */
 
 /* include C liberaries to test*/
-#include "stdio.h"
-#include "stdlib.h"
+#include <stdio.h>
+#include <stdlib.h>
+#include <stdint.h>
 /* include the header file */
 #include "c.h"
 /* extern state pointer */
 extern void (*C_state)();
 /* private attributes */
-static int data = 0;
-static int warning_state = 0;
+static int32_t data = 0;
+static int32_t warning_state = 0;
 /* functions and states */
-void RWIFI_sendData(int local_data){
+void RWIFI_sendData(int32_t local_data){
     data = local_data;
     switch (C_state_id)
     {

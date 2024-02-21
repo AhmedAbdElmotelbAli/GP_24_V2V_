@@ -10,16 +10,17 @@
  */
 
 /* include C liberaries to test*/
-#include "stdio.h"
-#include "stdlib.h"
+#include <stdio.h>
+#include <stdlib.h>
+#include <stdint.h>
 /* include the header file */
 #include "LCDP.h"
 /* extern state pointer */
 extern void (*LCDP_state)();
 /* private attributes */
-static int warning_state;
+static int32_t warning_state;
 /* functions and states */
-static void print_warning_state(int local_state){
+static void print_warning_state(int32_t local_state){
     if(local_state == 1){
         printf("LCD: Warning The car is breaking\n");
         fflush(stdout);
@@ -30,7 +31,7 @@ static void print_warning_state(int local_state){
         /* Misra Required */
     }
 }
-void C_print_warning_state(int local_warning_state){
+void C_print_warning_state(int32_t local_warning_state){
     /* setting attributes*/
     warning_state = local_warning_state;
     /* set new state */

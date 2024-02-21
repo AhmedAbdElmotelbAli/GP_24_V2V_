@@ -10,16 +10,17 @@
  */
 
 /* include C liberaries to test*/
-#include "stdio.h"
-#include "stdlib.h"
+#include <stdio.h>
+#include <stdlib.h>
+#include <stdint.h>
 /* include the header file */
 #include "RWIFI.h"
 /* extern state pointer */
 extern void (*RWIFI_state)();
 /* private attributes */
-static int data = 0;
+static int32_t data = 0;
 /* functions and states */
-void RWIFI_Read_Data(int* Pdata){
+void RWIFI_Read_Data(int32_t* Pdata){
 	printf("Please Enter The WIFI data: ");
     fflush(stdout);
     scanf_s("%d",Pdata);
