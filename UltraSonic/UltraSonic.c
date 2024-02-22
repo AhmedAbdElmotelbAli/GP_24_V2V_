@@ -1,55 +1,38 @@
+/*  Name: Ahmed Abdelmotelb Ali
+ * DATA:        22/2/2024
+ * */
 #include "tm4c123gh6pm.h"
+#include "Type.h"
+#include "UltraSonic.h"
 #include "UART.h"
-#include <stdio.h>
-
-/*functions prototypes*/
-void measure_distance(void);
-uint32_t measure_pulse_duration(void)
-void Timer0ACapture_init(void);
-void Delay_MicroSecond(int time);
-void Delay(unsigned long counter);
-
-/* global variables to store and display distance in cm */
-uint32_t time; /*stores pulse on time */
-uint32_t distance; /* stores measured distance value */
-int i;  /*iterartor*/
-
-/* main code to take distance measurement and send data to UART terminal */
-void measure_distance(void)
-{
-    Timer0ACapture_init();  /*initialize Timer0A in edge edge time */
-    UART_INIT(5); /* initialize UART5 module to transmit data to computer */
-    time = Measure_pulse_duration(); /* take pulse duration measurement */ 
-    distance = (time * 10625)/10000000; /* convert pulse duration into distance */
-    for(i = 0; i< 4; i++)
-        UART_TX((distance>>(8*i) & 0XFF), 5); 
-}
-
+#include "BITMATH.h"
+#include "GPIO.h"
 
 /* This function captures consecutive rising and falling edges of a periodic signal */
 /* from Timer Block 0 Timer A and returns the time difference (the period of the signal). */
-uint32_t measure_pulse_duration(void)
+uint32_t Measure_distance(void)
 {
     int lastEdge, thisEdge;
 	
 	  /* Given 10us trigger pulse */
-	  GPIOA->DATA &= ~(1<<4); /* make trigger  pin high */
+		CLR_BIT(GPIO_PORTA_DATA_R,GPIO_PIN_4);
+	 // GPIO_PORTA_DATA_R&= ~(1<<4); /* make trigger  pin high */
 	  Delay_MicroSecond(10); /*10 seconds delay */
-	  GPIOA->DATA |= (1<<4); /* make trigger  pin high */
+	  SET_BIT(GPIO_PORTA_DATA_R,GPIO_PIN_4); /* make trigger  pin high */
 	  Delay_MicroSecond(10); /*10 seconds delay */
-	  GPIOA->DATA &= ~(1<<4); /* make trigger  pin low */
+		CLR_BIT(GPIO_PORTA_DATA_R,GPIO_PIN_4); /* make trigger  pin low */
 
  	while(1)
 	{
-    TIMER0->ICR = 4;            /* clear timer0A capture flag */
-    while((TIMER0->RIS & 4) == 0) ;    /* wait till captured */
-	  if(GPIOB->DATA & (1<<6)) /*check if rising edge occurs */
+    TIMER0_ICR_R = 4;            /* clear timer0A capture flag */
+    while((TIMER0_RIS_R & 4) == 0) ;    /* wait till captured */
+	  if(GPIO_GetPinState(GPIO_PORTB,GPIO_PIN_6)) /*check if rising edge occurs */
 		{
-    lastEdge = TIMER0->TAR;     /* save the timestamp */
+    lastEdge = TIMER0_TAR_R;     /* save the timestamp */
 		/* detect falling edge */
-    TIMER0->ICR = 4;            /* clear timer0A capture flag */
-    while((TIMER0->RIS & 4) == 0) ;    /* wait till captured */
-    thisEdge = TIMER0->TAR;     /* save the timestamp */
+    TIMER0_ICR_R = 4;            /* clear timer0A capture flag */
+    while((TIMER0_RIS_R & 4) == 0) ;    /* wait till captured */
+    thisEdge = TIMER0_TAR_R;     /* save the timestamp */
 		return (thisEdge - lastEdge); /* return the time difference */
 		}
 	}
@@ -57,27 +40,31 @@ uint32_t measure_pulse_duration(void)
 
 /* Timer0A initialization function */
 /* Initialize Timer0A in input-edge time mode with up-count mode */
-void Timer0ACapture_init(void)
+void Timer0A_init(void)
 {
-    SYSCTL->RCGCTIMER |= 1;     /* enable clock to Timer Block 0 */
-    SYSCTL->RCGCGPIO |= 2;      /* enable clock to PORTB */
-    
-    GPIOB->DIR &= ~0x40;        /* make PB6 an input pin */
-    GPIOB->DEN |= 0x40;         /* make PB6 as digital pin */
-    GPIOB->AFSEL |= 0x40;       /* use PB6 alternate function */
-    GPIOB->PCTL &= ~0x0F000000;  /* configure PB6 for T0CCP0 */
-    GPIOB->PCTL |= 0x07000000;
+
+      SET_BIT(SYSCTL_RCGCTIMER_R,Timer0A_CLK);     /* enable clock to Timer Block 0 */
+      GPIO_Init(GPIO_PORTB,GPIO_PIN_6);
+      GPIO_SetPinDirection(GPIO_PORTB,GPIO_PIN_6,GPIO_DIRECTION_INPUT_PUSH_PULL);  
+			SET_BIT( GPIO_PORTB_AFSEL_R,GPIO_PIN_6);       /* use PB6 alternate function */
+			GPIO_PORTB_PCTL_R &= ~PB6_TOCCP0;  /* configure PB6 for T0CCP0 */
+      SET_BIT(GPIO_PORTB_PCTL_R, 24);
+			SET_BIT(GPIO_PORTB_PCTL_R, 25);
+			SET_BIT(GPIO_PORTB_PCTL_R, 26);
     
 	  /* PB2 as a digital output signal to provide trigger signal */
-	  SYSCTL->RCGCGPIO |= 1;      /* enable clock to PORTA */
-	  GPIOA->DIR |=(1<<4);         /* set PB2 as a digial output pin */
-	  GPIOA->DEN |=(1<<4);         /* make PB2 as digital pin */
+			GPIO_Init(GPIO_PORTA,GPIO_PIN_4);
+      GPIO_SetPinDirection(GPIO_PORTA,GPIO_PIN_4,GPIO_DIRECTION_OUTPUT); 
 
-    TIMER0->CTL &= ~1;          /* disable timer0A during setup */
-    TIMER0->CFG = 4;            /* 16-bit timer mode */
-    TIMER0->TAMR = 0x17;        /* up-count, edge-time, capture mode */
-    TIMER0->CTL |=0x0C;        /* capture the rising edge */
-    TIMER0->CTL |= (1<<0);           /* enable timer0A */
+			CLR_BIT(TIMER0_CTL_R,Timer0A_CLK);          /* disable timer0A during setup */
+			TIMER0_CFG_R = timer_mode16bit;            /* 16-bit timer mode */
+    	SET_BIT(TIMER0_TAMR_R,countup_bit);      /* up-count*/
+			SET_BIT(TIMER0_TAMR_R,Capture_mode1); /*capture mode */
+			SET_BIT(TIMER0_TAMR_R,Capture_mode2);
+	  	SET_BIT(TIMER0_TAMR_R,Edge_Time_mode);        /*edge-time*/
+      SET_BIT(TIMER0_CTL_R,Both_edge1);        /* capture the rising edge pin 2,3 */
+			SET_BIT(TIMER0_CTL_R,Both_edge2); 
+			SET_BIT(TIMER0_CTL_R,Timer0A_CLK);           /* enable timer0A */
 }
 
 
@@ -87,33 +74,35 @@ void Timer0ACapture_init(void)
 void Delay_MicroSecond(int time)
 {
     int i;
-    SYSCTL->RCGCTIMER |= 2;     /* enable clock to Timer Block 1 */
-    TIMER1->CTL = 0;            /* disable Timer before initialization */
-    TIMER1->CFG = 0x04;         /* 16-bit option */ 
-    TIMER1->TAMR = 0x02;        /* periodic mode and down-counter */
-    TIMER1->TAILR = 16 - 1;  /* TimerA interval load value reg */
-    TIMER1->ICR = 0x1;          /* clear the TimerA timeout flag */
-    TIMER1->CTL |= 0x01;        /* enable Timer A after initialization */
+    SYSCTL_RCGCTIMER_R |= 2;     /* enable clock to Timer Block 1 */
+    TIMER1_CTL_R = 0;            /* disable Timer before initialization */
+    TIMER1_CFG_R = 0x04;         /* 16-bit option */ 
+    TIMER1_TAMR_R = 0x02;        /* periodic mode and down-counter */
+    TIMER1_TAILR_R = 16 - 1;  /* TimerA interval load value reg */
+    TIMER1_ICR_R = 0x1;          /* clear the TimerA timeout flag */
+    TIMER1_CTL_R |= 0x01;        /* enable Timer A after initialization */
 
     for(i = 0; i < time; i++)
     {
-        while ((TIMER1->RIS & 0x1) == 0) ;      /* wait for TimerA timeout flag */
-        TIMER1->ICR = 0x1;      /* clear the TimerA timeout flag */
+        while ((TIMER1_RIS_R & 0x1) == 0) ;      /* wait for TimerA timeout flag */
+        TIMER1_ICR_R = 0x1;      /* clear the TimerA timeout flag */
     }
 }
-
-void Delay(unsigned long counter)
+void UART5_init(void)
+{
+	UART_INIT(UART_5);
+}
+void UART5_Transmitter(unsigned char data)  
+{
+    UART_TX(data,UART_5);                
+}
+void printstring(char *str)
+{
+			UartPrint(str,UART_5);
+}
+void Delay1(unsigned long counter)
 {
 	unsigned long i = 0;
 	
 	for(i=0; i< counter*1000; i++);
-}
-/* This function is called by the startup assembly code to perform system specific initialization tasks. */
-void SystemInit(void)
-{
-    __disable_irq();    /* disable all IRQs */
-    
-    /* Grant coprocessor access */
-    /* This is required since TM4C123G has a floating point coprocessor */
-    SCB->CPACR |= 0x00F00000;
 }
