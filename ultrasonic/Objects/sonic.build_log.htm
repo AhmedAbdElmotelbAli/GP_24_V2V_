@@ -1,0 +1,785 @@
+<html>
+<body>
+<pre>
+<h1>µVision Build Log</h1>
+<h2>Tool Versions:</h2>
+IDE-Version: µVision V5.38.0.0
+Copyright (C) 2022 ARM Ltd and ARM Germany GmbH. All rights reserved.
+License Information: Ahmed Abdelmotelb Ali, Administrator, LIC=----
+ 
+Tool Versions:
+Toolchain:       MDK-Lite  Version: 5.38.0.0
+Toolchain Path:  D:\ARM\ARMCLANG\Bin
+C Compiler:      ArmClang.exe V6.19
+Assembler:       Armasm.exe V6.19
+Linker/Locator:  ArmLink.exe V6.19
+Library Manager: ArmAr.exe V6.19
+Hex Converter:   FromElf.exe V6.19
+CPU DLL:         SARMCM3.DLL V5.38.0.0
+Dialog DLL:      DCM.DLL V1.17.5.0
+Target DLL:      lmidk-agdi.dll V???
+Dialog DLL:      TCM.DLL V1.56.4.0
+ 
+<h2>Project:</h2>
+D:\C51\Examples\HELLO\project\New folder\New folder\sonic.uvprojx
+Project File Date:  02/22/2024
+
+<h2>Output:</h2>
+*** Using Compiler 'V6.19', folder: 'D:\ARM\ARMCLANG\Bin'
+Rebuild target 'Target 1'
+Lcd.c(90): warning: variable 'address' may be uninitialized when used here [-Wconditional-uninitialized]
+        Cmd(LCD_SET_CURSOR_LOCATION | address);
+                                      ^~~~~~~
+Lcd.c(73): note: initialize the variable 'address' to silence this warning
+        uint08_t address;
+                        ^
+                         = '\0'
+Lcd.c(101): warning: passing 'const char *' to parameter of type 'char *' discards qualifiers [-Wincompatible-pointer-types-discards-qualifiers]
+    LCD_displayString(Str);      /* display the string */
+                      ^~~
+Lcd.c(58): note: passing argument to parameter 'str' here
+void LCD_displayString(char * str)
+                              ^
+Lcd.c(146): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+value <96> Value to be converted to a string.
+      ^
+Lcd.c(147): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+buffer <96> Array to store the result.
+       ^
+Lcd.c(148): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+base <96> Numerical base used to represent the value as a string, between 2 and 16
+     ^
+Lcd.c(169): warning: implicit conversion loses integer precision: 'int' to 'uint08_t' (aka 'unsigned char') [-Wimplicit-int-conversion]
+            buffer[i++] = 65 + (r - 10);
+                        ~ ~~~^~~~~~~~~~
+Lcd.c(172): warning: implicit conversion loses integer precision: 'int' to 'uint08_t' (aka 'unsigned char') [-Wimplicit-int-conversion]
+            buffer[i++] = 48 + r;
+                        ~ ~~~^~~
+Lcd.c(157): warning: mixing declarations and code is incompatible with standards before C99 [-Wdeclaration-after-statement]
+    sint16_t n = value;
+             ^
+Lcd.c(211): warning: passing 'uint08_t[16]' (aka 'unsigned char[16]') to parameter of type 'char *' converts between pointers to integer types where one is of the unique plain 'char' type and the other is not [-Wpointer-sign]
+    LCD_displayString(buffer); /* Display the string */
+                      ^~~~~~
+Lcd.c(58): note: passing argument to parameter 'str' here
+void LCD_displayString(char * str)
+                              ^
+9 warnings generated.
+compiling Lcd.c...
+main.c(9): warning: In file included from...
+./UltraSonic.h(66): warning: no newline at end of file [-Wnewline-eof]
+#endif /* UltraSonic */
+                       ^
+main.c(21): warning: no previous extern declaration for non-static variable 'duty_cycle' [-Wmissing-variable-declarations]
+uint16_t duty_cycle=25;
+         ^
+main.c(21): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+uint16_t duty_cycle=25;
+^
+main.c(22): warning: no previous extern declaration for non-static variable 'freq' [-Wmissing-variable-declarations]
+uint16_t freq =50;
+         ^
+main.c(22): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+uint16_t freq =50;
+^
+main.c(40): warning: format specifies type 'int' but the argument has type 'uint32_t' (aka 'unsigned long') [-Wformat]
+sprintf(mesg, "\r\nDistance = %d cm", distance); /*convert float type distance data into string */
+                              ~~      ^~~~~~~~
+                              %lu
+main.c(18): warning: no previous extern declaration for non-static variable 'time' [-Wmissing-variable-declarations]
+uint32_t time; /*stores pulse on time */
+         ^
+main.c(18): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+uint32_t time; /*stores pulse on time */
+^
+main.c(19): warning: no previous extern declaration for non-static variable 'distance' [-Wmissing-variable-declarations]
+uint32_t distance; /* stores measured distance value */
+         ^
+main.c(19): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+uint32_t distance; /* stores measured distance value */
+^
+main.c(20): warning: no previous extern declaration for non-static variable 'mesg' [-Wmissing-variable-declarations]
+char mesg[20];  /* string format of distance value */
+     ^
+main.c(20): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+char mesg[20];  /* string format of distance value */
+^
+7 warnings generated.
+compiling main.c...
+RGB_LEDS.c(27): warning: enumeration value 'LED_STATE_OFF' not explicitly handled in switch [-Wswitch-enum]
+    switch (red) {
+            ^~~
+RGB_LEDS.c(35): warning: enumeration value 'LED_STATE_OFF' not explicitly handled in switch [-Wswitch-enum]
+    switch (green) {
+            ^~~~~
+RGB_LEDS.c(43): warning: enumeration value 'LED_STATE_OFF' not explicitly handled in switch [-Wswitch-enum]
+    switch (blue) {
+            ^~~~
+3 warnings generated.
+compiling RGB_LEDS.c...
+GPIO.c(136): warning: default label in switch which covers all enumeration values [-Wcovered-switch-default]
+                                default : /*Do Nothing */ break;
+                                ^
+GPIO.c(137): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+                                };
+                                 ^
+GPIO.c(158): warning: default label in switch which covers all enumeration values [-Wcovered-switch-default]
+                                default : /*Do Nothing */ break;
+                                ^
+GPIO.c(159): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+                        };
+                         ^
+GPIO.c(180): warning: default label in switch which covers all enumeration values [-Wcovered-switch-default]
+                                default : /*Do Nothing */ break;
+                                ^
+GPIO.c(181): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+                                };
+                                 ^
+GPIO.c(202): warning: default label in switch which covers all enumeration values [-Wcovered-switch-default]
+                                default : /*Do Nothing */ break;
+                                ^
+GPIO.c(203): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+                        };
+                         ^
+GPIO.c(224): warning: default label in switch which covers all enumeration values [-Wcovered-switch-default]
+                                default : /*Do Nothing */ break;
+                                ^
+GPIO.c(225): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+                        };
+                         ^
+GPIO.c(246): warning: default label in switch which covers all enumeration values [-Wcovered-switch-default]
+                                default : /*Do Nothing */ break;
+                                ^
+GPIO.c(247): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+                        };
+                         ^
+GPIO.c(268): warning: default label in switch which covers all enumeration values [-Wcovered-switch-default]
+                                default : /*Do Nothing */ break;
+                                ^
+GPIO.c(269): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+                        };
+                         ^
+GPIO.c(277): warning: default label in switch which covers all enumeration values [-Wcovered-switch-default]
+                                default : /*Do Nothing */ break;
+                                ^
+GPIO.c(278): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+                        };
+                         ^
+GPIO.c(286): warning: default label in switch which covers all enumeration values [-Wcovered-switch-default]
+                                default : /*Do Nothing */ break;
+                                ^
+GPIO.c(287): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+                        };
+                         ^
+GPIO.c(295): warning: default label in switch which covers all enumeration values [-Wcovered-switch-default]
+                                default : /*Do Nothing */ break;
+                                ^
+GPIO.c(296): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+                        };
+                         ^
+GPIO.c(304): warning: default label in switch which covers all enumeration values [-Wcovered-switch-default]
+                                default : /*Do Nothing */ break;
+                                ^
+GPIO.c(305): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+                        };
+                         ^
+GPIO.c(313): warning: default label in switch which covers all enumeration values [-Wcovered-switch-default]
+                                default : /*Do Nothing */ break;
+                                ^
+GPIO.c(314): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+                        };
+                         ^
+GPIO.c(389): warning: default label in switch which covers all enumeration values [-Wcovered-switch-default]
+                                        default : /*Do Nothing */ break;
+                                        ^
+GPIO.c(390): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+                                        };
+                                         ^
+GPIO.c(411): warning: default label in switch which covers all enumeration values [-Wcovered-switch-default]
+                                        default : /*Do Nothing */ break;
+                                        ^
+GPIO.c(412): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+                                        };
+                                         ^
+GPIO.c(433): warning: default label in switch which covers all enumeration values [-Wcovered-switch-default]
+                                        default : /*Do Nothing */ break;
+                                        ^
+GPIO.c(434): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+                                        };
+                                         ^
+GPIO.c(455): warning: default label in switch which covers all enumeration values [-Wcovered-switch-default]
+                                        default : /*Do Nothing */ break;
+                                        ^
+GPIO.c(456): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+                                        };
+                                         ^
+GPIO.c(477): warning: default label in switch which covers all enumeration values [-Wcovered-switch-default]
+                                        default : /*Do Nothing */ break;
+                                        ^
+GPIO.c(478): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+                                        };
+                                         ^
+GPIO.c(499): warning: default label in switch which covers all enumeration values [-Wcovered-switch-default]
+                                        default : /*Do Nothing */ break;
+                                        ^
+GPIO.c(500): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+                                        };
+                                         ^
+GPIO.c(549): warning: implicit conversion loses integer precision: 'volatile unsigned long' to 'uint08_t' (aka 'unsigned char') [-Wimplicit-int-conversion]
+            returned_value =GPIO_PORTA_DATA_R ; break ;
+                           ~^~~~~~~~~~~~~~~~~
+./tm4c123gh6pm.h(162): note: expanded from macro 'GPIO_PORTA_DATA_R'
+#define GPIO_PORTA_DATA_R       (*((volatile unsigned long *)0x400043FC))
+                                 ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+GPIO.c(551): warning: implicit conversion loses integer precision: 'volatile unsigned long' to 'uint08_t' (aka 'unsigned char') [-Wimplicit-int-conversion]
+            returned_value =GPIO_PORTB_DATA_R ; break ;
+                           ~^~~~~~~~~~~~~~~~~
+./tm4c123gh6pm.h(193): note: expanded from macro 'GPIO_PORTB_DATA_R'
+#define GPIO_PORTB_DATA_R       (*((volatile unsigned long *)0x400053FC))
+                                 ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+GPIO.c(553): warning: implicit conversion loses integer precision: 'volatile unsigned long' to 'uint08_t' (aka 'unsigned char') [-Wimplicit-int-conversion]
+            returned_value =GPIO_PORTC_DATA_R ; break ;
+                           ~^~~~~~~~~~~~~~~~~
+./tm4c123gh6pm.h(224): note: expanded from macro 'GPIO_PORTC_DATA_R'
+#define GPIO_PORTC_DATA_R       (*((volatile unsigned long *)0x400063FC))
+                                 ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+GPIO.c(555): warning: implicit conversion loses integer precision: 'volatile unsigned long' to 'uint08_t' (aka 'unsigned char') [-Wimplicit-int-conversion]
+            returned_value =GPIO_PORTD_DATA_R ; break ;
+                           ~^~~~~~~~~~~~~~~~~
+./tm4c123gh6pm.h(255): note: expanded from macro 'GPIO_PORTD_DATA_R'
+#define GPIO_PORTD_DATA_R       (*((volatile unsigned long *)0x400073FC))
+                                 ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+GPIO.c(557): warning: implicit conversion loses integer precision: 'volatile unsigned long' to 'uint08_t' (aka 'unsigned char') [-Wimplicit-int-conversion]
+            returned_value =GPIO_PORTE_DATA_R ; break ;
+                           ~^~~~~~~~~~~~~~~~~
+./tm4c123gh6pm.h(670): note: expanded from macro 'GPIO_PORTE_DATA_R'
+#define GPIO_PORTE_DATA_R       (*((volatile unsigned long *)0x400243FC))
+                                 ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+GPIO.c(559): warning: implicit conversion loses integer precision: 'volatile unsigned long' to 'uint08_t' (aka 'unsigned char') [-Wimplicit-int-conversion]
+            returned_value =GPIO_PORTF_DATA_R ; break ;
+                           ~^~~~~~~~~~~~~~~~~
+./tm4c123gh6pm.h(701): note: expanded from macro 'GPIO_PORTF_DATA_R'
+#define GPIO_PORTF_DATA_R       (*((volatile unsigned long *)0x400253FC))
+                                 ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+42 warnings generated.
+compiling GPIO.c...
+UltraSonic.c(3): warning: In file included from...
+./UltraSonic.h(66): warning: no newline at end of file [-Wnewline-eof]
+#endif /* UltraSonic */
+                       ^
+UltraSonic.c(15): warning: implicit conversion changes signedness: 'int' to 'unsigned long' [-Wsign-conversion]
+                CLR_BIT(GPIO_PORTA_DATA_R,GPIO_PIN_4);
+                ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+./BITMATH.h(5): note: expanded from macro 'CLR_BIT'
+#define CLR_BIT(Reg,Bit)                 ( (Reg) &= ~( (1) << (Bit) )  )
+                                                 ~~ ^~~~~~~~~~~~~~~~~
+UltraSonic.c(20): warning: implicit conversion changes signedness: 'int' to 'unsigned long' [-Wsign-conversion]
+                CLR_BIT(GPIO_PORTA_DATA_R,GPIO_PIN_4); /* make trigger  pin low */
+                ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+./BITMATH.h(5): note: expanded from macro 'CLR_BIT'
+#define CLR_BIT(Reg,Bit)                 ( (Reg) &= ~( (1) << (Bit) )  )
+                                                 ~~ ^~~~~~~~~~~~~~~~~
+UltraSonic.c(28): warning: implicit conversion changes signedness: 'volatile unsigned long' to 'int' [-Wsign-conversion]
+    lastEdge = TIMER0_TAR_R;     /* save the timestamp */
+             ~ ^~~~~~~~~~~~
+./tm4c123gh6pm.h(966): note: expanded from macro 'TIMER0_TAR_R'
+#define TIMER0_TAR_R            (*((volatile unsigned long *)0x40030048))
+                                 ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+UltraSonic.c(32): warning: implicit conversion changes signedness: 'volatile unsigned long' to 'int' [-Wsign-conversion]
+    thisEdge = TIMER0_TAR_R;     /* save the timestamp */
+             ~ ^~~~~~~~~~~~
+./tm4c123gh6pm.h(966): note: expanded from macro 'TIMER0_TAR_R'
+#define TIMER0_TAR_R            (*((volatile unsigned long *)0x40030048))
+                                 ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+UltraSonic.c(33): warning: implicit conversion changes signedness: 'int' to 'uint32_t' (aka 'unsigned long') [-Wsign-conversion]
+                return (thisEdge - lastEdge); /* return the time difference */
+                ~~~~~~  ~~~~~~~~~^~~~~~~~~~
+UltraSonic.c(47): warning: implicit conversion changes signedness: 'int' to 'unsigned long' [-Wsign-conversion]
+                        GPIO_PORTB_PCTL_R &= ~PB6_TOCCP0;  /* configure PB6 for T0CCP0 */
+                                          ~~ ^~~~~~~~~~~
+UltraSonic.c(56): warning: implicit conversion changes signedness: 'int' to 'unsigned long' [-Wsign-conversion]
+                        CLR_BIT(TIMER0_CTL_R,Timer0A_CLK);          /* disable timer0A during setup */
+                        ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+./BITMATH.h(5): note: expanded from macro 'CLR_BIT'
+#define CLR_BIT(Reg,Bit)                 ( (Reg) &= ~( (1) << (Bit) )  )
+                                                 ~~ ^~~~~~~~~~~~~~~~~
+UltraSonic.c(105): warning: no newline at end of file [-Wnewline-eof]
+}
+ ^
+9 warnings generated.
+compiling UltraSonic.c...
+Bluetooth.c(12): warning: no previous prototype for function 'Bluetooth_init' [-Wmissing-prototypes]
+void Bluetooth_init(void)
+     ^
+Bluetooth.c(12): note: declare 'static' if the function is not intended to be used outside of this translation unit
+void Bluetooth_init(void)
+^
+static 
+Bluetooth.c(16): warning: no previous prototype for function 'Bluetooth_Read' [-Wmissing-prototypes]
+uint08_t Bluetooth_Read(void)
+         ^
+Bluetooth.c(16): note: declare 'static' if the function is not intended to be used outside of this translation unit
+uint08_t Bluetooth_Read(void)
+^
+static 
+Bluetooth.c(23): warning: no previous prototype for function 'Bluetooth_Write' [-Wmissing-prototypes]
+void Bluetooth_Write(unsigned char data)
+     ^
+Bluetooth.c(23): note: declare 'static' if the function is not intended to be used outside of this translation unit
+void Bluetooth_Write(unsigned char data)
+^
+static 
+Bluetooth.c(27): warning: no previous prototype for function 'Bluetooth_Write_String' [-Wmissing-prototypes]
+void Bluetooth_Write_String(char *str)
+     ^
+Bluetooth.c(27): note: declare 'static' if the function is not intended to be used outside of this translation unit
+void Bluetooth_Write_String(char *str)
+^
+static 
+Bluetooth.c(35): warning: no previous prototype for function 'Delay' [-Wmissing-prototypes]
+void Delay(unsigned long counter)
+     ^
+Bluetooth.c(35): note: declare 'static' if the function is not intended to be used outside of this translation unit
+void Delay(unsigned long counter)
+^
+static 
+Bluetooth.c(42): warning: no previous prototype for function 'Bluetooth_Control' [-Wmissing-prototypes]
+void Bluetooth_Control(char data)
+     ^
+Bluetooth.c(42): note: declare 'static' if the function is not intended to be used outside of this translation unit
+void Bluetooth_Control(char data)
+^
+static 
+6 warnings generated.
+compiling Bluetooth.c...
+Uart.c(26): warning: implicit conversion changes signedness: 'int' to 'unsigned long' [-Wsign-conversion]
+                        CLR_BIT(GPIO_PORTA_DIR_R,0);
+                        ^~~~~~~~~~~~~~~~~~~~~~~~~~~
+./BITMATH.h(5): note: expanded from macro 'CLR_BIT'
+#define CLR_BIT(Reg,Bit)                 ( (Reg) &= ~( (1) << (Bit) )  )
+                                                 ~~ ^~~~~~~~~~~~~~~~~
+Uart.c(32): warning: implicit conversion changes signedness: 'int' to 'unsigned long' [-Wsign-conversion]
+                        CLR_BIT(UART0_CTL_R,0); // Disable the UART by clearing the UARTEN bit in the UARTCTL register.
+                        ^~~~~~~~~~~~~~~~~~~~~~
+./BITMATH.h(5): note: expanded from macro 'CLR_BIT'
+#define CLR_BIT(Reg,Bit)                 ( (Reg) &= ~( (1) << (Bit) )  )
+                                                 ~~ ^~~~~~~~~~~~~~~~~
+Uart.c(37): warning: implicit conversion changes signedness: 'int' to 'unsigned long' [-Wsign-conversion]
+                        CLR_BIT(UART0_LCRH_R,3); // 111000
+                        ^~~~~~~~~~~~~~~~~~~~~~~
+./BITMATH.h(5): note: expanded from macro 'CLR_BIT'
+#define CLR_BIT(Reg,Bit)                 ( (Reg) &= ~( (1) << (Bit) )  )
+                                                 ~~ ^~~~~~~~~~~~~~~~~
+Uart.c(64): warning: implicit conversion changes signedness: 'int' to 'unsigned long' [-Wsign-conversion]
+                        CLR_BIT(GPIO_PORTB_DIR_R,0);
+                        ^~~~~~~~~~~~~~~~~~~~~~~~~~~
+./BITMATH.h(5): note: expanded from macro 'CLR_BIT'
+#define CLR_BIT(Reg,Bit)                 ( (Reg) &= ~( (1) << (Bit) )  )
+                                                 ~~ ^~~~~~~~~~~~~~~~~
+Uart.c(70): warning: implicit conversion changes signedness: 'int' to 'unsigned long' [-Wsign-conversion]
+                        CLR_BIT(UART1_CTL_R,0); // Disable the UART by clearing the UARTEN bit in the UARTCTL register.
+                        ^~~~~~~~~~~~~~~~~~~~~~
+./BITMATH.h(5): note: expanded from macro 'CLR_BIT'
+#define CLR_BIT(Reg,Bit)                 ( (Reg) &= ~( (1) << (Bit) )  )
+                                                 ~~ ^~~~~~~~~~~~~~~~~
+Uart.c(75): warning: implicit conversion changes signedness: 'int' to 'unsigned long' [-Wsign-conversion]
+                        CLR_BIT(UART1_LCRH_R,3); // 111000
+                        ^~~~~~~~~~~~~~~~~~~~~~~
+./BITMATH.h(5): note: expanded from macro 'CLR_BIT'
+#define CLR_BIT(Reg,Bit)                 ( (Reg) &= ~( (1) << (Bit) )  )
+                                                 ~~ ^~~~~~~~~~~~~~~~~
+Uart.c(99): warning: implicit conversion changes signedness: 'int' to 'unsigned long' [-Wsign-conversion]
+                        CLR_BIT(GPIO_PORTD_DIR_R,6);
+                        ^~~~~~~~~~~~~~~~~~~~~~~~~~~
+./BITMATH.h(5): note: expanded from macro 'CLR_BIT'
+#define CLR_BIT(Reg,Bit)                 ( (Reg) &= ~( (1) << (Bit) )  )
+                                                 ~~ ^~~~~~~~~~~~~~~~~
+Uart.c(105): warning: implicit conversion changes signedness: 'int' to 'unsigned long' [-Wsign-conversion]
+                        CLR_BIT(UART2_CTL_R,0); // Disable the UART by clearing the UARTEN bit in the UARTCTL register.
+                        ^~~~~~~~~~~~~~~~~~~~~~
+./BITMATH.h(5): note: expanded from macro 'CLR_BIT'
+#define CLR_BIT(Reg,Bit)                 ( (Reg) &= ~( (1) << (Bit) )  )
+                                                 ~~ ^~~~~~~~~~~~~~~~~
+Uart.c(110): warning: implicit conversion changes signedness: 'int' to 'unsigned long' [-Wsign-conversion]
+                        CLR_BIT(UART2_LCRH_R,3); // 111000
+                        ^~~~~~~~~~~~~~~~~~~~~~~
+./BITMATH.h(5): note: expanded from macro 'CLR_BIT'
+#define CLR_BIT(Reg,Bit)                 ( (Reg) &= ~( (1) << (Bit) )  )
+                                                 ~~ ^~~~~~~~~~~~~~~~~
+Uart.c(134): warning: implicit conversion changes signedness: 'int' to 'unsigned long' [-Wsign-conversion]
+                        CLR_BIT(GPIO_PORTC_DIR_R,6);
+                        ^~~~~~~~~~~~~~~~~~~~~~~~~~~
+./BITMATH.h(5): note: expanded from macro 'CLR_BIT'
+#define CLR_BIT(Reg,Bit)                 ( (Reg) &= ~( (1) << (Bit) )  )
+                                                 ~~ ^~~~~~~~~~~~~~~~~
+Uart.c(140): warning: implicit conversion changes signedness: 'int' to 'unsigned long' [-Wsign-conversion]
+                        CLR_BIT(UART3_CTL_R,0); // Disable the UART by clearing the UARTEN bit in the UARTCTL register.
+                        ^~~~~~~~~~~~~~~~~~~~~~
+./BITMATH.h(5): note: expanded from macro 'CLR_BIT'
+#define CLR_BIT(Reg,Bit)                 ( (Reg) &= ~( (1) << (Bit) )  )
+                                                 ~~ ^~~~~~~~~~~~~~~~~
+Uart.c(145): warning: implicit conversion changes signedness: 'int' to 'unsigned long' [-Wsign-conversion]
+                        CLR_BIT(UART3_LCRH_R,3); // 111000
+                        ^~~~~~~~~~~~~~~~~~~~~~~
+./BITMATH.h(5): note: expanded from macro 'CLR_BIT'
+#define CLR_BIT(Reg,Bit)                 ( (Reg) &= ~( (1) << (Bit) )  )
+                                                 ~~ ^~~~~~~~~~~~~~~~~
+Uart.c(169): warning: implicit conversion changes signedness: 'int' to 'unsigned long' [-Wsign-conversion]
+                        CLR_BIT(GPIO_PORTC_DIR_R,4);
+                        ^~~~~~~~~~~~~~~~~~~~~~~~~~~
+./BITMATH.h(5): note: expanded from macro 'CLR_BIT'
+#define CLR_BIT(Reg,Bit)                 ( (Reg) &= ~( (1) << (Bit) )  )
+                                                 ~~ ^~~~~~~~~~~~~~~~~
+Uart.c(175): warning: implicit conversion changes signedness: 'int' to 'unsigned long' [-Wsign-conversion]
+                        CLR_BIT(UART4_CTL_R,0); // Disable the UART by clearing the UARTEN bit in the UARTCTL register.
+                        ^~~~~~~~~~~~~~~~~~~~~~
+./BITMATH.h(5): note: expanded from macro 'CLR_BIT'
+#define CLR_BIT(Reg,Bit)                 ( (Reg) &= ~( (1) << (Bit) )  )
+                                                 ~~ ^~~~~~~~~~~~~~~~~
+Uart.c(180): warning: implicit conversion changes signedness: 'int' to 'unsigned long' [-Wsign-conversion]
+                        CLR_BIT(UART4_LCRH_R,3); // 111000
+                        ^~~~~~~~~~~~~~~~~~~~~~~
+./BITMATH.h(5): note: expanded from macro 'CLR_BIT'
+#define CLR_BIT(Reg,Bit)                 ( (Reg) &= ~( (1) << (Bit) )  )
+                                                 ~~ ^~~~~~~~~~~~~~~~~
+Uart.c(204): warning: implicit conversion changes signedness: 'int' to 'unsigned long' [-Wsign-conversion]
+                        CLR_BIT(GPIO_PORTE_DIR_R,4);
+                        ^~~~~~~~~~~~~~~~~~~~~~~~~~~
+./BITMATH.h(5): note: expanded from macro 'CLR_BIT'
+#define CLR_BIT(Reg,Bit)                 ( (Reg) &= ~( (1) << (Bit) )  )
+                                                 ~~ ^~~~~~~~~~~~~~~~~
+Uart.c(210): warning: implicit conversion changes signedness: 'int' to 'unsigned long' [-Wsign-conversion]
+                        CLR_BIT(UART5_CTL_R,0); // Disable the UART by clearing the UARTEN bit in the UARTCTL register.
+                        ^~~~~~~~~~~~~~~~~~~~~~
+./BITMATH.h(5): note: expanded from macro 'CLR_BIT'
+#define CLR_BIT(Reg,Bit)                 ( (Reg) &= ~( (1) << (Bit) )  )
+                                                 ~~ ^~~~~~~~~~~~~~~~~
+Uart.c(215): warning: implicit conversion changes signedness: 'int' to 'unsigned long' [-Wsign-conversion]
+                        CLR_BIT(UART5_LCRH_R,3); // 111000
+                        ^~~~~~~~~~~~~~~~~~~~~~~
+./BITMATH.h(5): note: expanded from macro 'CLR_BIT'
+#define CLR_BIT(Reg,Bit)                 ( (Reg) &= ~( (1) << (Bit) )  )
+                                                 ~~ ^~~~~~~~~~~~~~~~~
+Uart.c(239): warning: implicit conversion changes signedness: 'int' to 'unsigned long' [-Wsign-conversion]
+                        CLR_BIT(GPIO_PORTD_DIR_R,4);
+                        ^~~~~~~~~~~~~~~~~~~~~~~~~~~
+./BITMATH.h(5): note: expanded from macro 'CLR_BIT'
+#define CLR_BIT(Reg,Bit)                 ( (Reg) &= ~( (1) << (Bit) )  )
+                                                 ~~ ^~~~~~~~~~~~~~~~~
+Uart.c(245): warning: implicit conversion changes signedness: 'int' to 'unsigned long' [-Wsign-conversion]
+                        CLR_BIT(UART6_CTL_R,0); // Disable the UART by clearing the UARTEN bit in the UARTCTL register.
+                        ^~~~~~~~~~~~~~~~~~~~~~
+./BITMATH.h(5): note: expanded from macro 'CLR_BIT'
+#define CLR_BIT(Reg,Bit)                 ( (Reg) &= ~( (1) << (Bit) )  )
+                                                 ~~ ^~~~~~~~~~~~~~~~~
+Uart.c(250): warning: implicit conversion changes signedness: 'int' to 'unsigned long' [-Wsign-conversion]
+                        CLR_BIT(UART6_LCRH_R,3); // 111000
+                        ^~~~~~~~~~~~~~~~~~~~~~~
+./BITMATH.h(5): note: expanded from macro 'CLR_BIT'
+#define CLR_BIT(Reg,Bit)                 ( (Reg) &= ~( (1) << (Bit) )  )
+                                                 ~~ ^~~~~~~~~~~~~~~~~
+Uart.c(274): warning: implicit conversion changes signedness: 'int' to 'unsigned long' [-Wsign-conversion]
+                        CLR_BIT(GPIO_PORTE_DIR_R,0);
+                        ^~~~~~~~~~~~~~~~~~~~~~~~~~~
+./BITMATH.h(5): note: expanded from macro 'CLR_BIT'
+#define CLR_BIT(Reg,Bit)                 ( (Reg) &= ~( (1) << (Bit) )  )
+                                                 ~~ ^~~~~~~~~~~~~~~~~
+Uart.c(280): warning: implicit conversion changes signedness: 'int' to 'unsigned long' [-Wsign-conversion]
+                        CLR_BIT(UART7_CTL_R,0); // Disable the UART by clearing the UARTEN bit in the UARTCTL register.
+                        ^~~~~~~~~~~~~~~~~~~~~~
+./BITMATH.h(5): note: expanded from macro 'CLR_BIT'
+#define CLR_BIT(Reg,Bit)                 ( (Reg) &= ~( (1) << (Bit) )  )
+                                                 ~~ ^~~~~~~~~~~~~~~~~
+Uart.c(285): warning: implicit conversion changes signedness: 'int' to 'unsigned long' [-Wsign-conversion]
+                        CLR_BIT(UART7_LCRH_R,3); // 111000
+                        ^~~~~~~~~~~~~~~~~~~~~~~
+./BITMATH.h(5): note: expanded from macro 'CLR_BIT'
+#define CLR_BIT(Reg,Bit)                 ( (Reg) &= ~( (1) << (Bit) )  )
+                                                 ~~ ^~~~~~~~~~~~~~~~~
+Uart.c(340): warning: implicit conversion loses integer precision: 'volatile unsigned long' to 'uint08_t' (aka 'unsigned char') [-Wimplicit-int-conversion]
+                        * bytePtr = UART0_DR_R;
+                                  ~ ^~~~~~~~~~
+./tm4c123gh6pm.h(353): note: expanded from macro 'UART0_DR_R'
+#define UART0_DR_R              (*((volatile unsigned long *)0x4000C000))
+                                 ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Uart.c(344): warning: implicit conversion loses integer precision: 'volatile unsigned long' to 'uint08_t' (aka 'unsigned char') [-Wimplicit-int-conversion]
+                        * bytePtr = UART1_DR_R;
+                                  ~ ^~~~~~~~~~
+./tm4c123gh6pm.h(378): note: expanded from macro 'UART1_DR_R'
+#define UART1_DR_R              (*((volatile unsigned long *)0x4000D000))
+                                 ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Uart.c(349): warning: implicit conversion loses integer precision: 'volatile unsigned long' to 'uint08_t' (aka 'unsigned char') [-Wimplicit-int-conversion]
+                        * bytePtr = UART2_DR_R;
+                                  ~ ^~~~~~~~~~
+./tm4c123gh6pm.h(403): note: expanded from macro 'UART2_DR_R'
+#define UART2_DR_R              (*((volatile unsigned long *)0x4000E000))
+                                 ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Uart.c(354): warning: implicit conversion loses integer precision: 'volatile unsigned long' to 'uint08_t' (aka 'unsigned char') [-Wimplicit-int-conversion]
+                        * bytePtr = UART3_DR_R;
+                                  ~ ^~~~~~~~~~
+./tm4c123gh6pm.h(428): note: expanded from macro 'UART3_DR_R'
+#define UART3_DR_R              (*((volatile unsigned long *)0x4000F000))
+                                 ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Uart.c(359): warning: implicit conversion loses integer precision: 'volatile unsigned long' to 'uint08_t' (aka 'unsigned char') [-Wimplicit-int-conversion]
+                        * bytePtr = UART4_DR_R;
+                                  ~ ^~~~~~~~~~
+./tm4c123gh6pm.h(453): note: expanded from macro 'UART4_DR_R'
+#define UART4_DR_R              (*((volatile unsigned long *)0x40010000))
+                                 ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Uart.c(364): warning: implicit conversion loses integer precision: 'volatile unsigned long' to 'uint08_t' (aka 'unsigned char') [-Wimplicit-int-conversion]
+                        * bytePtr = UART5_DR_R;
+                                  ~ ^~~~~~~~~~
+./tm4c123gh6pm.h(478): note: expanded from macro 'UART5_DR_R'
+#define UART5_DR_R              (*((volatile unsigned long *)0x40011000))
+                                 ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Uart.c(369): warning: implicit conversion loses integer precision: 'volatile unsigned long' to 'uint08_t' (aka 'unsigned char') [-Wimplicit-int-conversion]
+                        * bytePtr = UART6_DR_R;
+                                  ~ ^~~~~~~~~~
+./tm4c123gh6pm.h(503): note: expanded from macro 'UART6_DR_R'
+#define UART6_DR_R              (*((volatile unsigned long *)0x40012000))
+                                 ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Uart.c(374): warning: implicit conversion loses integer precision: 'volatile unsigned long' to 'uint08_t' (aka 'unsigned char') [-Wimplicit-int-conversion]
+                        * bytePtr = UART7_DR_R;
+                                  ~ ^~~~~~~~~~
+./tm4c123gh6pm.h(528): note: expanded from macro 'UART7_DR_R'
+#define UART7_DR_R              (*((volatile unsigned long *)0x40013000))
+                                 ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Uart.c(386): warning: misleading indentation; statement is not part of the previous 'if' [-Wmisleading-indentation]
+        switch (UART_n) {
+        ^
+Uart.c(384): note: previous statement is here
+    else if (UART_INT == UART_TX_INT)
+    ^
+Uart.c(433): warning: signed shift result (0x80000000) sets the sign bit of the shift expression's type ('int') and becomes negative [-Wshift-sign-overflow]
+                SET_BIT(NVIC_EN1_R, 31);  // Enable interrupt for UART7
+                ^~~~~~~~~~~~~~~~~~~~~~~
+./BITMATH.h(4): note: expanded from macro 'SET_BIT'
+#define SET_BIT(Reg,Bit)                 ( (Reg) |=  ( (1) << (Bit) )  )
+                                                       ~~~ ^  ~~~~~
+Uart.c(433): warning: implicit conversion changes signedness: 'int' to 'unsigned long' [-Wsign-conversion]
+                SET_BIT(NVIC_EN1_R, 31);  // Enable interrupt for UART7
+                ^~~~~~~~~~~~~~~~~~~~~~~
+./BITMATH.h(4): note: expanded from macro 'SET_BIT'
+#define SET_BIT(Reg,Bit)                 ( (Reg) |=  ( (1) << (Bit) )  )
+                                                 ~~    ~~~~^~~~~~~~
+Uart.c(389): warning: variable 'bit_no' may be uninitialized when used here [-Wconditional-uninitialized]
+            CLR_BIT(UART0_ICR_R, bit_no); // Clear interrupt
+                                 ^~~~~~
+./BITMATH.h(5): note: expanded from macro 'CLR_BIT'
+#define CLR_BIT(Reg,Bit)                 ( (Reg) &= ~( (1) << (Bit) )  )
+                                                               ^~~
+Uart.c(381): note: initialize the variable 'bit_no' to silence this warning
+    uint08_t bit_no;
+                   ^
+                    = '\0'
+Uart.c(443): warning: misleading indentation; statement is not part of the previous 'if' [-Wmisleading-indentation]
+        switch (UART_n) {
+        ^
+Uart.c(441): note: previous statement is here
+    else if (UART_INT == UART_TX_INT)
+    ^
+Uart.c(482): warning: signed shift result (0x80000000) sets the sign bit of the shift expression's type ('int') and becomes negative [-Wshift-sign-overflow]
+                SET_BIT(NVIC_DIS1_R, 31);  // Disable interrupt for UART7
+                ^~~~~~~~~~~~~~~~~~~~~~~~
+./BITMATH.h(4): note: expanded from macro 'SET_BIT'
+#define SET_BIT(Reg,Bit)                 ( (Reg) |=  ( (1) << (Bit) )  )
+                                                       ~~~ ^  ~~~~~
+Uart.c(482): warning: implicit conversion changes signedness: 'int' to 'unsigned long' [-Wsign-conversion]
+                SET_BIT(NVIC_DIS1_R, 31);  // Disable interrupt for UART7
+                ^~~~~~~~~~~~~~~~~~~~~~~~
+./BITMATH.h(4): note: expanded from macro 'SET_BIT'
+#define SET_BIT(Reg,Bit)                 ( (Reg) |=  ( (1) << (Bit) )  )
+                                                 ~~    ~~~~^~~~~~~~
+Uart.c(446): warning: variable 'bit_no' may be uninitialized when used here [-Wconditional-uninitialized]
+            CLR_BIT(UART0_ICR_R, bit_no); // Clear interrupt
+                                 ^~~~~~
+./BITMATH.h(5): note: expanded from macro 'CLR_BIT'
+#define CLR_BIT(Reg,Bit)                 ( (Reg) &= ~( (1) << (Bit) )  )
+                                                               ^~~
+Uart.c(438): note: initialize the variable 'bit_no' to silence this warning
+    uint08_t bit_no;
+                   ^
+                    = '\0'
+Uart.c(491): warning: implicit conversion loses integer precision: 'volatile unsigned long' to 'uint08_t' (aka 'unsigned char') [-Wimplicit-int-conversion]
+        data = UART0_DR_R; // Read the received character from UART0
+             ~ ^~~~~~~~~~
+./tm4c123gh6pm.h(353): note: expanded from macro 'UART0_DR_R'
+#define UART0_DR_R              (*((volatile unsigned long *)0x4000C000))
+                                 ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Uart.c(509): warning: implicit conversion loses integer precision: 'volatile unsigned long' to 'uint08_t' (aka 'unsigned char') [-Wimplicit-int-conversion]
+        data = UART1_DR_R; // Read the received character from UART1
+             ~ ^~~~~~~~~~
+./tm4c123gh6pm.h(378): note: expanded from macro 'UART1_DR_R'
+#define UART1_DR_R              (*((volatile unsigned long *)0x4000D000))
+                                 ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Uart.c(527): warning: implicit conversion loses integer precision: 'volatile unsigned long' to 'uint08_t' (aka 'unsigned char') [-Wimplicit-int-conversion]
+        data = UART2_DR_R; // Read the received character from UART2
+             ~ ^~~~~~~~~~
+./tm4c123gh6pm.h(403): note: expanded from macro 'UART2_DR_R'
+#define UART2_DR_R              (*((volatile unsigned long *)0x4000E000))
+                                 ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Uart.c(545): warning: implicit conversion loses integer precision: 'volatile unsigned long' to 'uint08_t' (aka 'unsigned char') [-Wimplicit-int-conversion]
+        data = UART3_DR_R; // Read the received character from UART3
+             ~ ^~~~~~~~~~
+./tm4c123gh6pm.h(428): note: expanded from macro 'UART3_DR_R'
+#define UART3_DR_R              (*((volatile unsigned long *)0x4000F000))
+                                 ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Uart.c(563): warning: implicit conversion loses integer precision: 'volatile unsigned long' to 'uint08_t' (aka 'unsigned char') [-Wimplicit-int-conversion]
+        data = UART4_DR_R; // Read the received character from UART4
+             ~ ^~~~~~~~~~
+./tm4c123gh6pm.h(453): note: expanded from macro 'UART4_DR_R'
+#define UART4_DR_R              (*((volatile unsigned long *)0x40010000))
+                                 ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Uart.c(581): warning: implicit conversion loses integer precision: 'volatile unsigned long' to 'uint08_t' (aka 'unsigned char') [-Wimplicit-int-conversion]
+        data = UART5_DR_R; // Read the received character from UART5
+             ~ ^~~~~~~~~~
+./tm4c123gh6pm.h(478): note: expanded from macro 'UART5_DR_R'
+#define UART5_DR_R              (*((volatile unsigned long *)0x40011000))
+                                 ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Uart.c(599): warning: implicit conversion loses integer precision: 'volatile unsigned long' to 'uint08_t' (aka 'unsigned char') [-Wimplicit-int-conversion]
+        data = UART6_DR_R; // Read the received character from UART6
+             ~ ^~~~~~~~~~
+./tm4c123gh6pm.h(503): note: expanded from macro 'UART6_DR_R'
+#define UART6_DR_R              (*((volatile unsigned long *)0x40012000))
+                                 ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Uart.c(617): warning: implicit conversion loses integer precision: 'volatile unsigned long' to 'uint08_t' (aka 'unsigned char') [-Wimplicit-int-conversion]
+        data = UART7_DR_R; // Read the received character from UART7
+             ~ ^~~~~~~~~~
+./tm4c123gh6pm.h(528): note: expanded from macro 'UART7_DR_R'
+#define UART7_DR_R              (*((volatile unsigned long *)0x40013000))
+                                 ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Uart.c(638): warning: no newline at end of file [-Wnewline-eof]
+        
+        ^
+Uart.c(6): warning: no previous extern declaration for non-static variable 'data' [-Wmissing-variable-declarations]
+uint08_t data;
+         ^
+Uart.c(6): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+uint08_t data;
+^
+50 warnings generated.
+compiling Uart.c...
+PWM.c(14): warning: unused parameter 'module' [-Wunused-parameter]
+void PWMClockSet (PWM_Module module,PWM_Number number)
+                             ^
+PWM.c(14): warning: unused parameter 'number' [-Wunused-parameter]
+void PWMClockSet (PWM_Module module,PWM_Number number)
+                                               ^
+PWM.c(95): warning: unused parameter 'div' [-Wunused-parameter]
+void PWMDiv(PWM_SYSCLK_DIV div)
+                           ^
+PWM.c(105): warning: unused parameter 'module' [-Wunused-parameter]
+void PWMPinConfigure(PWM_Module module,PWM_Number number)
+                                ^
+PWM.c(105): warning: unused parameter 'number' [-Wunused-parameter]
+void PWMPinConfigure(PWM_Module module,PWM_Number number)
+                                                  ^
+PWM.c(334): warning: unused parameter 'module' [-Wunused-parameter]
+void PWMGenDisable(PWM_Module module,PWM_Number number)
+                              ^
+PWM.c(334): warning: unused parameter 'number' [-Wunused-parameter]
+void PWMGenDisable(PWM_Module module,PWM_Number number)
+                                                ^
+PWM.c(388): warning: unused parameter 'module' [-Wunused-parameter]
+void PWMGenConfigure (PWM_Module module, PWM_Mode mode, PWM_Number number)
+                                 ^
+PWM.c(388): warning: unused parameter 'mode' [-Wunused-parameter]
+void PWMGenConfigure (PWM_Module module, PWM_Mode mode, PWM_Number number)
+                                                  ^
+PWM.c(388): warning: unused parameter 'number' [-Wunused-parameter]
+void PWMGenConfigure (PWM_Module module, PWM_Mode mode, PWM_Number number)
+                                                                   ^
+PWM.c(736): warning: unused parameter 'module' [-Wunused-parameter]
+void PWMGenPeriodSet(PWM_Module module, PWM_Number number, PWM_SYSCLK_DIV div, uint32_t Clock_Required)
+                                ^
+PWM.c(736): warning: unused parameter 'number' [-Wunused-parameter]
+void PWMGenPeriodSet(PWM_Module module, PWM_Number number, PWM_SYSCLK_DIV div, uint32_t Clock_Required)
+                                                   ^
+PWM.c(736): warning: unused parameter 'div' [-Wunused-parameter]
+void PWMGenPeriodSet(PWM_Module module, PWM_Number number, PWM_SYSCLK_DIV div, uint32_t Clock_Required)
+                                                                          ^
+PWM.c(736): warning: unused parameter 'Clock_Required' [-Wunused-parameter]
+void PWMGenPeriodSet(PWM_Module module, PWM_Number number, PWM_SYSCLK_DIV div, uint32_t Clock_Required)
+                                                                                        ^
+PWM.c(824): warning: unused parameter 'module' [-Wunused-parameter]
+void PWMDutyCycleSet(PWM_Module module, PWM_Number number, PWM_Mode mode, uint32_t duty_cycle)
+                                ^
+PWM.c(824): warning: unused parameter 'number' [-Wunused-parameter]
+void PWMDutyCycleSet(PWM_Module module, PWM_Number number, PWM_Mode mode, uint32_t duty_cycle)
+                                                   ^
+PWM.c(824): warning: unused parameter 'mode' [-Wunused-parameter]
+void PWMDutyCycleSet(PWM_Module module, PWM_Number number, PWM_Mode mode, uint32_t duty_cycle)
+                                                                    ^
+PWM.c(824): warning: unused parameter 'duty_cycle' [-Wunused-parameter]
+void PWMDutyCycleSet(PWM_Module module, PWM_Number number, PWM_Mode mode, uint32_t duty_cycle)
+                                                                                   ^
+PWM.c(1143): warning: unused parameter 'module' [-Wunused-parameter]
+void PWMGenEnable(PWM_Module module,PWM_Number number)
+                             ^
+PWM.c(1143): warning: unused parameter 'number' [-Wunused-parameter]
+void PWMGenEnable(PWM_Module module,PWM_Number number)
+                                               ^
+PWM.c(1219): warning: unused parameter 'module' [-Wunused-parameter]
+void PWM_Init(PWM_Module module,PWM_Number number,PWM_SYSCLK_DIV div,PWM_Mode mode,uint32_t Clock_Required,uint32_t duty_cycle)
+                         ^
+PWM.c(1219): warning: unused parameter 'number' [-Wunused-parameter]
+void PWM_Init(PWM_Module module,PWM_Number number,PWM_SYSCLK_DIV div,PWM_Mode mode,uint32_t Clock_Required,uint32_t duty_cycle)
+                                           ^
+PWM.c(1219): warning: unused parameter 'div' [-Wunused-parameter]
+void PWM_Init(PWM_Module module,PWM_Number number,PWM_SYSCLK_DIV div,PWM_Mode mode,uint32_t Clock_Required,uint32_t duty_cycle)
+                                                                 ^
+PWM.c(1219): warning: unused parameter 'mode' [-Wunused-parameter]
+void PWM_Init(PWM_Module module,PWM_Number number,PWM_SYSCLK_DIV div,PWM_Mode mode,uint32_t Clock_Required,uint32_t duty_cycle)
+                                                                              ^
+PWM.c(1219): warning: unused parameter 'Clock_Required' [-Wunused-parameter]
+void PWM_Init(PWM_Module module,PWM_Number number,PWM_SYSCLK_DIV div,PWM_Mode mode,uint32_t Clock_Required,uint32_t duty_cycle)
+                                                                                            ^
+PWM.c(1219): warning: unused parameter 'duty_cycle' [-Wunused-parameter]
+void PWM_Init(PWM_Module module,PWM_Number number,PWM_SYSCLK_DIV div,PWM_Mode mode,uint32_t Clock_Required,uint32_t duty_cycle)
+                                                                                                                    ^
+26 warnings generated.
+compiling PWM.c...
+RTE/Device/TM4C123GH6PM/system_TM4C123.c(576): warning: 'CLOCK_SETUP' is not defined, evaluates to 0 [-Wundef]
+#if(CLOCK_SETUP)
+    ^
+RTE/Device/TM4C123GH6PM/system_TM4C123.c(586): warning: 'CLOCK_SETUP' is not defined, evaluates to 0 [-Wundef]
+#if(CLOCK_SETUP)
+    ^
+2 warnings generated.
+compiling system_TM4C123.c...
+assembling startup_TM4C123.s...
+linking...
+Program Size: Code=13076 RO-data=1208 RW-data=0 ZI-data=640  
+".\Objects\sonic.axf" - 0 Error(s), 154 Warning(s).
+
+<h2>Software Packages used:</h2>
+
+Package Vendor: ARM
+                http://www.keil.com/pack/ARM.CMSIS.5.9.0.pack
+                ARM.CMSIS.5.9.0
+                CMSIS (Common Microcontroller Software Interface Standard)
+   * Component: CORE Version: 5.6.0
+
+Package Vendor: Keil
+                http://www.keil.com/pack/Keil.TM4C_DFP.1.1.0.pack
+                Keil.TM4C_DFP.1.1.0
+                Texas Instruments Tiva C Series Device Support and Examples
+   * Component: Startup Version: 1.0.1
+
+<h2>Collection of Component include folders:</h2>
+  ./RTE/_Target_1
+  C:/Users/SHEREF ZEDAN/AppData/Local/Arm/Packs/ARM/CMSIS/5.9.0/CMSIS/Core/Include
+  C:/Users/SHEREF ZEDAN/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123
+
+<h2>Collection of Component Files used:</h2>
+
+   * Component: ARM::CMSIS:CORE:5.6.0
+
+   * Component: Keil::Device:Startup:1.0.1
+      Source file:   Device/Source/system_TM4C123.c
+      Source file:   Device/Source/ARM/startup_TM4C123.s
+      Include file:  Device/Include/TM4C123/TM4C123.h
+Build Time Elapsed:  00:00:04
+</pre>
+</body>
+</html>
