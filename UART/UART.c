@@ -3,8 +3,6 @@
 #include "../tm4c123gh6pm.h"
 #include "../Type.h"
 
-uint08_t data;
-
 void UART_INIT (uint08_t UART_n) {
     uint32_t delay;
     /* Baudrate 9600 , Stop 1 , No Paritiy , 8 Bits Data , 16 MHz*/
@@ -330,27 +328,35 @@ void UART_RX (uint08_t * bytePtr, uint08_t UART_n) {
         case UART_0:
             while(GET_BIT(UART0_FR_R,4)==1); // Wait for RXFE
 			* bytePtr = UART0_DR_R;
+            break;
         case UART_1: 
             while(GET_BIT(UART1_FR_R,4)==1); // Wait for RXFE
 			* bytePtr = UART1_DR_R;
+            break;
         case UART_2: 
             while(GET_BIT(UART2_FR_R,4)==1); // Wait for RXFE
 			* bytePtr = UART2_DR_R;
+            break;
         case UART_3: 
             while(GET_BIT(UART3_FR_R,4)==1); // Wait for RXFE
 			* bytePtr = UART3_DR_R;
+            break;
         case UART_4: 
             while(GET_BIT(UART4_FR_R,4)==1); // Wait for RXFE
 			* bytePtr = UART4_DR_R;
+            break;
         case UART_5: 
             while(GET_BIT(UART5_FR_R,4)==1); // Wait for RXFE
 			* bytePtr = UART5_DR_R;
+            break;
         case UART_6: 
             while(GET_BIT(UART6_FR_R,4)==1); // Wait for RXFE
 			* bytePtr = UART6_DR_R;
+            break;
         case UART_7: 
             while(GET_BIT(UART7_FR_R,4)==1); // Wait for RXFE
 			* bytePtr = UART7_DR_R;
+            break;
     }
 }
 
@@ -465,147 +471,15 @@ void UARTIntDisable(uint08_t UART_n, uint08_t UART_INT) {
     }
 }
 
-void UART0_Handler(void) {
-    // Check if the interrupt is due to RX
-    if(UART0_MIS_R & UART_MIS_RXMIS) {
-        // RX interrupt handling
-        UART_RX(&data, UART_0); // Read the received character from UART0
-        // Your RX handling code here
+void UART_String_TX(char *str, uint32_t length, uint08_t UART_n)
+{
+    uint32_t i;
+    for (i = 0; i < length; i++) {
+        UART_TX(str[i], UART_n);
     }
-
-    // Check if the interrupt is due to TX
-    if(UART0_MIS_R & UART_MIS_TXMIS) {
-        // TX interrupt handling
-        // Your TX handling code here
-        UART_TX (data, UART_0);
+    /*
+    while (*str != '\0') {
+        UART_TX(str++, UART_n);
     }
-    
-    // Clear the interrupt flags
-    UART0_ICR_R |= UART_ICR_RXIC | UART_ICR_TXIC;
-}
-void UART1_Handler(void) {
-    // Check if the interrupt is due to RX
-    if(UART1_MIS_R & UART_MIS_RXMIS) {
-        // RX interrupt handling
-        UART_RX(&data, UART_1); // Read the received character from UART1
-        // Your RX handling code here
-    }
-    
-    // Check if the interrupt is due to TX
-    if(UART1_MIS_R & UART_MIS_TXMIS) {
-        // TX interrupt handling
-        // Your TX handling code here
-        UART_TX (data, UART_1);
-    }
-    
-    // Clear the interrupt flags
-    UART1_ICR_R |= UART_ICR_RXIC | UART_ICR_TXIC;
-}
-void UART2_Handler(void) {
-    // Check if the interrupt is due to RX
-    if(UART2_MIS_R & UART_MIS_RXMIS) {
-        // RX interrupt handling
-        UART_RX(&data, UART_2); // Read the received character from UART2
-        // Your RX handling code here
-    }
-    
-    // Check if the interrupt is due to TX
-    if(UART2_MIS_R & UART_MIS_TXMIS) {
-        // TX interrupt handling
-        // Your TX handling code here
-        UART_TX (data, UART_2);
-    }
-    
-    // Clear the interrupt flags
-    UART2_ICR_R |= UART_ICR_RXIC | UART_ICR_TXIC;
-}
-void UART3_Handler(void) {
-    // Check if the interrupt is due to RX
-    if(UART3_MIS_R & UART_MIS_RXMIS) {
-        // RX interrupt handling
-        UART_RX(&data, UART_3); // Read the received character from UART3
-        // Your RX handling code here
-    }
-    
-    // Check if the interrupt is due to TX
-    if(UART3_MIS_R & UART_MIS_TXMIS) {
-        // TX interrupt handling
-        // Your TX handling code here
-        UART_TX (data, UART_3);
-    }
-    
-    // Clear the interrupt flags
-    UART3_ICR_R |= UART_ICR_RXIC | UART_ICR_TXIC;
-}
-void UART4_Handler(void) {
-    // Check if the interrupt is due to RX
-    if(UART4_MIS_R & UART_MIS_RXMIS) {
-        // RX interrupt handling
-        UART_RX(&data, UART_4); // Read the received character from UART4
-        // Your RX handling code here
-    }
-    
-    // Check if the interrupt is due to TX
-    if(UART4_MIS_R & UART_MIS_TXMIS) {
-        // TX interrupt handling
-        // Your TX handling code here
-        UART_TX (data, UART_4);
-    }
-    
-    // Clear the interrupt flags
-    UART4_ICR_R |= UART_ICR_RXIC | UART_ICR_TXIC;
-}
-void UART5_Handler(void) {
-    // Check if the interrupt is due to RX
-    if(UART5_MIS_R & UART_MIS_RXMIS) {
-        // RX interrupt handling
-        UART_RX(&data, UART_5); // Read the received character from UART5
-        // Your RX handling code here
-    }
-    
-    // Check if the interrupt is due to TX
-    if(UART5_MIS_R & UART_MIS_TXMIS) {
-        // TX interrupt handling
-        // Your TX handling code here
-        UART_TX (data, UART_5);
-    }
-    
-    // Clear the interrupt flags
-    UART5_ICR_R |= UART_ICR_RXIC | UART_ICR_TXIC;
-}
-void UART6_Handler(void) {
-    // Check if the interrupt is due to RX
-    if(UART6_MIS_R & UART_MIS_RXMIS) {
-        // RX interrupt handling
-        UART_RX(&data, UART_6); // Read the received character from UART6
-        // Your RX handling code here
-    }
-    
-    // Check if the interrupt is due to TX
-    if(UART6_MIS_R & UART_MIS_TXMIS) {
-        // TX interrupt handling
-        // Your TX handling code here
-        UART_TX (data, UART_6);
-    }
-    
-    // Clear the interrupt flags
-    UART6_ICR_R |= UART_ICR_RXIC | UART_ICR_TXIC;
-}
-void UART7_Handler(void) {
-    // Check if the interrupt is due to RX
-    if(UART7_MIS_R & UART_MIS_RXMIS) {
-        // RX interrupt handling
-        UART_RX(&data, UART_7); // Read the received character from UART7
-        // Your RX handling code here
-    }
-    
-    // Check if the interrupt is due to TX
-    if(UART7_MIS_R & UART_MIS_TXMIS) {
-        // TX interrupt handling
-        // Your TX handling code here
-        UART_TX (data, UART_7);
-    }
-    
-    // Clear the interrupt flags
-    UART7_ICR_R |= UART_ICR_RXIC | UART_ICR_TXIC;
+    */
 }
