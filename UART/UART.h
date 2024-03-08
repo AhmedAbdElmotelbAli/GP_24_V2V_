@@ -1,5 +1,6 @@
 #ifndef _UART_H_
 #define _UART_H_
+#include "../Type.h"
 
 // UART typedef, usage: UART_n UART_0. Send UART_0 as an argument to functions.
 typedef enum {
@@ -56,5 +57,8 @@ UART Transmit String Function
 Transmits a string byte by byte through the passed UART module. Send the address, length of the string, and UART module as arguments.
 Needs UART Initialization before usage.
 */
-void UART_String_TX(char *str, uint32_t length, uint08_t UART_n);
+void UART_String_TX(char *str, uint08_t UART_n);
+
+void Delay(unsigned long counter);
+
 #endif

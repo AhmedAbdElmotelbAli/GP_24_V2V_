@@ -1,10 +1,8 @@
 #include "UART.h"
 #include "../BITMATH.h"
 #include "../tm4c123gh6pm.h"
-#include "../Type.h"
 
 void UART_INIT (uint08_t UART_n) {
-    uint32_t delay;
     /* Baudrate 9600 , Stop 1 , No Paritiy , 8 Bits Data , 16 MHz*/
     switch (UART_n)
     {
@@ -12,7 +10,7 @@ void UART_INIT (uint08_t UART_n) {
             SET_BIT(SYSCTL_RCGCUART_R, 0); // Enable the UART module using the RCGCUART register (UART 0)
             SET_BIT(SYSCTL_RCGCGPIO_R, 0); // Enable the clock to the appropriate GPIO module via the RCGCGPIO register (PORT A)
             /*Wait to ensure that clock had been enabled*/
-			(void)(delay = 1);
+			Delay(10);
             SET_BIT(GPIO_PORTA_AFSEL_R, 0); // Configure the GPIO by setting the AFSEL bit (PORT A pin 0)
             SET_BIT(GPIO_PORTA_AFSEL_R, 1); // Configure the GPIO by setting the AFSEL bit (PORT A pin 1)
             
@@ -42,14 +40,13 @@ void UART_INIT (uint08_t UART_n) {
             SET_BIT(UART0_CTL_R, 0); // Enable UART
             SET_BIT(UART0_CTL_R, 8); // Enable TX
             SET_BIT(UART0_CTL_R, 9); // Enable RX
-            // Enable UART0 interrupts globally
-            
             break;
+
         case UART_1:
             SET_BIT(SYSCTL_RCGCUART_R, 1); // Enable the UART module using the RCGCUART register (UART 1)
             SET_BIT(SYSCTL_RCGCGPIO_R, 1); // Enable the clock to the appropriate GPIO module via the RCGCGPIO register (PORT B)
             /*Wait to ensure that clock had been enabled*/
-			(void)(delay = 1);
+			Delay(10);
             SET_BIT(GPIO_PORTB_AFSEL_R, 0); // Configure the GPIO by setting the AFSEL bit (PORT B pin 0)
             SET_BIT(GPIO_PORTB_AFSEL_R, 1); // Configure the GPIO by setting the AFSEL bit (PORT B pin 1)
             
@@ -79,11 +76,12 @@ void UART_INIT (uint08_t UART_n) {
             SET_BIT(UART1_CTL_R, 8); 
             SET_BIT(UART1_CTL_R, 9); 
             break;
+
         case UART_2:
             SET_BIT(SYSCTL_RCGCUART_R, 2); // Enable the UART module using the RCGCUART register (UART 2)
             SET_BIT(SYSCTL_RCGCGPIO_R, 3); // Enable the clock to the appropriate GPIO module via the RCGCGPIO register (PORT D)
             /*Wait to ensure that clock had been enabled*/
-			(void)(delay = 1);
+			Delay(10);
             SET_BIT(GPIO_PORTD_AFSEL_R, 6); // Configure the GPIO by setting the AFSEL bit (PORT D pin 6) - RX
             SET_BIT(GPIO_PORTD_AFSEL_R, 7); // Configure the GPIO by setting the AFSEL bit (PORT D pin 7) - TX
             
@@ -113,11 +111,12 @@ void UART_INIT (uint08_t UART_n) {
             SET_BIT(UART2_CTL_R, 8); 
             SET_BIT(UART2_CTL_R, 9); 
             break;
+
         case UART_3:
             SET_BIT(SYSCTL_RCGCUART_R, 3); // Enable the UART module using the RCGCUART register (UART 3)
             SET_BIT(SYSCTL_RCGCGPIO_R, 2); // Enable the clock to the appropriate GPIO module via the RCGCGPIO register (PORT C)
             /*Wait to ensure that clock had been enabled*/
-			(void)(delay = 1);
+			Delay(10);
             SET_BIT(GPIO_PORTC_AFSEL_R, 6); // Configure the GPIO by setting the AFSEL bit (PORT C pin 6) - RX
             SET_BIT(GPIO_PORTC_AFSEL_R, 7); // Configure the GPIO by setting the AFSEL bit (PORT C pin 7) - TX
             
@@ -147,11 +146,12 @@ void UART_INIT (uint08_t UART_n) {
             SET_BIT(UART3_CTL_R, 8); 
             SET_BIT(UART3_CTL_R, 9); 
             break;
+
         case UART_4:
             SET_BIT(SYSCTL_RCGCUART_R, 4); // Enable the UART module using the RCGCUART register (UART 4)
             SET_BIT(SYSCTL_RCGCGPIO_R, 2); // Enable the clock to the appropriate GPIO module via the RCGCGPIO register (PORT C)
             /*Wait to ensure that clock had been enabled*/
-			(void)(delay = 1);
+			Delay(10);
             SET_BIT(GPIO_PORTC_AFSEL_R, 4); // Configure the GPIO by setting the AFSEL bit (PORT C pin 4) - RX
             SET_BIT(GPIO_PORTC_AFSEL_R, 5); // Configure the GPIO by setting the AFSEL bit (PORT C pin 5) - TX
             
@@ -181,11 +181,12 @@ void UART_INIT (uint08_t UART_n) {
             SET_BIT(UART4_CTL_R, 8); 
             SET_BIT(UART4_CTL_R, 9); 
             break;
+
         case UART_5:
             SET_BIT(SYSCTL_RCGCUART_R, 5); // Enable the UART module using the RCGCUART register (UART 5)
             SET_BIT(SYSCTL_RCGCGPIO_R, 4); // Enable the clock to the appropriate GPIO module via the RCGCGPIO register (PORT E)
             /*Wait to ensure that clock had been enabled*/
-			(void)(delay = 1);
+			Delay(10);
             SET_BIT(GPIO_PORTE_AFSEL_R, 4); // Configure the GPIO by setting the AFSEL bit (PORT E pin 4) - RX
             SET_BIT(GPIO_PORTE_AFSEL_R, 5); // Configure the GPIO by setting the AFSEL bit (PORT E pin 5) - TX
             
@@ -215,11 +216,12 @@ void UART_INIT (uint08_t UART_n) {
             SET_BIT(UART5_CTL_R, 8); 
             SET_BIT(UART5_CTL_R, 9); 
             break;
+
         case UART_6:
             SET_BIT(SYSCTL_RCGCUART_R, 6); // Enable the UART module using the RCGCUART register (UART 6)
             SET_BIT(SYSCTL_RCGCGPIO_R, 3); // Enable the clock to the appropriate GPIO module via the RCGCGPIO register (PORT D)
             /*Wait to ensure that clock had been enabled*/
-			(void)(delay = 1);
+			Delay(10);
             SET_BIT(GPIO_PORTD_AFSEL_R, 4); // Configure the GPIO by setting the AFSEL bit (PORT D pin 4) - RX
             SET_BIT(GPIO_PORTD_AFSEL_R, 5); // Configure the GPIO by setting the AFSEL bit (PORT D pin 5) - TX
             
@@ -249,11 +251,12 @@ void UART_INIT (uint08_t UART_n) {
             SET_BIT(UART6_CTL_R, 8); 
             SET_BIT(UART6_CTL_R, 9); 
             break;
+
         case UART_7:
             SET_BIT(SYSCTL_RCGCUART_R, 7); // Enable the UART module using the RCGCUART register (UART 7)
             SET_BIT(SYSCTL_RCGCGPIO_R, 4); // Enable the clock to the appropriate GPIO module via the RCGCGPIO register (PORT E)
             /*Wait to ensure that clock had been enabled*/
-			(void)(delay = 1);
+			Delay(10);
             SET_BIT(GPIO_PORTE_AFSEL_R, 0); // Configure the GPIO by setting the AFSEL bit (PORT E pin 0) - RX
             SET_BIT(GPIO_PORTE_AFSEL_R, 1); // Configure the GPIO by setting the AFSEL bit (PORT E pin 1) - TX
             
@@ -360,6 +363,36 @@ void UART_RX (uint08_t * bytePtr, uint08_t UART_n) {
     }
 }
 
+// Function that enables the NVIC for the desired UART module. Can be added in the initialization part.
+void UARTNVICEn (uint08_t UART_n) {
+	switch (UART_n) {
+        case UART_0:		
+            SET_BIT(NVIC_EN0_R, 5);  // Enable interrupt for UART0
+            break;
+        case UART_1:
+            SET_BIT(NVIC_EN0_R, 6);  // Enable interrupt for UART1
+            break;
+        case UART_2:  
+            SET_BIT(NVIC_EN1_R, 1);  // Enable interrupt for UART2
+            break;
+        case UART_3:
+            SET_BIT(NVIC_EN1_R, 27);  // Enable interrupt for UART3
+            break;
+        case UART_4:
+            SET_BIT(NVIC_EN1_R, 28);  // Enable interrupt for UART4
+            break;
+        case UART_5:
+            SET_BIT(NVIC_EN1_R, 29);  // Enable interrupt for UART5
+            break;
+        case UART_6:
+            SET_BIT(NVIC_EN1_R, 30);  // Enable interrupt for UART6
+            break;
+        case UART_7:
+            SET_BIT(NVIC_EN1_R, 31);  // Enable interrupt for UART7
+            break;
+    }
+}
+
 // Function that enables the desired interrupt. Can be added in the initialization part.
 
 void UARTIntEnable(uint08_t UART_n, uint08_t UART_INT){
@@ -371,51 +404,50 @@ void UARTIntEnable(uint08_t UART_n, uint08_t UART_INT){
 	switch (UART_n) {
         case UART_0:
             /* Enable Interrupts */
-            CLR_BIT(UART0_ICR_R, bit_no); // Clear interrupt
-            SET_BIT(UART0_IM_R, bit_no);  // Enable interrupt
-            SET_BIT(NVIC_EN0_R, 5);  // Enable interrupt for UART0
+			UART0_ICR_R &= ~(0x0780); // Clear interrupt
+            SET_BIT(UART0_IM_R, bit_no);  // Enable interrupt (TX / RX)
             break;
+
         case UART_1:
         	/* Enable Interrupts */
-            CLR_BIT(UART1_ICR_R, bit_no); 
+            UART1_ICR_R &= ~(0x0780); // Clear interrupt
             SET_BIT(UART1_IM_R, bit_no); 
-            SET_BIT(NVIC_EN0_R, 6);  // Enable interrupt for UART1
             break;
+
         case UART_2:
         	/* Enable Interrupts */
-        	CLR_BIT(UART2_ICR_R, bit_no);
+        	UART2_ICR_R &= ~(0x0780); // Clear interrupt
         	SET_BIT(UART2_IM_R, bit_no);  
-            SET_BIT(NVIC_EN1_R, 1);  // Enable interrupt for UART2
             break;
+            
         case UART_3:
         	/* Enable Interrupts */
-        	CLR_BIT(UART3_ICR_R, bit_no);
+        	UART3_ICR_R &= ~(0x0780); // Clear interrupt
             SET_BIT(UART3_IM_R, bit_no);
-            SET_BIT(NVIC_EN1_R, 27);  // Enable interrupt for UART3
             break;
+
         case UART_4:
         	/* Enable Interrupts */
-        	CLR_BIT(UART4_ICR_R, bit_no);
+        	UART4_ICR_R &= ~(0x0780); // Clear interrupt
         	SET_BIT(UART4_IM_R, bit_no);
-            SET_BIT(NVIC_EN1_R, 28);  // Enable interrupt for UART4
             break;
+
         case UART_5:
         	/* Enable Interrupts */
-        	CLR_BIT(UART5_ICR_R, bit_no);
+        	UART5_ICR_R &= ~(0x0780); // Clear interrupt
             SET_BIT(UART5_IM_R, bit_no); 
-            SET_BIT(NVIC_EN1_R, 29);  // Enable interrupt for UART5
             break;
+
         case UART_6:
         	/* Enable Interrupts */
-        	CLR_BIT(UART6_ICR_R, bit_no);
+        	UART6_ICR_R &= ~(0x0780); // Clear interrupt
         	SET_BIT(UART6_IM_R, bit_no);
-        	SET_BIT(NVIC_EN1_R, 30);  // Enable interrupt for UART6
             break;
+
         case UART_7:
         	/* Enable Interrupts */
-        	CLR_BIT(UART7_ICR_R, bit_no);
+        	UART7_ICR_R &= ~(0x0780); // Clear interrupt
         	SET_BIT(UART7_IM_R, bit_no);
-        	SET_BIT(NVIC_EN1_R, 31);  // Enable interrupt for UART7
             break;
     }
 }
@@ -430,56 +462,65 @@ void UARTIntDisable(uint08_t UART_n, uint08_t UART_INT) {
 	switch (UART_n) {
         case UART_0:
             /* Disable Interrupts */
-            CLR_BIT(UART0_ICR_R, bit_no); // Clear interrupt
+            UART0_ICR_R &= ~(0x0780); // Clear interrupt
             SET_BIT(NVIC_DIS0_R, 5);  // Disable interrupt for UART0
             break;
+        
         case UART_1:
         	/* Disable Interrupts */
-            CLR_BIT(UART1_ICR_R, bit_no); 
+            UART1_ICR_R &= ~(0x0780); // Clear interrupt
             SET_BIT(NVIC_DIS0_R, 6);  // Disable interrupt for UART1
             break;
+        
         case UART_2:
         	/* Disable Interrupts */
-        	CLR_BIT(UART2_ICR_R, bit_no);
+        	UART2_ICR_R &= ~(0x0780); // Clear interrupt
             SET_BIT(NVIC_DIS1_R, 1);  // Disable interrupt for UART2
             break;
+        
         case UART_3:
         	/* Disable Interrupts */
-        	CLR_BIT(UART3_ICR_R, bit_no);
+        	UART3_ICR_R &= ~(0x0780); // Clear interrupt
             SET_BIT(NVIC_DIS1_R, 27);  // Disable interrupt for UART3
             break;
+        
         case UART_4:
         	/* Disable Interrupts */
-        	CLR_BIT(UART4_ICR_R, bit_no);
+        	UART4_ICR_R &= ~(0x0780); // Clear interrupt
             SET_BIT(NVIC_DIS1_R, 28);  // Disable interrupt for UART4
             break;
+        
         case UART_5:
         	/* Disable Interrupts */
-        	CLR_BIT(UART5_ICR_R, bit_no);
+        	UART5_ICR_R &= ~(0x0780); // Clear interrupt
             SET_BIT(NVIC_DIS1_R, 29);  // Disable interrupt for UART5
             break;
+        
         case UART_6:
         	/* Disable Interrupts */
-        	CLR_BIT(UART6_ICR_R, bit_no);
+        	UART6_ICR_R &= ~(0x0780); // Clear interrupt
         	SET_BIT(NVIC_DIS1_R, 30);  // Disable interrupt for UART6
             break;
+        
         case UART_7:
         	/* Disable Interrupts */
-        	CLR_BIT(UART7_ICR_R, bit_no);
+        	UART7_ICR_R &= ~(0x0780); // Clear interrupt
         	SET_BIT(NVIC_DIS1_R, 31);  // Disable interrupt for UART7
             break;
     }
 }
 
-void UART_String_TX(char *str, uint32_t length, uint08_t UART_n)
+void UART_String_TX(char *str, uint08_t UART_n)
 {
-    uint32_t i;
-    for (i = 0; i < length; i++) {
-        UART_TX(str[i], UART_n);
-    }
-    /*
-    while (*str != '\0') {
-        UART_TX(str++, UART_n);
-    }
-    */
+    while(*str)
+		{
+			UART_TX(*(str++), UART_n);
+		}
+}
+
+void Delay(unsigned long counter)
+{
+	unsigned long i = 0;
+	
+	for(i=0; i< counter; i++);
 }
