@@ -3,6 +3,7 @@
 #include "../Type.h"
 
 // UART typedef, usage: UART_n UART_0. Send UART_0 as an argument to functions.
+
 typedef enum {
     UART_0,
     UART_1,
