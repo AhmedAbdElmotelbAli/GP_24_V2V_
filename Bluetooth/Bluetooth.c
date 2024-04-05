@@ -1,16 +1,16 @@
 /*
- * Bluetooth.c
- *
- *  Created on: 9/2/2024
- *      Author: Ahmed Abdelmotelb Ali
+ ============================================================================
+ File Name		: Bluetooth.c
+ Author			: Ahmed Abdelmotelb Ali
+ Version		: 4.0
+ Date			: 5/4/2023
+ Description	: This file contains the implementation of Bluetooth Driver
+ Notes			: 
+ ============================================================================
  */
-#include "tm4c123gh6pm.h"
-#include "Type.h"
-#include "UART.h"
-#include "Motor.h"
-#include "UltraSonic.h"
+
 #include "Bluetooth.h"
-#include "Lcd.h"
+
 
 void Bluetooth_Voidinit(void)
 {
