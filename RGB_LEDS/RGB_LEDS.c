@@ -1,15 +1,15 @@
 /*
- * RGB_LEDS.c
- *
- *  Created on: Dec 28, 2023
- *      Author: Ahmed Adel Hasssan
+ ============================================================================
+ File Name		: RGB_LEDS.c
+ Author			: Ahmed Abdelmotelb Ali
+ Version		: 1.0
+ Date			: 5/4/2023
+ Description	: This file contains the implementation of PWM Driver
+ Notes			: 
+ ============================================================================
  */
-#include "config.h"
-#include "Type.h"
-#include "BITMATH.h"
-#include "GPIO.h"
+
 #include "RGB_LEDS.h"
-#include "tm4c123gh6pm.h"
 
 void RGB_LEDS_Init(void){
     GPIO_Init(GPIO_PORTF,GPIO_PIN_1);//init Red led
