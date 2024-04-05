@@ -1,4 +1,14 @@
-#include "RTE_Main.h"
+/*
+ ============================================================================
+ File Name		: RTE.c
+ Author			: Ahmed Abdelmotelb Ali
+ Version		: 4.0
+ Date			: 5/4/2023
+ Description	: This file contains the implementation of RTE Driver
+ Notes			: 
+ ============================================================================
+ */
+ #include "RTE_Main.h"
 #include "stdbool.h"
 
 void RTE_Call_System_voidInit(void){
