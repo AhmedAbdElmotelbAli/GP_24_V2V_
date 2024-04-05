@@ -7,86 +7,121 @@
 #include "tm4c123gh6pm.h"
 #include "Type.h"
 #include "UART.h"
+#include "Motor.h"
+#include "UltraSonic.h"
+#include "Bluetooth.h"
 #include "Lcd.h"
-#include "RGB_LEDS.h"
-void Bluetooth_init(void)
+
+void Bluetooth_Voidinit(void)
 {
     UART_INIT(5);
 }
-uint08_t Bluetooth_Read(void)
+uint08_t Bluetooth_U8Read(void)
 {
 
        uint08_t data;
        UART_RX(&data,5);
        return  data;
 }
-void Bluetooth_Write(unsigned char data)
+void Bluetooth_VoidWrite(unsigned char data)
 {
     UART_TX(data,5);
 }
-void Bluetooth_Write_String(char *str)
+void Bluetooth_VoidWriteString(char *str)
 {
   while(*str)
     {
-        Bluetooth_Write(*(str++));
+        Bluetooth_VoidWrite(*(str++));
     }
 }
 
-void Delay(unsigned long counter)
-{
-    unsigned long i = 0;
 
-    for(i=0; i< counter; i++);
-}
-
-void Bluetooth_Control(char data)
+void Bluetooth_VoidControl(char data)
 {
-    switch (data)
+  /*char c ;
+	char static mesg[20];*/  /* string format of distance value */
+	//uint32_t distance;  
+	switch (data)
               {
-                  case 'A':
-                      RGB_LEDS_State(LED_STATE_ON,LED_STATE_OFF,LED_STATE_OFF);
-                       Bluetooth_Write_String("RED LED ON\n");
-                       LCD_clearScreen();
-                       LCD_displayString("RED LED ON");
+                  case 'F':
+										
+										Motor_VoidGoForward();
+										Bluetooth_VoidWriteString("forword\n");
                       break;
                   case 'B':
+                    Motor_VoidBackward();
+										Bluetooth_VoidWriteString("Backward\n");
+										
+                      break;
+                  case 'L':   
+	
+										Motor_VoidLEFT();
+										Bluetooth_VoidWriteString("LEFT\n");
+					
+                      break;
+                  case 'R':
                       /*Medium Speed*/
-                      RGB_LEDS_State(LED_STATE_OFF,LED_STATE_OFF,LED_STATE_OFF);
-                      Bluetooth_Write_String("RED LED OFF\n");
-                      LCD_clearScreen();
-                      LCD_displayString("RED LED OFF");
+							
+                     Motor_VoidRight();
+											Bluetooth_VoidWriteString("Right\n");
+
                       break;
-                  case 'C':
-                      RGB_LEDS_State(LED_STATE_OFF,LED_STATE_OFF,LED_STATE_ON);
-                      Bluetooth_Write_String("BLUE LED ON\n");
-                      LCD_clearScreen();
-                      LCD_displayString("BLUE LED ON");
+										  case 'G':
+		
+									
+									Motor_VoidLEFT();
+										Bluetooth_VoidWriteString("Farword LEFT\n");
+										
                       break;
-                  case 'D':
+                  case 'I':
                       /*Medium Speed*/
-                      RGB_LEDS_State(LED_STATE_OFF,LED_STATE_OFF,LED_STATE_OFF);
-                      Bluetooth_Write_String("BLUE LED OFF\n");
-                      LCD_clearScreen();
-                      LCD_displayString("BLUE LED OFF");
+									
+                     Motor_VoidRight();
+											Bluetooth_VoidWriteString("Farword Right\n");
+										
                       break;
-                  case 'E':
-                      RGB_LEDS_State(LED_STATE_OFF,LED_STATE_ON,LED_STATE_OFF);
-                      Bluetooth_Write_String("GREEN LED ON\n");
-                      LCD_clearScreen();
-                      LCD_displayString("GREEN LED ON");
+										case 'H': 
+					
+								   	Motor_VoidLEFT_B();
+										Bluetooth_VoidWriteString("Back LEFT\n");
+										
                       break;
-
-                  case 'F':
+                  case 'J':
+											
+										
+											Motor_VoidRight_B();
+											Bluetooth_VoidWriteString("Back Right\n");
+										
+                      break;
+										case '0': 
+										LCD_VoidclearScreen();											
+								   	Motor_VoidSetSpeed(MOTOR_SPEED_LOW);
+										Bluetooth_VoidWriteString("MOTOR SPEED LOW\n");
+									
+                      break;
+										 case '5':
+										LCD_VoidclearScreen();
                       /*Medium Speed*/
-                       RGB_LEDS_State(LED_STATE_OFF,LED_STATE_OFF,LED_STATE_OFF);
-                      Bluetooth_Write_String("GREEN LED OFF\n");
-                      LCD_clearScreen();
-                      LCD_displayString("GREEN LED ON");
+									
+                    Motor_VoidSetSpeed(MOTOR_SPEED_MID);
+										Bluetooth_VoidWriteString("MOTOR SPEED MID\n");
+										LCD_VoidDisplayString("MOTOR SPEED HIGH");
+										LCD_VoidclearScreen();										
                       break;
-
-
+                  case 'q':
+                    Motor_VoidSetSpeed(MOTOR_SPEED_HIGH);
+										Bluetooth_VoidWriteString("MOTOR SPEED HIGH\n");
+										
+                      break;
+                  case 'S':
+									LCD_VoidclearScreen();
+									Motor_VoidStop();
+									Bluetooth_VoidWriteString("Stop\n");
+                      break;
+									
                   default:
                       /*Do nothing*/
                       break;
               }
+
 }
