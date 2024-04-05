@@ -1,5 +1,14 @@
-#include "RTE_Main.h"
-#include "stdbool.h"
+/*
+ ============================================================================
+ File Name		: check.c
+ Author			: Ahmed Abdelmotelb Ali
+ Version		: 4.0
+ Date			: 5/4/2023
+ Description	: This file contains the implementation of check Driver
+ Notes			: 
+ ============================================================================
+ */
+
 #include "check.h"
 	
 	char validCommands[] = {'B', 'L', 'R', 'G', 'I', 'H', 'J'};
