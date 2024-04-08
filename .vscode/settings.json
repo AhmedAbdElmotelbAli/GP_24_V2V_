@@ -1,0 +1,13 @@
+{
+    "files.associations": {
+        "gpio.h": "c",
+        "uart.h": "c",
+        "on_board_switchs.h": "c",
+        "type.h": "c",
+        "lcd.h": "c",
+        "bitmath.h": "c",
+        "tm4c123gh6pm.h": "c",
+        "external_led.h": "c",
+        "rgb_leds.h": "c"
+    }
+}
