@@ -1,29 +1,30 @@
 /*
  ============================================================================
- File Name:     C.h
+ File Name:     LCD_Print.h
  Author      :  Ahmed Emad Hassan
  Version     :  1.0
  Date        :  06/12/2023
- Description :  Controller module
- Notes       :  Responsable for taking data from other modules and sending data to other modules
+ Description :  LCD Print module
+ Notes       :  responsable for printing warning messages at LCD
  ============================================================================
  */
+
 /* start header guard */
-#ifndef C_H_
-#define C_H_
+#ifndef LCD_Print_H_
+#define LCD_Print_H_
 /* include state.h */
 #include "state.h"
 /* define state id enum variable */
 enum{
-    C_normal,
-    C_emergency
-}C_state_id;
+    LCD_Print_normal,
+    LCD_Print_warning
+}LCD_Print_state_id;
 /* initialization */
-void C_Init();
+void Init();
 /* other functions and state functions */
-STATE_define(C_normal);
-STATE_define(C_emergency);
+STATE_define(LCD_Print_normal);
+STATE_define(LCD_Print_warning);
 /* state pointer to function */
-void (*C_state)();
+void (*LCD_Print_state)();
 /* end header guard */
 #endif

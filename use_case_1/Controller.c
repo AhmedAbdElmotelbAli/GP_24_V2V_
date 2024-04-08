@@ -1,6 +1,6 @@
 /*
  ============================================================================
- File Name:     C.c
+ File Name:     Controller.c
  Author      :  Ahmed Emad Hassan
  Version     :  1.0
  Date        :  06/12/2023
@@ -10,39 +10,38 @@
  */
 
 /* include C liberaries to test*/
-#include <stdio.h>
-#include <stdlib.h>
+
 #include <stdint.h>
 /* include the header file */
-#include "c.h"
+#include "Controller.h"
 /* extern state pointer */
-extern void (*C_state)();
+extern void (*Controller_state)();
 /* private attributes */
 static int32_t data = 0;
 static int32_t warning_state = 0;
 /* functions and states */
 void RWIFI_sendData(int32_t local_data){
     data = local_data;
-    switch (C_state_id)
+    switch (Controller_state_id)
     {
-    case C_normal:
+    case Controller_normal:
         if(local_data == 0){
             warning_state = 0;
-            C_state = STATE(C_normal);
+            Controller_state = STATE(Controller_normal);
         }else if(local_data == 1){
             warning_state = 1;
-            C_state = STATE(C_emergency);
+            Controller_state = STATE(Controller_emergency);
         }else{
             /* Misra required */
         }
         break;
-    case C_emergency:
+    case Controller_emergency:
         if(local_data == 0){
             warning_state = 0;
-            C_state = STATE(C_normal);
+            Controller_state = STATE(Controller_normal);
         }else if(local_data == 1){
             warning_state = 1;
-            C_state = STATE(C_emergency);
+            Controller_state = STATE(Controller_emergency);
         }else{
             /* Misra required */
         }
@@ -52,21 +51,21 @@ void RWIFI_sendData(int32_t local_data){
         break;
     }
 }
-STATE_define(C_normal){
+STATE_define(Controller_normal){
 	
     /* state name */
-    C_state_id = C_normal;
+    Controller_state_id = Controller_normal;
 	/* state action */
-    C_print_warning_state(warning_state);
+    Controller_print_warning_state(warning_state);
     /* event check */
-    C_state = STATE(C_normal);
+    Controller_state = STATE(Controller_normal);
 }
-STATE_define(C_emergency){
+STATE_define(Controller_emergency){
 	
     /* state name */
-    C_state_id = C_emergency;
+    Controller_state_id = Controller_emergency;
 	/* state action */
-    C_print_warning_state(warning_state);
+    Controller_print_warning_state(warning_state);
     /* event check */
-    C_state = STATE(C_emergency);
+    Controller_state = STATE(Controller_emergency);
 }

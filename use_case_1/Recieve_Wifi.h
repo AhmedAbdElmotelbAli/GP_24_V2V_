@@ -1,6 +1,6 @@
 /*
  ============================================================================
- File Name:     RWIFI.h
+ File Name:     Recieve_Wifi.h
  Author      :  Ahmed Emad Hassan
  Version     :  1.0
  Date        :  06/12/2023
@@ -10,19 +10,19 @@
  */
 
 /* start header guard */
-#ifndef RWIFI_h_
-#define RWIFI_h_
+#ifndef Recieve_Wifi_h_
+#define Recieve_Wifi_h_
 /* include state.h */
 #include "state.h"
 /* define state id enum variable */
 enum{
-    RWIFI_busy
-}RWIFI_state_id;
+    Recieve_Wifi_busy
+}Recieve_Wifi_state_id;
 /* initialization */
-void RWIFI_Init();
+void Recieve_Wifi_Init();
 /* other functions and state functions */
-STATE_define(RWIFI_busy);
+STATE_define(Recieve_Wifi_busy);
 /* state pointer to function */
-void (*RWIFI_state)();
+void (*Recieve_Wifi_state)();
 /* end header guard */
 #endif

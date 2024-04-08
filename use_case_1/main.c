@@ -1,13 +1,12 @@
 /* include all C function to test */
-#include <stdio.h>
-#include <stdlib.h>
+
 #include <stdint.h>
 /* include state.h */
 #include "state.h"
 /* include all modules */
-#include "C.h"
-#include "LCDP.h"
-#include "RWIFI.h"
+#include "Controller.h"
+#include "LCD_Print.h"
+#include "Recieve_WIFI.h"
 
 void setup(){
     /* init all the drivers */
@@ -19,18 +18,18 @@ void setup(){
     /* init block */
 
     /* set state pointers for each block */
-    RWIFI_state = STATE(RWIFI_busy);
-    C_state = STATE(C_normal);
-    LCDP_state = STATE(LCDP_normal);
+    Recieve_Wifi_state = STATE(Recieve_Wifi_busy);
+    Controller_state = STATE(Controller_normal);
+    LCD_Print_state = STATE(LCD_Print_normal);
 }
 
 int32_t main(){
     setup();
     while (1){
         /* write all states to be called sequencial */
-        RWIFI_state();
+        Recieve_Wifi_state();
         C_state();
-        LCDP_state();
+        LCD_Print_state();
     }
     return 0;
 }

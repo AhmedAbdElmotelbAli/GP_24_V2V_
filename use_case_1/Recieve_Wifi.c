@@ -1,6 +1,6 @@
 /*
  ============================================================================
- File Name:     RWIFI.c
+ File Name:     Recieve_Wifi.c
  Author      :  Ahmed Emad Hassan
  Version     :  1.0
  Date        :  06/12/2023
@@ -10,28 +10,23 @@
  */
 
 /* include C liberaries to test*/
-#include <stdio.h>
-#include <stdlib.h>
 #include <stdint.h>
 /* include the header file */
-#include "RWIFI.h"
+#include "Recieve_Wifi.h"
 /* extern state pointer */
-extern void (*RWIFI_state)();
+extern void (*Recieve_Wifi_state)();
 /* private attributes */
 static int32_t data = 0;
 /* functions and states */
-void RWIFI_Read_Data(int32_t* Pdata){
-	printf("Please Enter The WIFI data: ");
-    fflush(stdout);
-    scanf_s("%d",Pdata);
-    fflush(stdin);
+void Recieve_Wifi_Read_Data(int32_t* Pdata){
+    //Recieve Data from Wifi Here
 }
-STATE_define(RWIFI_busy){
+STATE_define(Recieve_Wifi_busy){
     /* state name */
-    RWIFI_state_id = RWIFI_busy;
+    Recieve_Wifi_state_id = Recieve_Wifi_busy;
     /* state action */
-	RWIFI_Read_Data(&data);
-    RWIFI_sendData(data);
+	Recieve_Wifi_Read_Data(&data);
+    Recieve_Wifi_sendData(data);
     /* event check */
-    RWIFI_state = STATE(RWIFI_busy);
+    Recieve_Wifi_state = STATE(Recieve_Wifi_busy);
 }
