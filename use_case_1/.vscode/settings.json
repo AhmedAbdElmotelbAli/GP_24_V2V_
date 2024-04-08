@@ -1,0 +1,8 @@
+{
+    "files.associations": {
+        "stdio.h": "c",
+        "stdlib.h": "c",
+        "controller.h": "c",
+        "recieve_wifi.h": "c"
+    }
+}
