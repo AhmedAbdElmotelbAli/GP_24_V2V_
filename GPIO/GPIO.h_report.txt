@@ -1,0 +1,10 @@
+[GPIO.h:8] (style) misra violation (use --rule-texts=<file> to get proper output) (Undefined) [misra-c2012-21.1]
+[Type.h:2] (style) misra violation (use --rule-texts=<file> to get proper output) (Undefined) [misra-c2012-21.1]
+Checking GPIO.h.dump...
+Checking GPIO.h.dump, config ...
+
+MISRA rules violations found:
+	Undefined: 2
+
+MISRA rules violated:
+	misra-c2012-21.1 (-): 2

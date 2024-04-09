@@ -1,0 +1,34 @@
+[test.c:67] (style) misra violation (use --rule-texts=<file> to get proper output) (Undefined) [misra-c2012-7.4]
+[test.c:20] (style) misra violation (use --rule-texts=<file> to get proper output) (Undefined) [misra-c2012-10.1]
+[test.c:22] (style) misra violation (use --rule-texts=<file> to get proper output) (Undefined) [misra-c2012-10.1]
+[test.c:23] (style) misra violation (use --rule-texts=<file> to get proper output) (Undefined) [misra-c2012-10.1]
+[test.c:28] (style) misra violation (use --rule-texts=<file> to get proper output) (Undefined) [misra-c2012-10.1]
+[test.c:30] (style) misra violation (use --rule-texts=<file> to get proper output) (Undefined) [misra-c2012-10.1]
+[test.c:31] (style) misra violation (use --rule-texts=<file> to get proper output) (Undefined) [misra-c2012-10.1]
+[test.c:36] (style) misra violation (use --rule-texts=<file> to get proper output) (Undefined) [misra-c2012-10.1]
+[test.c:38] (style) misra violation (use --rule-texts=<file> to get proper output) (Undefined) [misra-c2012-10.1]
+[test.c:39] (style) misra violation (use --rule-texts=<file> to get proper output) (Undefined) [misra-c2012-10.1]
+[test.c:66] (style) misra violation (use --rule-texts=<file> to get proper output) (Undefined) [misra-c2012-10.1]
+[test.c:66] (style) misra violation (use --rule-texts=<file> to get proper output) (Undefined) [misra-c2012-10.1]
+[test.c:66] (style) misra violation (use --rule-texts=<file> to get proper output) (Undefined) [misra-c2012-10.1]
+[test.c:76] (style) misra violation (use --rule-texts=<file> to get proper output) (Undefined) [misra-c2012-10.1]
+[test.c:76] (style) misra violation (use --rule-texts=<file> to get proper output) (Undefined) [misra-c2012-10.1]
+[test.c:76] (style) misra violation (use --rule-texts=<file> to get proper output) (Undefined) [misra-c2012-10.1]
+[test.c:79] (style) misra violation (use --rule-texts=<file> to get proper output) (Undefined) [misra-c2012-10.1]
+[test.c:79] (style) misra violation (use --rule-texts=<file> to get proper output) (Undefined) [misra-c2012-10.1]
+[test.c:79] (style) misra violation (use --rule-texts=<file> to get proper output) (Undefined) [misra-c2012-10.1]
+[test.c:67] (style) misra violation (use --rule-texts=<file> to get proper output) (Undefined) [misra-c2012-11.8]
+[test.c:41] (style) misra violation (use --rule-texts=<file> to get proper output) (Undefined) [misra-c2012-15.7]
+[UART.h:2] (style) misra violation (use --rule-texts=<file> to get proper output) (Undefined) [misra-c2012-21.1]
+Checking test.c.dump...
+Checking test.c.dump, config ...
+
+MISRA rules violations found:
+	Undefined: 22
+
+MISRA rules violated:
+	misra-c2012-7.4 (-): 1
+	misra-c2012-10.1 (-): 18
+	misra-c2012-11.8 (-): 1
+	misra-c2012-15.7 (-): 1
+	misra-c2012-21.1 (-): 1

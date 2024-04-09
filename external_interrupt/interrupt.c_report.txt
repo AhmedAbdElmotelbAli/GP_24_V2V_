@@ -1,0 +1,55 @@
+[interrupt.c:9] (style) misra violation (use --rule-texts=<file> to get proper output) (Undefined) [misra-c2012-10.1]
+[interrupt.c:10] (style) misra violation (use --rule-texts=<file> to get proper output) (Undefined) [misra-c2012-10.1]
+[interrupt.c:11] (style) misra violation (use --rule-texts=<file> to get proper output) (Undefined) [misra-c2012-10.1]
+[interrupt.c:12] (style) misra violation (use --rule-texts=<file> to get proper output) (Undefined) [misra-c2012-10.1]
+[interrupt.c:13] (style) misra violation (use --rule-texts=<file> to get proper output) (Undefined) [misra-c2012-10.1]
+[interrupt.c:13] (style) misra violation (use --rule-texts=<file> to get proper output) (Undefined) [misra-c2012-10.1]
+[interrupt.c:14] (style) misra violation (use --rule-texts=<file> to get proper output) (Undefined) [misra-c2012-10.1]
+[interrupt.c:14] (style) misra violation (use --rule-texts=<file> to get proper output) (Undefined) [misra-c2012-10.1]
+[interrupt.c:16] (style) misra violation (use --rule-texts=<file> to get proper output) (Undefined) [misra-c2012-10.1]
+[interrupt.c:25] (style) misra violation (use --rule-texts=<file> to get proper output) (Undefined) [misra-c2012-10.1]
+[interrupt.c:29] (style) misra violation (use --rule-texts=<file> to get proper output) (Undefined) [misra-c2012-10.1]
+[interrupt.c:33] (style) misra violation (use --rule-texts=<file> to get proper output) (Undefined) [misra-c2012-10.1]
+[interrupt.c:37] (style) misra violation (use --rule-texts=<file> to get proper output) (Undefined) [misra-c2012-10.1]
+[interrupt.c:41] (style) misra violation (use --rule-texts=<file> to get proper output) (Undefined) [misra-c2012-10.1]
+[interrupt.c:12] (style) misra violation (use --rule-texts=<file> to get proper output) (Undefined) [misra-c2012-10.4]
+[interrupt.c:13] (style) misra violation (use --rule-texts=<file> to get proper output) (Undefined) [misra-c2012-10.4]
+[interrupt.c:14] (style) misra violation (use --rule-texts=<file> to get proper output) (Undefined) [misra-c2012-10.4]
+[interrupt.c:21] (style) misra violation (use --rule-texts=<file> to get proper output) (Undefined) [misra-c2012-10.4]
+[interrupt.c:25] (style) misra violation (use --rule-texts=<file> to get proper output) (Undefined) [misra-c2012-10.4]
+[interrupt.c:29] (style) misra violation (use --rule-texts=<file> to get proper output) (Undefined) [misra-c2012-10.4]
+[interrupt.c:33] (style) misra violation (use --rule-texts=<file> to get proper output) (Undefined) [misra-c2012-10.4]
+[interrupt.c:37] (style) misra violation (use --rule-texts=<file> to get proper output) (Undefined) [misra-c2012-10.4]
+[interrupt.c:41] (style) misra violation (use --rule-texts=<file> to get proper output) (Undefined) [misra-c2012-10.4]
+[interrupt.c:52] (style) misra violation (use --rule-texts=<file> to get proper output) (Undefined) [misra-c2012-10.4]
+[interrupt.c:19] (style) misra violation (use --rule-texts=<file> to get proper output) (Undefined) [misra-c2012-11.4]
+[interrupt.c:21] (style) misra violation (use --rule-texts=<file> to get proper output) (Undefined) [misra-c2012-11.4]
+[interrupt.c:23] (style) misra violation (use --rule-texts=<file> to get proper output) (Undefined) [misra-c2012-11.4]
+[interrupt.c:25] (style) misra violation (use --rule-texts=<file> to get proper output) (Undefined) [misra-c2012-11.4]
+[interrupt.c:27] (style) misra violation (use --rule-texts=<file> to get proper output) (Undefined) [misra-c2012-11.4]
+[interrupt.c:29] (style) misra violation (use --rule-texts=<file> to get proper output) (Undefined) [misra-c2012-11.4]
+[interrupt.c:31] (style) misra violation (use --rule-texts=<file> to get proper output) (Undefined) [misra-c2012-11.4]
+[interrupt.c:33] (style) misra violation (use --rule-texts=<file> to get proper output) (Undefined) [misra-c2012-11.4]
+[interrupt.c:35] (style) misra violation (use --rule-texts=<file> to get proper output) (Undefined) [misra-c2012-11.4]
+[interrupt.c:37] (style) misra violation (use --rule-texts=<file> to get proper output) (Undefined) [misra-c2012-11.4]
+[interrupt.c:39] (style) misra violation (use --rule-texts=<file> to get proper output) (Undefined) [misra-c2012-11.4]
+[interrupt.c:41] (style) misra violation (use --rule-texts=<file> to get proper output) (Undefined) [misra-c2012-11.4]
+[interrupt.c:52] (style) misra violation (use --rule-texts=<file> to get proper output) (Undefined) [misra-c2012-11.4]
+[interrupt.c:60] (style) misra violation (use --rule-texts=<file> to get proper output) (Undefined) [misra-c2012-11.4]
+[interrupt.c:67] (style) misra violation (use --rule-texts=<file> to get proper output) (Undefined) [misra-c2012-11.4]
+[interrupt.c:72] (style) misra violation (use --rule-texts=<file> to get proper output) (Undefined) [misra-c2012-11.4]
+[interrupt.c:77] (style) misra violation (use --rule-texts=<file> to get proper output) (Undefined) [misra-c2012-11.4]
+[interrupt.c:82] (style) misra violation (use --rule-texts=<file> to get proper output) (Undefined) [misra-c2012-11.4]
+[interrupt.c:87] (style) misra violation (use --rule-texts=<file> to get proper output) (Undefined) [misra-c2012-11.4]
+[interrupt.c:42] (style) misra violation (use --rule-texts=<file> to get proper output) (Undefined) [misra-c2012-15.7]
+Checking interrupt.c.dump...
+Checking interrupt.c.dump, config ...
+
+MISRA rules violations found:
+	Undefined: 44
+
+MISRA rules violated:
+	misra-c2012-10.1 (-): 14
+	misra-c2012-10.4 (-): 10
+	misra-c2012-11.4 (-): 19
+	misra-c2012-15.7 (-): 1
