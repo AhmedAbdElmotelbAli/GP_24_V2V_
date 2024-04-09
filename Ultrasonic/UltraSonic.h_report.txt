@@ -1,0 +1,14 @@
+[UltraSonic.h:10] (style) misra violation (use --rule-texts=<file> to get proper output) (Undefined) [misra-c2012-7.3]
+[UltraSonic.h:11] (style) misra violation (use --rule-texts=<file> to get proper output) (Undefined) [misra-c2012-7.3]
+[UltraSonic.h:30] (style) misra violation (use --rule-texts=<file> to get proper output) (Undefined) [misra-c2012-7.3]
+[UltraSonic.h:37] (style) misra violation (use --rule-texts=<file> to get proper output) (Undefined) [misra-c2012-7.3]
+[UltraSonic.h:74] (style) misra violation (use --rule-texts=<file> to get proper output) (Undefined) [misra-c2012-7.3]
+[UltraSonic.h:81] (style) misra violation (use --rule-texts=<file> to get proper output) (Undefined) [misra-c2012-7.3]
+Checking UltraSonic.h.dump...
+Checking UltraSonic.h.dump, config ...
+
+MISRA rules violations found:
+	Undefined: 6
+
+MISRA rules violated:
+	misra-c2012-7.3 (-): 6

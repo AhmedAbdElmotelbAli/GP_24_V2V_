@@ -1,0 +1,53 @@
+[GPS_Module.c:175] (style) misra violation (use --rule-texts=<file> to get proper output) (Undefined) [misra-c2012-3.1]
+[GPS_Module.c:31] (style) misra violation (use --rule-texts=<file> to get proper output) (Undefined) [misra-c2012-10.4]
+[GPS_Module.c:38] (style) misra violation (use --rule-texts=<file> to get proper output) (Undefined) [misra-c2012-10.4]
+[GPS_Module.c:39] (style) misra violation (use --rule-texts=<file> to get proper output) (Undefined) [misra-c2012-10.4]
+[GPS_Module.c:40] (style) misra violation (use --rule-texts=<file> to get proper output) (Undefined) [misra-c2012-10.4]
+[GPS_Module.c:51] (style) misra violation (use --rule-texts=<file> to get proper output) (Undefined) [misra-c2012-10.4]
+[GPS_Module.c:54] (style) misra violation (use --rule-texts=<file> to get proper output) (Undefined) [misra-c2012-10.4]
+[GPS_Module.c:66] (style) misra violation (use --rule-texts=<file> to get proper output) (Undefined) [misra-c2012-10.4]
+[GPS_Module.c:68] (style) misra violation (use --rule-texts=<file> to get proper output) (Undefined) [misra-c2012-10.4]
+[GPS_Module.c:69] (style) misra violation (use --rule-texts=<file> to get proper output) (Undefined) [misra-c2012-10.4]
+[GPS_Module.c:81] (style) misra violation (use --rule-texts=<file> to get proper output) (Undefined) [misra-c2012-10.4]
+[GPS_Module.c:84] (style) misra violation (use --rule-texts=<file> to get proper output) (Undefined) [misra-c2012-10.4]
+[GPS_Module.c:94] (style) misra violation (use --rule-texts=<file> to get proper output) (Undefined) [misra-c2012-10.4]
+[GPS_Module.c:96] (style) misra violation (use --rule-texts=<file> to get proper output) (Undefined) [misra-c2012-10.4]
+[GPS_Module.c:97] (style) misra violation (use --rule-texts=<file> to get proper output) (Undefined) [misra-c2012-10.4]
+[GPS_Module.c:108] (style) misra violation (use --rule-texts=<file> to get proper output) (Undefined) [misra-c2012-10.4]
+[GPS_Module.c:111] (style) misra violation (use --rule-texts=<file> to get proper output) (Undefined) [misra-c2012-10.4]
+[GPS_Module.c:140] (style) misra violation (use --rule-texts=<file> to get proper output) (Undefined) [misra-c2012-10.4]
+[GPS_Module.c:148] (style) misra violation (use --rule-texts=<file> to get proper output) (Undefined) [misra-c2012-10.4]
+[GPS_Module.c:154] (style) misra violation (use --rule-texts=<file> to get proper output) (Undefined) [misra-c2012-10.4]
+[GPS_Module.c:154] (style) misra violation (use --rule-texts=<file> to get proper output) (Undefined) [misra-c2012-10.4]
+[GPS_Module.c:154] (style) misra violation (use --rule-texts=<file> to get proper output) (Undefined) [misra-c2012-10.4]
+[GPS_Module.c:19] (style) misra violation (use --rule-texts=<file> to get proper output) (Undefined) [misra-c2012-12.3]
+[GPS_Module.c:27] (style) misra violation (use --rule-texts=<file> to get proper output) (Undefined) [misra-c2012-12.3]
+[GPS_Module.c:27] (style) misra violation (use --rule-texts=<file> to get proper output) (Undefined) [misra-c2012-12.3]
+[GPS_Module.c:60] (style) misra violation (use --rule-texts=<file> to get proper output) (Undefined) [misra-c2012-12.3]
+[GPS_Module.c:89] (style) misra violation (use --rule-texts=<file> to get proper output) (Undefined) [misra-c2012-12.3]
+[GPS_Module.c:150] (style) misra violation (use --rule-texts=<file> to get proper output) (Undefined) [misra-c2012-13.3]
+[GPS_Module.c:152] (style) misra violation (use --rule-texts=<file> to get proper output) (Undefined) [misra-c2012-13.3]
+[GPS_Module.c:157] (style) misra violation (use --rule-texts=<file> to get proper output) (Undefined) [misra-c2012-13.4]
+[GPS_Module.c:157] (style) misra violation (use --rule-texts=<file> to get proper output) (Undefined) [misra-c2012-13.4]
+[GPS_Module.c:134] (style) misra violation (use --rule-texts=<file> to get proper output) (Undefined) [misra-c2012-14.4]
+[GPS_Module.c:42] (style) misra violation (use --rule-texts=<file> to get proper output) (Undefined) [misra-c2012-17.7]
+[GPS_Module.h:9] (style) misra violation (use --rule-texts=<file> to get proper output) (Undefined) [misra-c2012-21.6]
+[GPS_Module.c:37] (style) misra violation (use --rule-texts=<file> to get proper output) (Undefined) [misra-c2012-21.7]
+[GPS_Module.c:63] (style) misra violation (use --rule-texts=<file> to get proper output) (Undefined) [misra-c2012-21.7]
+[GPS_Module.c:91] (style) misra violation (use --rule-texts=<file> to get proper output) (Undefined) [misra-c2012-21.7]
+Checking GPS_Module.c.dump...
+Checking GPS_Module.c.dump, config ...
+
+MISRA rules violations found:
+	Undefined: 37
+
+MISRA rules violated:
+	misra-c2012-3.1 (-): 1
+	misra-c2012-10.4 (-): 21
+	misra-c2012-12.3 (-): 5
+	misra-c2012-13.3 (-): 2
+	misra-c2012-13.4 (-): 2
+	misra-c2012-14.4 (-): 1
+	misra-c2012-17.7 (-): 1
+	misra-c2012-21.6 (-): 1
+	misra-c2012-21.7 (-): 3

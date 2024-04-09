@@ -1,0 +1,39 @@
+[Lcd.c:115] (style) misra violation (use --rule-texts=<file> to get proper output) (Undefined) [misra-c2012-10.1]
+[Lcd.c:160] (style) misra violation (use --rule-texts=<file> to get proper output) (Undefined) [misra-c2012-10.4]
+[Lcd.c:160] (style) misra violation (use --rule-texts=<file> to get proper output) (Undefined) [misra-c2012-10.4]
+[Lcd.c:185] (style) misra violation (use --rule-texts=<file> to get proper output) (Undefined) [misra-c2012-10.4]
+[Lcd.c:193] (style) misra violation (use --rule-texts=<file> to get proper output) (Undefined) [misra-c2012-10.4]
+[Lcd.c:200] (style) misra violation (use --rule-texts=<file> to get proper output) (Undefined) [misra-c2012-10.4]
+[Lcd.c:226] (style) misra violation (use --rule-texts=<file> to get proper output) (Undefined) [misra-c2012-10.4]
+[Lcd.c:104] (style) misra violation (use --rule-texts=<file> to get proper output) (Undefined) [misra-c2012-11.8]
+[Lcd.c:160] (style) misra violation (use --rule-texts=<file> to get proper output) (Undefined) [misra-c2012-12.1]
+[Lcd.c:193] (style) misra violation (use --rule-texts=<file> to get proper output) (Undefined) [misra-c2012-12.1]
+[Lcd.c:226] (style) misra violation (use --rule-texts=<file> to get proper output) (Undefined) [misra-c2012-12.1]
+[Lcd.c:200] (style) misra violation (use --rule-texts=<file> to get proper output) (Undefined) [misra-c2012-12.3]
+[Lcd.c:202] (style) misra violation (use --rule-texts=<file> to get proper output) (Undefined) [misra-c2012-12.3]
+[Lcd.c:202] (style) misra violation (use --rule-texts=<file> to get proper output) (Undefined) [misra-c2012-12.3]
+[Lcd.c:175] (style) misra violation (use --rule-texts=<file> to get proper output) (Undefined) [misra-c2012-13.3]
+[Lcd.c:178] (style) misra violation (use --rule-texts=<file> to get proper output) (Undefined) [misra-c2012-13.3]
+[Lcd.c:186] (style) misra violation (use --rule-texts=<file> to get proper output) (Undefined) [misra-c2012-13.3]
+[Lcd.c:194] (style) misra violation (use --rule-texts=<file> to get proper output) (Undefined) [misra-c2012-13.3]
+[Lcd.c:202] (style) misra violation (use --rule-texts=<file> to get proper output) (Undefined) [misra-c2012-13.3]
+[Lcd.c:202] (style) misra violation (use --rule-texts=<file> to get proper output) (Undefined) [misra-c2012-13.3]
+[Lcd.c:170] (style) misra violation (use --rule-texts=<file> to get proper output) (Undefined) [misra-c2012-14.4]
+[Lcd.c:161] (style) misra violation (use --rule-texts=<file> to get proper output) (Undefined) [misra-c2012-15.5]
+[Lcd.c:78] (style) misra violation (use --rule-texts=<file> to get proper output) (Undefined) [misra-c2012-16.4]
+Checking Lcd.c.dump...
+Checking Lcd.c.dump, config ...
+
+MISRA rules violations found:
+	Undefined: 23
+
+MISRA rules violated:
+	misra-c2012-10.1 (-): 1
+	misra-c2012-10.4 (-): 6
+	misra-c2012-11.8 (-): 1
+	misra-c2012-12.1 (-): 3
+	misra-c2012-12.3 (-): 3
+	misra-c2012-13.3 (-): 6
+	misra-c2012-14.4 (-): 1
+	misra-c2012-15.5 (-): 1
+	misra-c2012-16.4 (-): 1
