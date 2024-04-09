@@ -1,0 +1,14 @@
+[EXTERNAL_LED.c:24] (style) misra violation (use --rule-texts=<file> to get proper output) (Undefined) [misra-c2012-7.2]
+[EXTERNAL_LED.c:41] (style) misra violation (use --rule-texts=<file> to get proper output) (Undefined) [misra-c2012-7.2]
+[EXTERNAL_LED.c:51] (style) misra violation (use --rule-texts=<file> to get proper output) (Undefined) [misra-c2012-7.2]
+[../GPIO/GPIO.h:2] (style) misra violation (use --rule-texts=<file> to get proper output) (Undefined) [misra-c2012-21.1]
+[../GPIO/Type.h:2] (style) misra violation (use --rule-texts=<file> to get proper output) (Undefined) [misra-c2012-21.1]
+Checking EXTERNAL_LED.c.dump...
+Checking EXTERNAL_LED.c.dump, config ...
+
+MISRA rules violations found:
+	Undefined: 5
+
+MISRA rules violated:
+	misra-c2012-7.2 (-): 3
+	misra-c2012-21.1 (-): 2

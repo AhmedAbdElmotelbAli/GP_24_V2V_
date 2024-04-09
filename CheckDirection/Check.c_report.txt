@@ -1,0 +1,21 @@
+[check.h:17] (style) misra violation (use --rule-texts=<file> to get proper output) (Undefined) [misra-c2012-8.11]
+[Check.c:42] (style) misra violation (use --rule-texts=<file> to get proper output) (Undefined) [misra-c2012-10.8]
+[Check.c:20] (style) misra violation (use --rule-texts=<file> to get proper output) (Undefined) [misra-c2012-12.1]
+[Check.c:25] (style) misra violation (use --rule-texts=<file> to get proper output) (Undefined) [misra-c2012-12.1]
+[Check.c:30] (style) misra violation (use --rule-texts=<file> to get proper output) (Undefined) [misra-c2012-12.1]
+[Check.c:51] (style) misra violation (use --rule-texts=<file> to get proper output) (Undefined) [misra-c2012-15.6]
+[Check.c:36] (style) misra violation (use --rule-texts=<file> to get proper output) (Undefined) [misra-c2012-15.7]
+[check.h:13] (style) misra violation (use --rule-texts=<file> to get proper output) (Undefined) [misra-c2012-21.1]
+Checking Check.c.dump...
+Checking Check.c.dump, config ...
+
+MISRA rules violations found:
+	Undefined: 8
+
+MISRA rules violated:
+	misra-c2012-8.11 (-): 1
+	misra-c2012-10.8 (-): 1
+	misra-c2012-12.1 (-): 3
+	misra-c2012-15.6 (-): 1
+	misra-c2012-15.7 (-): 1
+	misra-c2012-21.1 (-): 1

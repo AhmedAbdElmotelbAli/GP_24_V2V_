@@ -1,0 +1,9 @@
+[projdefs.h:1] (style) misra violation (use --rule-texts=<file> to get proper output) (Undefined) [misra-c2012-3.1]
+Checking projdefs.h.dump...
+Checking projdefs.h.dump, config ...
+
+MISRA rules violations found:
+	Undefined: 1
+
+MISRA rules violated:
+	misra-c2012-3.1 (-): 1

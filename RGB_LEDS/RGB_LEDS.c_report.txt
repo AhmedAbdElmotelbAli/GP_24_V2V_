@@ -1,0 +1,12 @@
+[../GPIO/GPIO.h:2] (style) misra violation (use --rule-texts=<file> to get proper output) (Undefined) [misra-c2012-21.1]
+[../GPIO/Type.h:2] (style) misra violation (use --rule-texts=<file> to get proper output) (Undefined) [misra-c2012-21.1]
+[../GPIO/config.h:2] (style) misra violation (use --rule-texts=<file> to get proper output) (Undefined) [misra-c2012-21.1]
+[../GPIO/tm4c123gh6pm.h:41] (style) misra violation (use --rule-texts=<file> to get proper output) (Undefined) [misra-c2012-21.1]
+Checking RGB_LEDS.c.dump...
+Checking RGB_LEDS.c.dump, config ...
+
+MISRA rules violations found:
+	Undefined: 4
+
+MISRA rules violated:
+	misra-c2012-21.1 (-): 4

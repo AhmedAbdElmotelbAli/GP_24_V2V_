@@ -1,0 +1,37 @@
+[Bluetooth.c:49] (style) misra violation (use --rule-texts=<file> to get proper output) (Undefined) [misra-c2012-7.4]
+[Bluetooth.c:53] (style) misra violation (use --rule-texts=<file> to get proper output) (Undefined) [misra-c2012-7.4]
+[Bluetooth.c:59] (style) misra violation (use --rule-texts=<file> to get proper output) (Undefined) [misra-c2012-7.4]
+[Bluetooth.c:66] (style) misra violation (use --rule-texts=<file> to get proper output) (Undefined) [misra-c2012-7.4]
+[Bluetooth.c:73] (style) misra violation (use --rule-texts=<file> to get proper output) (Undefined) [misra-c2012-7.4]
+[Bluetooth.c:80] (style) misra violation (use --rule-texts=<file> to get proper output) (Undefined) [misra-c2012-7.4]
+[Bluetooth.c:86] (style) misra violation (use --rule-texts=<file> to get proper output) (Undefined) [misra-c2012-7.4]
+[Bluetooth.c:93] (style) misra violation (use --rule-texts=<file> to get proper output) (Undefined) [misra-c2012-7.4]
+[Bluetooth.c:99] (style) misra violation (use --rule-texts=<file> to get proper output) (Undefined) [misra-c2012-7.4]
+[Bluetooth.c:107] (style) misra violation (use --rule-texts=<file> to get proper output) (Undefined) [misra-c2012-7.4]
+[Bluetooth.c:113] (style) misra violation (use --rule-texts=<file> to get proper output) (Undefined) [misra-c2012-7.4]
+[Bluetooth.c:119] (style) misra violation (use --rule-texts=<file> to get proper output) (Undefined) [misra-c2012-7.4]
+[Bluetooth.c:49] (style) misra violation (use --rule-texts=<file> to get proper output) (Undefined) [misra-c2012-11.8]
+[Bluetooth.c:53] (style) misra violation (use --rule-texts=<file> to get proper output) (Undefined) [misra-c2012-11.8]
+[Bluetooth.c:59] (style) misra violation (use --rule-texts=<file> to get proper output) (Undefined) [misra-c2012-11.8]
+[Bluetooth.c:66] (style) misra violation (use --rule-texts=<file> to get proper output) (Undefined) [misra-c2012-11.8]
+[Bluetooth.c:73] (style) misra violation (use --rule-texts=<file> to get proper output) (Undefined) [misra-c2012-11.8]
+[Bluetooth.c:80] (style) misra violation (use --rule-texts=<file> to get proper output) (Undefined) [misra-c2012-11.8]
+[Bluetooth.c:86] (style) misra violation (use --rule-texts=<file> to get proper output) (Undefined) [misra-c2012-11.8]
+[Bluetooth.c:93] (style) misra violation (use --rule-texts=<file> to get proper output) (Undefined) [misra-c2012-11.8]
+[Bluetooth.c:99] (style) misra violation (use --rule-texts=<file> to get proper output) (Undefined) [misra-c2012-11.8]
+[Bluetooth.c:107] (style) misra violation (use --rule-texts=<file> to get proper output) (Undefined) [misra-c2012-11.8]
+[Bluetooth.c:113] (style) misra violation (use --rule-texts=<file> to get proper output) (Undefined) [misra-c2012-11.8]
+[Bluetooth.c:119] (style) misra violation (use --rule-texts=<file> to get proper output) (Undefined) [misra-c2012-11.8]
+[Bluetooth.c:32] (style) misra violation (use --rule-texts=<file> to get proper output) (Undefined) [misra-c2012-14.4]
+[Bluetooth.c:34] (style) misra violation (use --rule-texts=<file> to get proper output) (Undefined) [misra-c2012-17.8]
+Checking Bluetooth.c.dump...
+Checking Bluetooth.c.dump, config ...
+
+MISRA rules violations found:
+	Undefined: 26
+
+MISRA rules violated:
+	misra-c2012-7.4 (-): 12
+	misra-c2012-11.8 (-): 12
+	misra-c2012-14.4 (-): 1
+	misra-c2012-17.8 (-): 1

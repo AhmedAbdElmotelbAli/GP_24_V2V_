@@ -1,0 +1,86 @@
+[event_groups.c:1] (style) misra violation (use --rule-texts=<file> to get proper output) (Undefined) [misra-c2012-3.1]
+[list.h:149] (style) misra violation (use --rule-texts=<file> to get proper output) (Undefined) [misra-c2012-5.5]
+[event_groups.c:147] (style) misra violation (use --rule-texts=<file> to get proper output) (Undefined) [misra-c2012-5.5]
+[event_groups.c:196] (style) misra violation (use --rule-texts=<file> to get proper output) (Undefined) [misra-c2012-5.5]
+[event_groups.c:320] (style) misra violation (use --rule-texts=<file> to get proper output) (Undefined) [misra-c2012-5.5]
+[event_groups.c:473] (style) misra violation (use --rule-texts=<file> to get proper output) (Undefined) [misra-c2012-5.5]
+[event_groups.c:533] (style) misra violation (use --rule-texts=<file> to get proper output) (Undefined) [misra-c2012-5.5]
+[event_groups.c:627] (style) misra violation (use --rule-texts=<file> to get proper output) (Undefined) [misra-c2012-5.5]
+[event_groups.c:671] (style) misra violation (use --rule-texts=<file> to get proper output) (Undefined) [misra-c2012-7.3]
+[event_groups.c:673] (style) misra violation (use --rule-texts=<file> to get proper output) (Undefined) [misra-c2012-7.3]
+[event_groups.c:680] (style) misra violation (use --rule-texts=<file> to get proper output) (Undefined) [misra-c2012-7.3]
+[event_groups.c:682] (style) misra violation (use --rule-texts=<file> to get proper output) (Undefined) [misra-c2012-7.3]
+[event_groups.c:521] (style) misra violation (use --rule-texts=<file> to get proper output) (Undefined) [misra-c2012-10.1]
+[event_groups.c:259] (style) misra violation (use --rule-texts=<file> to get proper output) (Undefined) [misra-c2012-11.4]
+[event_groups.c:411] (style) misra violation (use --rule-texts=<file> to get proper output) (Undefined) [misra-c2012-11.4]
+[event_groups.c:163] (style) misra violation (use --rule-texts=<file> to get proper output) (Undefined) [misra-c2012-11.5]
+[event_groups.c:745] (style) misra violation (use --rule-texts=<file> to get proper output) (Undefined) [misra-c2012-11.5]
+[event_groups.c:767] (style) misra violation (use --rule-texts=<file> to get proper output) (Undefined) [misra-c2012-11.5]
+[event_groups.c:640] (style) misra violation (use --rule-texts=<file> to get proper output) (Undefined) [misra-c2012-11.8]
+[event_groups.c:197] (style) misra violation (use --rule-texts=<file> to get proper output) (Undefined) [misra-c2012-12.3]
+[event_groups.c:322] (style) misra violation (use --rule-texts=<file> to get proper output) (Undefined) [misra-c2012-12.3]
+[event_groups.c:323] (style) misra violation (use --rule-texts=<file> to get proper output) (Undefined) [misra-c2012-12.3]
+[event_groups.c:534] (style) misra violation (use --rule-texts=<file> to get proper output) (Undefined) [misra-c2012-12.3]
+[event_groups.c:537] (style) misra violation (use --rule-texts=<file> to get proper output) (Undefined) [misra-c2012-12.3]
+[event_groups.c:537] (style) misra violation (use --rule-texts=<file> to get proper output) (Undefined) [misra-c2012-12.3]
+[event_groups.c:225] (style) misra violation (use --rule-texts=<file> to get proper output) (Undefined) [misra-c2012-17.8]
+[event_groups.c:349] (style) misra violation (use --rule-texts=<file> to get proper output) (Undefined) [misra-c2012-17.8]
+[FreeRTOS.h:1212] (style) misra violation (use --rule-texts=<file> to get proper output) (Undefined) [misra-c2012-19.2]
+[FreeRTOS.h:1216] (style) misra violation (use --rule-texts=<file> to get proper output) (Undefined) [misra-c2012-19.2]
+[deprecated_definitions.h:41] (style) misra violation (use --rule-texts=<file> to get proper output) (Undefined) [misra-c2012-20.2]
+[deprecated_definitions.h:46] (style) misra violation (use --rule-texts=<file> to get proper output) (Undefined) [misra-c2012-20.2]
+[deprecated_definitions.h:95] (style) misra violation (use --rule-texts=<file> to get proper output) (Undefined) [misra-c2012-20.2]
+[deprecated_definitions.h:107] (style) misra violation (use --rule-texts=<file> to get proper output) (Undefined) [misra-c2012-20.2]
+[deprecated_definitions.h:115] (style) misra violation (use --rule-texts=<file> to get proper output) (Undefined) [misra-c2012-20.2]
+[deprecated_definitions.h:119] (style) misra violation (use --rule-texts=<file> to get proper output) (Undefined) [misra-c2012-20.2]
+[deprecated_definitions.h:123] (style) misra violation (use --rule-texts=<file> to get proper output) (Undefined) [misra-c2012-20.2]
+[deprecated_definitions.h:127] (style) misra violation (use --rule-texts=<file> to get proper output) (Undefined) [misra-c2012-20.2]
+[deprecated_definitions.h:131] (style) misra violation (use --rule-texts=<file> to get proper output) (Undefined) [misra-c2012-20.2]
+[deprecated_definitions.h:135] (style) misra violation (use --rule-texts=<file> to get proper output) (Undefined) [misra-c2012-20.2]
+[deprecated_definitions.h:139] (style) misra violation (use --rule-texts=<file> to get proper output) (Undefined) [misra-c2012-20.2]
+[deprecated_definitions.h:179] (style) misra violation (use --rule-texts=<file> to get proper output) (Undefined) [misra-c2012-20.2]
+[deprecated_definitions.h:207] (style) misra violation (use --rule-texts=<file> to get proper output) (Undefined) [misra-c2012-20.2]
+[deprecated_definitions.h:215] (style) misra violation (use --rule-texts=<file> to get proper output) (Undefined) [misra-c2012-20.2]
+[deprecated_definitions.h:224] (style) misra violation (use --rule-texts=<file> to get proper output) (Undefined) [misra-c2012-20.2]
+[event_groups.c:45] (style) misra violation (use --rule-texts=<file> to get proper output) (Undefined) [misra-c2012-20.5]
+[FreeRTOS.h:288] (style) misra violation (use --rule-texts=<file> to get proper output) (Undefined) [misra-c2012-20.7]
+[FreeRTOS.h:292] (style) misra violation (use --rule-texts=<file> to get proper output) (Undefined) [misra-c2012-20.7]
+[FreeRTOS.h:300] (style) misra violation (use --rule-texts=<file> to get proper output) (Undefined) [misra-c2012-20.7]
+[FreeRTOS.h:929] (style) misra violation (use --rule-texts=<file> to get proper output) (Undefined) [misra-c2012-20.7]
+[event_groups.h:417] (style) misra violation (use --rule-texts=<file> to get proper output) (Undefined) [misra-c2012-20.7]
+[event_groups.h:573] (style) misra violation (use --rule-texts=<file> to get proper output) (Undefined) [misra-c2012-20.7]
+[portmacro.h:89] (style) misra violation (use --rule-texts=<file> to get proper output) (Undefined) [misra-c2012-20.7]
+[portmacro.h:112] (style) misra violation (use --rule-texts=<file> to get proper output) (Undefined) [misra-c2012-20.7]
+[portmacro.h:146] (style) misra violation (use --rule-texts=<file> to get proper output) (Undefined) [misra-c2012-20.7]
+[portmacro.h:147] (style) misra violation (use --rule-texts=<file> to get proper output) (Undefined) [misra-c2012-20.7]
+Checking event_groups.c.dump...
+Checking event_groups.c.dump, config ...
+Checking event_groups.c.dump, config ARM7_LPC21xx_KEIL_RVDS...
+Checking event_groups.c.dump, config BCC_FLASH_LITE_186_PORT...
+Checking event_groups.c.dump, config BCC_INDUSTRIAL_PC_PORT...
+Checking event_groups.c.dump, config COLDFIRE_V2_CODEWARRIOR...
+Checking event_groups.c.dump, config COLDFIRE_V2_GCC...
+Checking event_groups.c.dump, config GCC_ARM7...
+Checking event_groups.c.dump, config GCC_ARM7_ECLIPSE...
+Checking event_groups.c.dump, config GCC_ARMCM3...
+Checking event_groups.c.dump, config GCC_ARMCM3_LM3S102...
+Checking event_groups.c.dump, config GCC_AT91FR40008...
+Checking event_groups.c.dump, config GCC_H8S...
+
+MISRA rules violations found:
+	Undefined: 55
+
+MISRA rules violated:
+	misra-c2012-3.1 (-): 1
+	misra-c2012-5.5 (-): 7
+	misra-c2012-7.3 (-): 4
+	misra-c2012-10.1 (-): 1
+	misra-c2012-11.4 (-): 2
+	misra-c2012-11.5 (-): 3
+	misra-c2012-11.8 (-): 1
+	misra-c2012-12.3 (-): 6
+	misra-c2012-17.8 (-): 2
+	misra-c2012-19.2 (-): 2
+	misra-c2012-20.2 (-): 15
+	misra-c2012-20.5 (-): 1
+	misra-c2012-20.7 (-): 10

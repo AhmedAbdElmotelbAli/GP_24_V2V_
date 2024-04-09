@@ -1,0 +1,80 @@
+[heap_2.c:1] (style) misra violation (use --rule-texts=<file> to get proper output) (Undefined) [misra-c2012-3.1]
+[heap_2.c:28] (style) misra violation (use --rule-texts=<file> to get proper output) (Undefined) [misra-c2012-3.1]
+[list.h:149] (style) misra violation (use --rule-texts=<file> to get proper output) (Undefined) [misra-c2012-5.5]
+[heap_2.c:81] (style) misra violation (use --rule-texts=<file> to get proper output) (Undefined) [misra-c2012-10.4]
+[heap_2.c:137] (style) misra violation (use --rule-texts=<file> to get proper output) (Undefined) [misra-c2012-10.4]
+[heap_2.c:142] (style) misra violation (use --rule-texts=<file> to get proper output) (Undefined) [misra-c2012-10.4]
+[heap_2.c:145] (style) misra violation (use --rule-texts=<file> to get proper output) (Undefined) [misra-c2012-10.4]
+[heap_2.c:145] (style) misra violation (use --rule-texts=<file> to get proper output) (Undefined) [misra-c2012-10.4]
+[heap_2.c:145] (style) misra violation (use --rule-texts=<file> to get proper output) (Undefined) [misra-c2012-10.4]
+[heap_2.c:149] (style) misra violation (use --rule-texts=<file> to get proper output) (Undefined) [misra-c2012-10.4]
+[heap_2.c:149] (style) misra violation (use --rule-texts=<file> to get proper output) (Undefined) [misra-c2012-10.4]
+[heap_2.c:174] (style) misra violation (use --rule-texts=<file> to get proper output) (Undefined) [misra-c2012-10.4]
+[heap_2.c:257] (style) misra violation (use --rule-texts=<file> to get proper output) (Undefined) [misra-c2012-11.4]
+[heap_2.c:257] (style) misra violation (use --rule-texts=<file> to get proper output) (Undefined) [misra-c2012-11.4]
+[heap_2.c:214] (style) misra violation (use --rule-texts=<file> to get proper output) (Undefined) [misra-c2012-11.5]
+[heap_2.c:85] (style) misra violation (use --rule-texts=<file> to get proper output) (Undefined) [misra-c2012-12.3]
+[heap_2.c:121] (style) misra violation (use --rule-texts=<file> to get proper output) (Undefined) [misra-c2012-12.3]
+[heap_2.c:121] (style) misra violation (use --rule-texts=<file> to get proper output) (Undefined) [misra-c2012-12.3]
+[heap_2.c:139] (style) misra violation (use --rule-texts=<file> to get proper output) (Undefined) [misra-c2012-17.8]
+[heap_2.c:145] (style) misra violation (use --rule-texts=<file> to get proper output) (Undefined) [misra-c2012-17.8]
+[heap_2.c:167] (style) misra violation (use --rule-texts=<file> to get proper output) (Undefined) [misra-c2012-18.4]
+[heap_2.c:179] (style) misra violation (use --rule-texts=<file> to get proper output) (Undefined) [misra-c2012-18.4]
+[heap_2.c:221] (style) misra violation (use --rule-texts=<file> to get proper output) (Undefined) [misra-c2012-18.4]
+[FreeRTOS.h:1212] (style) misra violation (use --rule-texts=<file> to get proper output) (Undefined) [misra-c2012-19.2]
+[FreeRTOS.h:1216] (style) misra violation (use --rule-texts=<file> to get proper output) (Undefined) [misra-c2012-19.2]
+[deprecated_definitions.h:41] (style) misra violation (use --rule-texts=<file> to get proper output) (Undefined) [misra-c2012-20.2]
+[deprecated_definitions.h:46] (style) misra violation (use --rule-texts=<file> to get proper output) (Undefined) [misra-c2012-20.2]
+[deprecated_definitions.h:95] (style) misra violation (use --rule-texts=<file> to get proper output) (Undefined) [misra-c2012-20.2]
+[deprecated_definitions.h:107] (style) misra violation (use --rule-texts=<file> to get proper output) (Undefined) [misra-c2012-20.2]
+[deprecated_definitions.h:115] (style) misra violation (use --rule-texts=<file> to get proper output) (Undefined) [misra-c2012-20.2]
+[deprecated_definitions.h:119] (style) misra violation (use --rule-texts=<file> to get proper output) (Undefined) [misra-c2012-20.2]
+[deprecated_definitions.h:123] (style) misra violation (use --rule-texts=<file> to get proper output) (Undefined) [misra-c2012-20.2]
+[deprecated_definitions.h:127] (style) misra violation (use --rule-texts=<file> to get proper output) (Undefined) [misra-c2012-20.2]
+[deprecated_definitions.h:131] (style) misra violation (use --rule-texts=<file> to get proper output) (Undefined) [misra-c2012-20.2]
+[deprecated_definitions.h:135] (style) misra violation (use --rule-texts=<file> to get proper output) (Undefined) [misra-c2012-20.2]
+[deprecated_definitions.h:139] (style) misra violation (use --rule-texts=<file> to get proper output) (Undefined) [misra-c2012-20.2]
+[deprecated_definitions.h:179] (style) misra violation (use --rule-texts=<file> to get proper output) (Undefined) [misra-c2012-20.2]
+[deprecated_definitions.h:207] (style) misra violation (use --rule-texts=<file> to get proper output) (Undefined) [misra-c2012-20.2]
+[deprecated_definitions.h:215] (style) misra violation (use --rule-texts=<file> to get proper output) (Undefined) [misra-c2012-20.2]
+[deprecated_definitions.h:224] (style) misra violation (use --rule-texts=<file> to get proper output) (Undefined) [misra-c2012-20.2]
+[heap_2.c:47] (style) misra violation (use --rule-texts=<file> to get proper output) (Undefined) [misra-c2012-20.5]
+[heap_2.c:98] (style) misra violation (use --rule-texts=<file> to get proper output) (Undefined) [misra-c2012-20.7]
+[FreeRTOS.h:288] (style) misra violation (use --rule-texts=<file> to get proper output) (Undefined) [misra-c2012-20.7]
+[FreeRTOS.h:292] (style) misra violation (use --rule-texts=<file> to get proper output) (Undefined) [misra-c2012-20.7]
+[FreeRTOS.h:300] (style) misra violation (use --rule-texts=<file> to get proper output) (Undefined) [misra-c2012-20.7]
+[FreeRTOS.h:929] (style) misra violation (use --rule-texts=<file> to get proper output) (Undefined) [misra-c2012-20.7]
+[portmacro.h:89] (style) misra violation (use --rule-texts=<file> to get proper output) (Undefined) [misra-c2012-20.7]
+[portmacro.h:112] (style) misra violation (use --rule-texts=<file> to get proper output) (Undefined) [misra-c2012-20.7]
+[portmacro.h:146] (style) misra violation (use --rule-texts=<file> to get proper output) (Undefined) [misra-c2012-20.7]
+[portmacro.h:147] (style) misra violation (use --rule-texts=<file> to get proper output) (Undefined) [misra-c2012-20.7]
+Checking heap_2.c.dump...
+Checking heap_2.c.dump, config ...
+Checking heap_2.c.dump, config ARM7_LPC21xx_KEIL_RVDS...
+Checking heap_2.c.dump, config BCC_FLASH_LITE_186_PORT...
+Checking heap_2.c.dump, config BCC_INDUSTRIAL_PC_PORT...
+Checking heap_2.c.dump, config COLDFIRE_V2_CODEWARRIOR...
+Checking heap_2.c.dump, config COLDFIRE_V2_GCC...
+Checking heap_2.c.dump, config GCC_ARM7...
+Checking heap_2.c.dump, config GCC_ARM7_ECLIPSE...
+Checking heap_2.c.dump, config GCC_ARMCM3...
+Checking heap_2.c.dump, config GCC_ARMCM3_LM3S102...
+Checking heap_2.c.dump, config GCC_AT91FR40008...
+Checking heap_2.c.dump, config GCC_H8S...
+
+MISRA rules violations found:
+	Undefined: 50
+
+MISRA rules violated:
+	misra-c2012-3.1 (-): 2
+	misra-c2012-5.5 (-): 1
+	misra-c2012-10.4 (-): 9
+	misra-c2012-11.4 (-): 2
+	misra-c2012-11.5 (-): 1
+	misra-c2012-12.3 (-): 3
+	misra-c2012-17.8 (-): 2
+	misra-c2012-18.4 (-): 3
+	misra-c2012-19.2 (-): 2
+	misra-c2012-20.2 (-): 15
+	misra-c2012-20.5 (-): 1
+	misra-c2012-20.7 (-): 9

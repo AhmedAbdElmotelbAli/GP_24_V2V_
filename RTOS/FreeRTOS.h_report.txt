@@ -1,0 +1,55 @@
+[FreeRTOS.h:1] (style) misra violation (use --rule-texts=<file> to get proper output) (Undefined) [misra-c2012-3.1]
+[FreeRTOS.h:640] (style) misra violation (use --rule-texts=<file> to get proper output) (Undefined) [misra-c2012-7.3]
+[FreeRTOS.h:644] (style) misra violation (use --rule-texts=<file> to get proper output) (Undefined) [misra-c2012-7.3]
+[FreeRTOS.h:802] (style) misra violation (use --rule-texts=<file> to get proper output) (Undefined) [misra-c2012-7.3]
+[FreeRTOS.h:987] (style) misra violation (use --rule-texts=<file> to get proper output) (Undefined) [misra-c2012-7.3]
+[FreeRTOS.h:1173] (style) misra violation (use --rule-texts=<file> to get proper output) (Undefined) [misra-c2012-7.3]
+[FreeRTOS.h:1179] (style) misra violation (use --rule-texts=<file> to get proper output) (Undefined) [misra-c2012-7.3]
+[FreeRTOS.h:1212] (style) misra violation (use --rule-texts=<file> to get proper output) (Undefined) [misra-c2012-19.2]
+[FreeRTOS.h:1216] (style) misra violation (use --rule-texts=<file> to get proper output) (Undefined) [misra-c2012-19.2]
+[deprecated_definitions.h:41] (style) misra violation (use --rule-texts=<file> to get proper output) (Undefined) [misra-c2012-20.2]
+[deprecated_definitions.h:46] (style) misra violation (use --rule-texts=<file> to get proper output) (Undefined) [misra-c2012-20.2]
+[deprecated_definitions.h:95] (style) misra violation (use --rule-texts=<file> to get proper output) (Undefined) [misra-c2012-20.2]
+[deprecated_definitions.h:107] (style) misra violation (use --rule-texts=<file> to get proper output) (Undefined) [misra-c2012-20.2]
+[deprecated_definitions.h:115] (style) misra violation (use --rule-texts=<file> to get proper output) (Undefined) [misra-c2012-20.2]
+[deprecated_definitions.h:119] (style) misra violation (use --rule-texts=<file> to get proper output) (Undefined) [misra-c2012-20.2]
+[deprecated_definitions.h:123] (style) misra violation (use --rule-texts=<file> to get proper output) (Undefined) [misra-c2012-20.2]
+[deprecated_definitions.h:127] (style) misra violation (use --rule-texts=<file> to get proper output) (Undefined) [misra-c2012-20.2]
+[deprecated_definitions.h:131] (style) misra violation (use --rule-texts=<file> to get proper output) (Undefined) [misra-c2012-20.2]
+[deprecated_definitions.h:135] (style) misra violation (use --rule-texts=<file> to get proper output) (Undefined) [misra-c2012-20.2]
+[deprecated_definitions.h:139] (style) misra violation (use --rule-texts=<file> to get proper output) (Undefined) [misra-c2012-20.2]
+[deprecated_definitions.h:179] (style) misra violation (use --rule-texts=<file> to get proper output) (Undefined) [misra-c2012-20.2]
+[deprecated_definitions.h:207] (style) misra violation (use --rule-texts=<file> to get proper output) (Undefined) [misra-c2012-20.2]
+[deprecated_definitions.h:215] (style) misra violation (use --rule-texts=<file> to get proper output) (Undefined) [misra-c2012-20.2]
+[deprecated_definitions.h:224] (style) misra violation (use --rule-texts=<file> to get proper output) (Undefined) [misra-c2012-20.2]
+[FreeRTOS.h:288] (style) misra violation (use --rule-texts=<file> to get proper output) (Undefined) [misra-c2012-20.7]
+[FreeRTOS.h:292] (style) misra violation (use --rule-texts=<file> to get proper output) (Undefined) [misra-c2012-20.7]
+[FreeRTOS.h:300] (style) misra violation (use --rule-texts=<file> to get proper output) (Undefined) [misra-c2012-20.7]
+[FreeRTOS.h:929] (style) misra violation (use --rule-texts=<file> to get proper output) (Undefined) [misra-c2012-20.7]
+[portmacro.h:89] (style) misra violation (use --rule-texts=<file> to get proper output) (Undefined) [misra-c2012-20.7]
+[portmacro.h:112] (style) misra violation (use --rule-texts=<file> to get proper output) (Undefined) [misra-c2012-20.7]
+[portmacro.h:146] (style) misra violation (use --rule-texts=<file> to get proper output) (Undefined) [misra-c2012-20.7]
+[portmacro.h:147] (style) misra violation (use --rule-texts=<file> to get proper output) (Undefined) [misra-c2012-20.7]
+Checking FreeRTOS.h.dump...
+Checking FreeRTOS.h.dump, config ...
+Checking FreeRTOS.h.dump, config ARM7_LPC21xx_KEIL_RVDS...
+Checking FreeRTOS.h.dump, config BCC_FLASH_LITE_186_PORT...
+Checking FreeRTOS.h.dump, config BCC_INDUSTRIAL_PC_PORT...
+Checking FreeRTOS.h.dump, config COLDFIRE_V2_CODEWARRIOR...
+Checking FreeRTOS.h.dump, config COLDFIRE_V2_GCC...
+Checking FreeRTOS.h.dump, config GCC_ARM7...
+Checking FreeRTOS.h.dump, config GCC_ARM7_ECLIPSE...
+Checking FreeRTOS.h.dump, config GCC_ARMCM3...
+Checking FreeRTOS.h.dump, config GCC_ARMCM3_LM3S102...
+Checking FreeRTOS.h.dump, config GCC_AT91FR40008...
+Checking FreeRTOS.h.dump, config GCC_H8S...
+
+MISRA rules violations found:
+	Undefined: 32
+
+MISRA rules violated:
+	misra-c2012-3.1 (-): 1
+	misra-c2012-7.3 (-): 6
+	misra-c2012-19.2 (-): 2
+	misra-c2012-20.2 (-): 15
+	misra-c2012-20.7 (-): 8

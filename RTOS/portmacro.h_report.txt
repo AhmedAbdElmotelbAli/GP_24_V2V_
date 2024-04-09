@@ -1,0 +1,17 @@
+[portmacro.h:1] (style) misra violation (use --rule-texts=<file> to get proper output) (Undefined) [misra-c2012-3.1]
+[portmacro.h:89] (style) misra violation (use --rule-texts=<file> to get proper output) (Undefined) [misra-c2012-15.6]
+[portmacro.h:89] (style) misra violation (use --rule-texts=<file> to get proper output) (Undefined) [misra-c2012-20.7]
+[portmacro.h:112] (style) misra violation (use --rule-texts=<file> to get proper output) (Undefined) [misra-c2012-20.7]
+[portmacro.h:146] (style) misra violation (use --rule-texts=<file> to get proper output) (Undefined) [misra-c2012-20.7]
+[portmacro.h:147] (style) misra violation (use --rule-texts=<file> to get proper output) (Undefined) [misra-c2012-20.7]
+Checking portmacro.h.dump...
+Checking portmacro.h.dump, config ...
+Checking portmacro.h.dump, config configASSERT...
+
+MISRA rules violations found:
+	Undefined: 6
+
+MISRA rules violated:
+	misra-c2012-3.1 (-): 1
+	misra-c2012-15.6 (-): 1
+	misra-c2012-20.7 (-): 4

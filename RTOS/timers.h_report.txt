@@ -1,0 +1,24 @@
+[timers.h:1] (style) misra violation (use --rule-texts=<file> to get proper output) (Undefined) [misra-c2012-3.1]
+[timers.h:92] (style) misra violation (use --rule-texts=<file> to get proper output) (Undefined) [misra-c2012-3.1]
+[timers.h:237] (style) misra violation (use --rule-texts=<file> to get proper output) (Undefined) [misra-c2012-3.1]
+[timers.h:412] (style) misra violation (use --rule-texts=<file> to get proper output) (Undefined) [misra-c2012-3.1]
+[timers.h:553] (style) misra violation (use --rule-texts=<file> to get proper output) (Undefined) [misra-c2012-3.1]
+[timers.h:673] (style) misra violation (use --rule-texts=<file> to get proper output) (Undefined) [misra-c2012-3.1]
+[timers.h:798] (style) misra violation (use --rule-texts=<file> to get proper output) (Undefined) [misra-c2012-3.1]
+[timers.h:885] (style) misra violation (use --rule-texts=<file> to get proper output) (Undefined) [misra-c2012-3.1]
+[timers.h:949] (style) misra violation (use --rule-texts=<file> to get proper output) (Undefined) [misra-c2012-3.1]
+[timers.h:1023] (style) misra violation (use --rule-texts=<file> to get proper output) (Undefined) [misra-c2012-3.1]
+[timers.h:1111] (style) misra violation (use --rule-texts=<file> to get proper output) (Undefined) [misra-c2012-3.1]
+[timers.h:1329] (style) misra violation (use --rule-texts=<file> to get proper output) (Undefined) [misra-c2012-3.1]
+[timers.h:1201] (style) misra violation (use --rule-texts=<file> to get proper output) (Undefined) [misra-c2012-7.3]
+[timers.h:1238] (style) misra violation (use --rule-texts=<file> to get proper output) (Undefined) [misra-c2012-7.3]
+Checking timers.h.dump...
+Checking timers.h.dump, config INC_FREERTOS_H;INC_TASK_H...
+Checking timers.h.dump, config INC_FREERTOS_H;LIST_H...
+
+MISRA rules violations found:
+	Undefined: 14
+
+MISRA rules violated:
+	misra-c2012-3.1 (-): 12
+	misra-c2012-7.3 (-): 2

@@ -1,0 +1,70 @@
+[UART.c:17] (style) misra violation (use --rule-texts=<file> to get proper output) (Undefined) [misra-c2012-13.4]
+[UART.c:54] (style) misra violation (use --rule-texts=<file> to get proper output) (Undefined) [misra-c2012-13.4]
+[UART.c:88] (style) misra violation (use --rule-texts=<file> to get proper output) (Undefined) [misra-c2012-13.4]
+[UART.c:122] (style) misra violation (use --rule-texts=<file> to get proper output) (Undefined) [misra-c2012-13.4]
+[UART.c:156] (style) misra violation (use --rule-texts=<file> to get proper output) (Undefined) [misra-c2012-13.4]
+[UART.c:190] (style) misra violation (use --rule-texts=<file> to get proper output) (Undefined) [misra-c2012-13.4]
+[UART.c:224] (style) misra violation (use --rule-texts=<file> to get proper output) (Undefined) [misra-c2012-13.4]
+[UART.c:258] (style) misra violation (use --rule-texts=<file> to get proper output) (Undefined) [misra-c2012-13.4]
+[UART.c:479] (style) misra violation (use --rule-texts=<file> to get proper output) (Undefined) [misra-c2012-14.4]
+[UART.c:486] (style) misra violation (use --rule-texts=<file> to get proper output) (Undefined) [misra-c2012-14.4]
+[UART.c:497] (style) misra violation (use --rule-texts=<file> to get proper output) (Undefined) [misra-c2012-14.4]
+[UART.c:504] (style) misra violation (use --rule-texts=<file> to get proper output) (Undefined) [misra-c2012-14.4]
+[UART.c:515] (style) misra violation (use --rule-texts=<file> to get proper output) (Undefined) [misra-c2012-14.4]
+[UART.c:522] (style) misra violation (use --rule-texts=<file> to get proper output) (Undefined) [misra-c2012-14.4]
+[UART.c:533] (style) misra violation (use --rule-texts=<file> to get proper output) (Undefined) [misra-c2012-14.4]
+[UART.c:540] (style) misra violation (use --rule-texts=<file> to get proper output) (Undefined) [misra-c2012-14.4]
+[UART.c:551] (style) misra violation (use --rule-texts=<file> to get proper output) (Undefined) [misra-c2012-14.4]
+[UART.c:558] (style) misra violation (use --rule-texts=<file> to get proper output) (Undefined) [misra-c2012-14.4]
+[UART.c:569] (style) misra violation (use --rule-texts=<file> to get proper output) (Undefined) [misra-c2012-14.4]
+[UART.c:576] (style) misra violation (use --rule-texts=<file> to get proper output) (Undefined) [misra-c2012-14.4]
+[UART.c:587] (style) misra violation (use --rule-texts=<file> to get proper output) (Undefined) [misra-c2012-14.4]
+[UART.c:594] (style) misra violation (use --rule-texts=<file> to get proper output) (Undefined) [misra-c2012-14.4]
+[UART.c:605] (style) misra violation (use --rule-texts=<file> to get proper output) (Undefined) [misra-c2012-14.4]
+[UART.c:612] (style) misra violation (use --rule-texts=<file> to get proper output) (Undefined) [misra-c2012-14.4]
+[UART.c:623] (style) misra violation (use --rule-texts=<file> to get proper output) (Undefined) [misra-c2012-14.4]
+[UART.c:294] (style) misra violation (use --rule-texts=<file> to get proper output) (Undefined) [misra-c2012-15.6]
+[UART.c:298] (style) misra violation (use --rule-texts=<file> to get proper output) (Undefined) [misra-c2012-15.6]
+[UART.c:302] (style) misra violation (use --rule-texts=<file> to get proper output) (Undefined) [misra-c2012-15.6]
+[UART.c:306] (style) misra violation (use --rule-texts=<file> to get proper output) (Undefined) [misra-c2012-15.6]
+[UART.c:310] (style) misra violation (use --rule-texts=<file> to get proper output) (Undefined) [misra-c2012-15.6]
+[UART.c:314] (style) misra violation (use --rule-texts=<file> to get proper output) (Undefined) [misra-c2012-15.6]
+[UART.c:318] (style) misra violation (use --rule-texts=<file> to get proper output) (Undefined) [misra-c2012-15.6]
+[UART.c:322] (style) misra violation (use --rule-texts=<file> to get proper output) (Undefined) [misra-c2012-15.6]
+[UART.c:331] (style) misra violation (use --rule-texts=<file> to get proper output) (Undefined) [misra-c2012-15.6]
+[UART.c:335] (style) misra violation (use --rule-texts=<file> to get proper output) (Undefined) [misra-c2012-15.6]
+[UART.c:340] (style) misra violation (use --rule-texts=<file> to get proper output) (Undefined) [misra-c2012-15.6]
+[UART.c:345] (style) misra violation (use --rule-texts=<file> to get proper output) (Undefined) [misra-c2012-15.6]
+[UART.c:350] (style) misra violation (use --rule-texts=<file> to get proper output) (Undefined) [misra-c2012-15.6]
+[UART.c:355] (style) misra violation (use --rule-texts=<file> to get proper output) (Undefined) [misra-c2012-15.6]
+[UART.c:360] (style) misra violation (use --rule-texts=<file> to get proper output) (Undefined) [misra-c2012-15.6]
+[UART.c:363] (style) misra violation (use --rule-texts=<file> to get proper output) (Undefined) [misra-c2012-15.6]
+[UART.c:372] (style) misra violation (use --rule-texts=<file> to get proper output) (Undefined) [misra-c2012-15.6]
+[UART.c:374] (style) misra violation (use --rule-texts=<file> to get proper output) (Undefined) [misra-c2012-15.6]
+[UART.c:429] (style) misra violation (use --rule-texts=<file> to get proper output) (Undefined) [misra-c2012-15.6]
+[UART.c:431] (style) misra violation (use --rule-texts=<file> to get proper output) (Undefined) [misra-c2012-15.6]
+[UART.c:375] (style) misra violation (use --rule-texts=<file> to get proper output) (Undefined) [misra-c2012-15.7]
+[UART.c:432] (style) misra violation (use --rule-texts=<file> to get proper output) (Undefined) [misra-c2012-15.7]
+[UART.c:362] (style) misra violation (use --rule-texts=<file> to get proper output) (Undefined) [misra-c2012-16.3]
+[UART.c:11] (style) misra violation (use --rule-texts=<file> to get proper output) (Undefined) [misra-c2012-16.4]
+[UART.c:292] (style) misra violation (use --rule-texts=<file> to get proper output) (Undefined) [misra-c2012-16.4]
+[UART.c:329] (style) misra violation (use --rule-texts=<file> to get proper output) (Undefined) [misra-c2012-16.4]
+[UART.c:376] (style) misra violation (use --rule-texts=<file> to get proper output) (Undefined) [misra-c2012-16.4]
+[UART.c:433] (style) misra violation (use --rule-texts=<file> to get proper output) (Undefined) [misra-c2012-16.4]
+[UART.c:625] (style) misra violation (use --rule-texts=<file> to get proper output) (Undefined) [misra-c2012-17.8]
+[UART.h:2] (style) misra violation (use --rule-texts=<file> to get proper output) (Undefined) [misra-c2012-21.1]
+Checking UART.c.dump...
+Checking UART.c.dump, config ...
+
+MISRA rules violations found:
+	Undefined: 55
+
+MISRA rules violated:
+	misra-c2012-13.4 (-): 8
+	misra-c2012-14.4 (-): 17
+	misra-c2012-15.6 (-): 20
+	misra-c2012-15.7 (-): 2
+	misra-c2012-16.3 (-): 1
+	misra-c2012-16.4 (-): 5
+	misra-c2012-17.8 (-): 1
+	misra-c2012-21.1 (-): 1

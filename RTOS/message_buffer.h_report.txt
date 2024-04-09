@@ -1,0 +1,29 @@
+[message_buffer.h:1] (style) misra violation (use --rule-texts=<file> to get proper output) (Undefined) [misra-c2012-3.1]
+[message_buffer.h:87] (style) misra violation (use --rule-texts=<file> to get proper output) (Undefined) [misra-c2012-3.1]
+[message_buffer.h:146] (style) misra violation (use --rule-texts=<file> to get proper output) (Undefined) [misra-c2012-3.1]
+[message_buffer.h:213] (style) misra violation (use --rule-texts=<file> to get proper output) (Undefined) [misra-c2012-3.1]
+[message_buffer.h:313] (style) misra violation (use --rule-texts=<file> to get proper output) (Undefined) [misra-c2012-3.1]
+[message_buffer.h:418] (style) misra violation (use --rule-texts=<file> to get proper output) (Undefined) [misra-c2012-3.1]
+[message_buffer.h:508] (style) misra violation (use --rule-texts=<file> to get proper output) (Undefined) [misra-c2012-3.1]
+[message_buffer.h:310] (style) misra violation (use --rule-texts=<file> to get proper output) (Undefined) [misra-c2012-20.7]
+[message_buffer.h:415] (style) misra violation (use --rule-texts=<file> to get proper output) (Undefined) [misra-c2012-20.7]
+[message_buffer.h:504] (style) misra violation (use --rule-texts=<file> to get proper output) (Undefined) [misra-c2012-20.7]
+[message_buffer.h:606] (style) misra violation (use --rule-texts=<file> to get proper output) (Undefined) [misra-c2012-20.7]
+[message_buffer.h:627] (style) misra violation (use --rule-texts=<file> to get proper output) (Undefined) [misra-c2012-20.7]
+[message_buffer.h:645] (style) misra violation (use --rule-texts=<file> to get proper output) (Undefined) [misra-c2012-20.7]
+[message_buffer.h:662] (style) misra violation (use --rule-texts=<file> to get proper output) (Undefined) [misra-c2012-20.7]
+[message_buffer.h:686] (style) misra violation (use --rule-texts=<file> to get proper output) (Undefined) [misra-c2012-20.7]
+[message_buffer.h:709] (style) misra violation (use --rule-texts=<file> to get proper output) (Undefined) [misra-c2012-20.7]
+[message_buffer.h:711] (style) misra violation (use --rule-texts=<file> to get proper output) (Undefined) [misra-c2012-20.7]
+[message_buffer.h:731] (style) misra violation (use --rule-texts=<file> to get proper output) (Undefined) [misra-c2012-20.7]
+[message_buffer.h:771] (style) misra violation (use --rule-texts=<file> to get proper output) (Undefined) [misra-c2012-20.7]
+[message_buffer.h:812] (style) misra violation (use --rule-texts=<file> to get proper output) (Undefined) [misra-c2012-20.7]
+Checking message_buffer.h.dump...
+Checking message_buffer.h.dump, config INC_FREERTOS_H;STREAM_BUFFER_H...
+
+MISRA rules violations found:
+	Undefined: 20
+
+MISRA rules violated:
+	misra-c2012-3.1 (-): 7
+	misra-c2012-20.7 (-): 13

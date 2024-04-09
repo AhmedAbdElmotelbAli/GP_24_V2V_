@@ -1,0 +1,25 @@
+[event_groups.h:1] (style) misra violation (use --rule-texts=<file> to get proper output) (Undefined) [misra-c2012-3.1]
+[event_groups.h:95] (style) misra violation (use --rule-texts=<file> to get proper output) (Undefined) [misra-c2012-3.1]
+[event_groups.h:151] (style) misra violation (use --rule-texts=<file> to get proper output) (Undefined) [misra-c2012-3.1]
+[event_groups.h:204] (style) misra violation (use --rule-texts=<file> to get proper output) (Undefined) [misra-c2012-3.1]
+[event_groups.h:302] (style) misra violation (use --rule-texts=<file> to get proper output) (Undefined) [misra-c2012-3.1]
+[event_groups.h:360] (style) misra violation (use --rule-texts=<file> to get proper output) (Undefined) [misra-c2012-3.1]
+[event_groups.h:421] (style) misra violation (use --rule-texts=<file> to get proper output) (Undefined) [misra-c2012-3.1]
+[event_groups.h:496] (style) misra violation (use --rule-texts=<file> to get proper output) (Undefined) [misra-c2012-3.1]
+[event_groups.h:577] (style) misra violation (use --rule-texts=<file> to get proper output) (Undefined) [misra-c2012-3.1]
+[event_groups.h:758] (style) misra violation (use --rule-texts=<file> to get proper output) (Undefined) [misra-c2012-7.3]
+[event_groups.h:760] (style) misra violation (use --rule-texts=<file> to get proper output) (Undefined) [misra-c2012-7.3]
+[event_groups.h:417] (style) misra violation (use --rule-texts=<file> to get proper output) (Undefined) [misra-c2012-20.7]
+[event_groups.h:573] (style) misra violation (use --rule-texts=<file> to get proper output) (Undefined) [misra-c2012-20.7]
+Checking event_groups.h.dump...
+Checking event_groups.h.dump, config INC_FREERTOS_H;INC_TASK_H...
+Checking event_groups.h.dump, config INC_FREERTOS_H;LIST_H...
+Checking event_groups.h.dump, config INC_FREERTOS_H;TIMERS_H...
+
+MISRA rules violations found:
+	Undefined: 13
+
+MISRA rules violated:
+	misra-c2012-3.1 (-): 9
+	misra-c2012-7.3 (-): 2
+	misra-c2012-20.7 (-): 2

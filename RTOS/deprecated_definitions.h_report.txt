@@ -1,0 +1,46 @@
+[deprecated_definitions.h:1] (style) misra violation (use --rule-texts=<file> to get proper output) (Undefined) [misra-c2012-3.1]
+[deprecated_definitions.h:230] (style) misra violation (use --rule-texts=<file> to get proper output) (Undefined) [misra-c2012-20.1]
+[deprecated_definitions.h:237] (style) misra violation (use --rule-texts=<file> to get proper output) (Undefined) [misra-c2012-20.1]
+[deprecated_definitions.h:243] (style) misra violation (use --rule-texts=<file> to get proper output) (Undefined) [misra-c2012-20.1]
+[deprecated_definitions.h:247] (style) misra violation (use --rule-texts=<file> to get proper output) (Undefined) [misra-c2012-20.1]
+[deprecated_definitions.h:252] (style) misra violation (use --rule-texts=<file> to get proper output) (Undefined) [misra-c2012-20.1]
+[deprecated_definitions.h:256] (style) misra violation (use --rule-texts=<file> to get proper output) (Undefined) [misra-c2012-20.1]
+[deprecated_definitions.h:260] (style) misra violation (use --rule-texts=<file> to get proper output) (Undefined) [misra-c2012-20.1]
+[deprecated_definitions.h:264] (style) misra violation (use --rule-texts=<file> to get proper output) (Undefined) [misra-c2012-20.1]
+[deprecated_definitions.h:268] (style) misra violation (use --rule-texts=<file> to get proper output) (Undefined) [misra-c2012-20.1]
+[deprecated_definitions.h:272] (style) misra violation (use --rule-texts=<file> to get proper output) (Undefined) [misra-c2012-20.1]
+[deprecated_definitions.h:276] (style) misra violation (use --rule-texts=<file> to get proper output) (Undefined) [misra-c2012-20.1]
+[deprecated_definitions.h:41] (style) misra violation (use --rule-texts=<file> to get proper output) (Undefined) [misra-c2012-20.2]
+[deprecated_definitions.h:46] (style) misra violation (use --rule-texts=<file> to get proper output) (Undefined) [misra-c2012-20.2]
+[deprecated_definitions.h:95] (style) misra violation (use --rule-texts=<file> to get proper output) (Undefined) [misra-c2012-20.2]
+[deprecated_definitions.h:107] (style) misra violation (use --rule-texts=<file> to get proper output) (Undefined) [misra-c2012-20.2]
+[deprecated_definitions.h:115] (style) misra violation (use --rule-texts=<file> to get proper output) (Undefined) [misra-c2012-20.2]
+[deprecated_definitions.h:119] (style) misra violation (use --rule-texts=<file> to get proper output) (Undefined) [misra-c2012-20.2]
+[deprecated_definitions.h:123] (style) misra violation (use --rule-texts=<file> to get proper output) (Undefined) [misra-c2012-20.2]
+[deprecated_definitions.h:127] (style) misra violation (use --rule-texts=<file> to get proper output) (Undefined) [misra-c2012-20.2]
+[deprecated_definitions.h:131] (style) misra violation (use --rule-texts=<file> to get proper output) (Undefined) [misra-c2012-20.2]
+[deprecated_definitions.h:135] (style) misra violation (use --rule-texts=<file> to get proper output) (Undefined) [misra-c2012-20.2]
+[deprecated_definitions.h:139] (style) misra violation (use --rule-texts=<file> to get proper output) (Undefined) [misra-c2012-20.2]
+[deprecated_definitions.h:179] (style) misra violation (use --rule-texts=<file> to get proper output) (Undefined) [misra-c2012-20.2]
+[deprecated_definitions.h:207] (style) misra violation (use --rule-texts=<file> to get proper output) (Undefined) [misra-c2012-20.2]
+[deprecated_definitions.h:215] (style) misra violation (use --rule-texts=<file> to get proper output) (Undefined) [misra-c2012-20.2]
+[deprecated_definitions.h:224] (style) misra violation (use --rule-texts=<file> to get proper output) (Undefined) [misra-c2012-20.2]
+[portmacro.h:89] (style) misra violation (use --rule-texts=<file> to get proper output) (Undefined) [misra-c2012-20.7]
+[portmacro.h:112] (style) misra violation (use --rule-texts=<file> to get proper output) (Undefined) [misra-c2012-20.7]
+[portmacro.h:146] (style) misra violation (use --rule-texts=<file> to get proper output) (Undefined) [misra-c2012-20.7]
+[portmacro.h:147] (style) misra violation (use --rule-texts=<file> to get proper output) (Undefined) [misra-c2012-20.7]
+[deprecated_definitions.h:223] (style) misra violation (use --rule-texts=<file> to get proper output) (Undefined) [misra-c2012-20.1]
+[deprecated_definitions.h:224] (style) misra violation (use --rule-texts=<file> to get proper output) (Undefined) [misra-c2012-20.1]
+Checking deprecated_definitions.h.dump...
+Checking deprecated_definitions.h.dump, config BCC_FLASH_LITE_186_PORT...
+Checking deprecated_definitions.h.dump, config BCC_INDUSTRIAL_PC_PORT...
+Checking deprecated_definitions.h.dump, config GCC_ARM7_ECLIPSE...
+
+MISRA rules violations found:
+	Undefined: 33
+
+MISRA rules violated:
+	misra-c2012-3.1 (-): 1
+	misra-c2012-20.1 (-): 13
+	misra-c2012-20.2 (-): 15
+	misra-c2012-20.7 (-): 4

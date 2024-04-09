@@ -1,0 +1,31 @@
+[UltraSonic.c:26] (style) misra violation (use --rule-texts=<file> to get proper output) (Undefined) [misra-c2012-3.1]
+[UltraSonic.c:14] (style) misra violation (use --rule-texts=<file> to get proper output) (Undefined) [misra-c2012-7.3]
+[UltraSonic.c:20] (style) misra violation (use --rule-texts=<file> to get proper output) (Undefined) [misra-c2012-7.3]
+[UltraSonic.c:65] (style) misra violation (use --rule-texts=<file> to get proper output) (Undefined) [misra-c2012-7.3]
+[UltraSonic.c:69] (style) misra violation (use --rule-texts=<file> to get proper output) (Undefined) [misra-c2012-7.3]
+[UltraSonic.c:63] (style) misra violation (use --rule-texts=<file> to get proper output) (Undefined) [misra-c2012-10.4]
+[UltraSonic.c:70] (style) misra violation (use --rule-texts=<file> to get proper output) (Undefined) [misra-c2012-10.4]
+[UltraSonic.c:43] (style) misra violation (use --rule-texts=<file> to get proper output) (Undefined) [misra-c2012-10.8]
+[UltraSonic.c:63] (style) misra violation (use --rule-texts=<file> to get proper output) (Undefined) [misra-c2012-12.1]
+[UltraSonic.c:22] (style) misra violation (use --rule-texts=<file> to get proper output) (Undefined) [misra-c2012-12.3]
+[UltraSonic.c:36] (style) misra violation (use --rule-texts=<file> to get proper output) (Undefined) [misra-c2012-14.4]
+[UltraSonic.c:43] (style) misra violation (use --rule-texts=<file> to get proper output) (Undefined) [misra-c2012-15.5]
+[UltraSonic.c:35] (style) misra violation (use --rule-texts=<file> to get proper output) (Undefined) [misra-c2012-15.6]
+[UltraSonic.c:41] (style) misra violation (use --rule-texts=<file> to get proper output) (Undefined) [misra-c2012-15.6]
+[UltraSonic.c:63] (style) misra violation (use --rule-texts=<file> to get proper output) (Undefined) [misra-c2012-15.6]
+Checking UltraSonic.c.dump...
+Checking UltraSonic.c.dump, config ...
+
+MISRA rules violations found:
+	Undefined: 15
+
+MISRA rules violated:
+	misra-c2012-3.1 (-): 1
+	misra-c2012-7.3 (-): 4
+	misra-c2012-10.4 (-): 2
+	misra-c2012-10.8 (-): 1
+	misra-c2012-12.1 (-): 1
+	misra-c2012-12.3 (-): 1
+	misra-c2012-14.4 (-): 1
+	misra-c2012-15.5 (-): 1
+	misra-c2012-15.6 (-): 3

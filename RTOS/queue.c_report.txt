@@ -1,0 +1,127 @@
+[queue.c:1] (style) misra violation (use --rule-texts=<file> to get proper output) (Undefined) [misra-c2012-3.1]
+[queue.c:93] (style) misra violation (use --rule-texts=<file> to get proper output) (Undefined) [misra-c2012-3.1]
+[queue.c:993] (style) misra violation (use --rule-texts=<file> to get proper output) (Undefined) [misra-c2012-3.1]
+[queue.c:1171] (style) misra violation (use --rule-texts=<file> to get proper output) (Undefined) [misra-c2012-3.1]
+[queue.c:1839] (style) misra violation (use --rule-texts=<file> to get proper output) (Undefined) [misra-c2012-3.1]
+[queue.c:1935] (style) misra violation (use --rule-texts=<file> to get proper output) (Undefined) [misra-c2012-3.1]
+[list.h:149] (style) misra violation (use --rule-texts=<file> to get proper output) (Undefined) [misra-c2012-5.5]
+[queue.c:266] (style) misra violation (use --rule-texts=<file> to get proper output) (Undefined) [misra-c2012-5.5]
+[queue.c:385] (style) misra violation (use --rule-texts=<file> to get proper output) (Undefined) [misra-c2012-5.5]
+[queue.c:520] (style) misra violation (use --rule-texts=<file> to get proper output) (Undefined) [misra-c2012-5.5]
+[queue.c:614] (style) misra violation (use --rule-texts=<file> to get proper output) (Undefined) [misra-c2012-5.5]
+[queue.c:670] (style) misra violation (use --rule-texts=<file> to get proper output) (Undefined) [misra-c2012-5.5]
+[queue.c:743] (style) misra violation (use --rule-texts=<file> to get proper output) (Undefined) [misra-c2012-5.5]
+[queue.c:772] (style) misra violation (use --rule-texts=<file> to get proper output) (Undefined) [misra-c2012-5.5]
+[queue.c:1318] (style) misra violation (use --rule-texts=<file> to get proper output) (Undefined) [misra-c2012-5.5]
+[queue.c:1460] (style) misra violation (use --rule-texts=<file> to get proper output) (Undefined) [misra-c2012-5.5]
+[queue.c:1680] (style) misra violation (use --rule-texts=<file> to get proper output) (Undefined) [misra-c2012-5.5]
+[queue.c:1979] (style) misra violation (use --rule-texts=<file> to get proper output) (Undefined) [misra-c2012-5.5]
+[queue.c:1995] (style) misra violation (use --rule-texts=<file> to get proper output) (Undefined) [misra-c2012-5.5]
+[queue.c:2024] (style) misra violation (use --rule-texts=<file> to get proper output) (Undefined) [misra-c2012-5.5]
+[queue.c:2720] (style) misra violation (use --rule-texts=<file> to get proper output) (Undefined) [misra-c2012-5.5]
+[queue.c:2749] (style) misra violation (use --rule-texts=<file> to get proper output) (Undefined) [misra-c2012-5.5]
+[queue.c:2778] (style) misra violation (use --rule-texts=<file> to get proper output) (Undefined) [misra-c2012-5.5]
+[queue.c:2849] (style) misra violation (use --rule-texts=<file> to get proper output) (Undefined) [misra-c2012-5.5]
+[queue.c:2864] (style) misra violation (use --rule-texts=<file> to get proper output) (Undefined) [misra-c2012-5.5]
+[queue.c:2898] (style) misra violation (use --rule-texts=<file> to get proper output) (Undefined) [misra-c2012-5.5]
+[queue.c:2935] (style) misra violation (use --rule-texts=<file> to get proper output) (Undefined) [misra-c2012-5.5]
+[queue.c:1014] (style) misra violation (use --rule-texts=<file> to get proper output) (Undefined) [misra-c2012-10.1]
+[queue.c:1187] (style) misra violation (use --rule-texts=<file> to get proper output) (Undefined) [misra-c2012-10.1]
+[queue.c:1855] (style) misra violation (use --rule-texts=<file> to get proper output) (Undefined) [misra-c2012-10.1]
+[queue.c:1951] (style) misra violation (use --rule-texts=<file> to get proper output) (Undefined) [misra-c2012-10.1]
+[queue.c:395] (style) misra violation (use --rule-texts=<file> to get proper output) (Undefined) [misra-c2012-10.8]
+[queue.c:291] (style) misra violation (use --rule-texts=<file> to get proper output) (Undefined) [misra-c2012-11.4]
+[queue.c:821] (style) misra violation (use --rule-texts=<file> to get proper output) (Undefined) [misra-c2012-11.4]
+[queue.c:840] (style) misra violation (use --rule-texts=<file> to get proper output) (Undefined) [misra-c2012-11.4]
+[queue.c:853] (style) misra violation (use --rule-texts=<file> to get proper output) (Undefined) [misra-c2012-11.4]
+[queue.c:957] (style) misra violation (use --rule-texts=<file> to get proper output) (Undefined) [misra-c2012-11.4]
+[queue.c:1362] (style) misra violation (use --rule-texts=<file> to get proper output) (Undefined) [misra-c2012-11.4]
+[queue.c:1422] (style) misra violation (use --rule-texts=<file> to get proper output) (Undefined) [misra-c2012-11.4]
+[queue.c:1525] (style) misra violation (use --rule-texts=<file> to get proper output) (Undefined) [misra-c2012-11.4]
+[queue.c:1614] (style) misra violation (use --rule-texts=<file> to get proper output) (Undefined) [misra-c2012-11.4]
+[queue.c:1731] (style) misra violation (use --rule-texts=<file> to get proper output) (Undefined) [misra-c2012-11.4]
+[queue.c:1792] (style) misra violation (use --rule-texts=<file> to get proper output) (Undefined) [misra-c2012-11.4]
+[queue.c:2793] (style) misra violation (use --rule-texts=<file> to get proper output) (Undefined) [misra-c2012-11.4]
+[queue.c:409] (style) misra violation (use --rule-texts=<file> to get proper output) (Undefined) [misra-c2012-11.5]
+[queue.c:1986] (style) misra violation (use --rule-texts=<file> to get proper output) (Undefined) [misra-c2012-11.8]
+[queue.c:522] (style) misra violation (use --rule-texts=<file> to get proper output) (Undefined) [misra-c2012-12.3]
+[queue.c:773] (style) misra violation (use --rule-texts=<file> to get proper output) (Undefined) [misra-c2012-12.3]
+[queue.c:898] (style) misra violation (use --rule-texts=<file> to get proper output) (Undefined) [misra-c2012-15.5]
+[queue.c:911] (style) misra violation (use --rule-texts=<file> to get proper output) (Undefined) [misra-c2012-15.5]
+[queue.c:974] (style) misra violation (use --rule-texts=<file> to get proper output) (Undefined) [misra-c2012-15.5]
+[queue.c:1375] (style) misra violation (use --rule-texts=<file> to get proper output) (Undefined) [misra-c2012-15.5]
+[queue.c:1385] (style) misra violation (use --rule-texts=<file> to get proper output) (Undefined) [misra-c2012-15.5]
+[queue.c:1447] (style) misra violation (use --rule-texts=<file> to get proper output) (Undefined) [misra-c2012-15.5]
+[queue.c:1538] (style) misra violation (use --rule-texts=<file> to get proper output) (Undefined) [misra-c2012-15.5]
+[queue.c:1557] (style) misra violation (use --rule-texts=<file> to get proper output) (Undefined) [misra-c2012-15.5]
+[queue.c:1666] (style) misra violation (use --rule-texts=<file> to get proper output) (Undefined) [misra-c2012-15.5]
+[queue.c:1744] (style) misra violation (use --rule-texts=<file> to get proper output) (Undefined) [misra-c2012-15.5]
+[queue.c:1754] (style) misra violation (use --rule-texts=<file> to get proper output) (Undefined) [misra-c2012-15.5]
+[queue.c:1817] (style) misra violation (use --rule-texts=<file> to get proper output) (Undefined) [misra-c2012-15.5]
+[queue.c:273] (style) misra violation (use --rule-texts=<file> to get proper output) (Undefined) [misra-c2012-18.4]
+[queue.c:276] (style) misra violation (use --rule-texts=<file> to get proper output) (Undefined) [misra-c2012-18.4]
+[queue.c:416] (style) misra violation (use --rule-texts=<file> to get proper output) (Undefined) [misra-c2012-18.4]
+[queue.c:2154] (style) misra violation (use --rule-texts=<file> to get proper output) (Undefined) [misra-c2012-18.4]
+[queue.c:2168] (style) misra violation (use --rule-texts=<file> to get proper output) (Undefined) [misra-c2012-18.4]
+[queue.c:2172] (style) misra violation (use --rule-texts=<file> to get proper output) (Undefined) [misra-c2012-18.4]
+[queue.c:2211] (style) misra violation (use --rule-texts=<file> to get proper output) (Undefined) [misra-c2012-18.4]
+[FreeRTOS.h:1212] (style) misra violation (use --rule-texts=<file> to get proper output) (Undefined) [misra-c2012-19.2]
+[FreeRTOS.h:1216] (style) misra violation (use --rule-texts=<file> to get proper output) (Undefined) [misra-c2012-19.2]
+[queue.c:103] (style) misra violation (use --rule-texts=<file> to get proper output) (Undefined) [misra-c2012-19.2]
+[queue.c:107] (style) misra violation (use --rule-texts=<file> to get proper output) (Undefined) [misra-c2012-19.2]
+[deprecated_definitions.h:41] (style) misra violation (use --rule-texts=<file> to get proper output) (Undefined) [misra-c2012-20.2]
+[deprecated_definitions.h:46] (style) misra violation (use --rule-texts=<file> to get proper output) (Undefined) [misra-c2012-20.2]
+[deprecated_definitions.h:95] (style) misra violation (use --rule-texts=<file> to get proper output) (Undefined) [misra-c2012-20.2]
+[deprecated_definitions.h:107] (style) misra violation (use --rule-texts=<file> to get proper output) (Undefined) [misra-c2012-20.2]
+[deprecated_definitions.h:115] (style) misra violation (use --rule-texts=<file> to get proper output) (Undefined) [misra-c2012-20.2]
+[deprecated_definitions.h:119] (style) misra violation (use --rule-texts=<file> to get proper output) (Undefined) [misra-c2012-20.2]
+[deprecated_definitions.h:123] (style) misra violation (use --rule-texts=<file> to get proper output) (Undefined) [misra-c2012-20.2]
+[deprecated_definitions.h:127] (style) misra violation (use --rule-texts=<file> to get proper output) (Undefined) [misra-c2012-20.2]
+[deprecated_definitions.h:131] (style) misra violation (use --rule-texts=<file> to get proper output) (Undefined) [misra-c2012-20.2]
+[deprecated_definitions.h:135] (style) misra violation (use --rule-texts=<file> to get proper output) (Undefined) [misra-c2012-20.2]
+[deprecated_definitions.h:139] (style) misra violation (use --rule-texts=<file> to get proper output) (Undefined) [misra-c2012-20.2]
+[deprecated_definitions.h:179] (style) misra violation (use --rule-texts=<file> to get proper output) (Undefined) [misra-c2012-20.2]
+[deprecated_definitions.h:207] (style) misra violation (use --rule-texts=<file> to get proper output) (Undefined) [misra-c2012-20.2]
+[deprecated_definitions.h:215] (style) misra violation (use --rule-texts=<file> to get proper output) (Undefined) [misra-c2012-20.2]
+[deprecated_definitions.h:224] (style) misra violation (use --rule-texts=<file> to get proper output) (Undefined) [misra-c2012-20.2]
+[queue.c:47] (style) misra violation (use --rule-texts=<file> to get proper output) (Undefined) [misra-c2012-20.5]
+[FreeRTOS.h:288] (style) misra violation (use --rule-texts=<file> to get proper output) (Undefined) [misra-c2012-20.7]
+[FreeRTOS.h:292] (style) misra violation (use --rule-texts=<file> to get proper output) (Undefined) [misra-c2012-20.7]
+[FreeRTOS.h:300] (style) misra violation (use --rule-texts=<file> to get proper output) (Undefined) [misra-c2012-20.7]
+[FreeRTOS.h:929] (style) misra violation (use --rule-texts=<file> to get proper output) (Undefined) [misra-c2012-20.7]
+[portmacro.h:89] (style) misra violation (use --rule-texts=<file> to get proper output) (Undefined) [misra-c2012-20.7]
+[portmacro.h:112] (style) misra violation (use --rule-texts=<file> to get proper output) (Undefined) [misra-c2012-20.7]
+[portmacro.h:146] (style) misra violation (use --rule-texts=<file> to get proper output) (Undefined) [misra-c2012-20.7]
+[portmacro.h:147] (style) misra violation (use --rule-texts=<file> to get proper output) (Undefined) [misra-c2012-20.7]
+Checking queue.c.dump...
+Checking queue.c.dump, config ...
+Checking queue.c.dump, config ARM7_LPC21xx_KEIL_RVDS...
+Checking queue.c.dump, config BCC_FLASH_LITE_186_PORT...
+Checking queue.c.dump, config BCC_INDUSTRIAL_PC_PORT...
+Checking queue.c.dump, config COLDFIRE_V2_CODEWARRIOR...
+Checking queue.c.dump, config COLDFIRE_V2_GCC...
+Checking queue.c.dump, config GCC_ARM7...
+Checking queue.c.dump, config GCC_ARM7_ECLIPSE...
+Checking queue.c.dump, config GCC_ARMCM3...
+Checking queue.c.dump, config GCC_ARMCM3_LM3S102...
+Checking queue.c.dump, config GCC_AT91FR40008...
+Checking queue.c.dump, config GCC_H8S...
+
+MISRA rules violations found:
+	Undefined: 95
+
+MISRA rules violated:
+	misra-c2012-3.1 (-): 6
+	misra-c2012-5.5 (-): 21
+	misra-c2012-10.1 (-): 4
+	misra-c2012-10.8 (-): 1
+	misra-c2012-11.4 (-): 12
+	misra-c2012-11.5 (-): 1
+	misra-c2012-11.8 (-): 1
+	misra-c2012-12.3 (-): 2
+	misra-c2012-15.5 (-): 12
+	misra-c2012-18.4 (-): 7
+	misra-c2012-19.2 (-): 4
+	misra-c2012-20.2 (-): 15
+	misra-c2012-20.5 (-): 1
+	misra-c2012-20.7 (-): 8

@@ -1,0 +1,16 @@
+[mpu_prototypes.h:1] (style) misra violation (use --rule-texts=<file> to get proper output) (Undefined) [misra-c2012-3.1]
+[mpu_prototypes.h:48] (style) misra violation (use --rule-texts=<file> to get proper output) (Undefined) [misra-c2012-7.3]
+[mpu_prototypes.h:102] (style) misra violation (use --rule-texts=<file> to get proper output) (Undefined) [misra-c2012-7.3]
+[mpu_prototypes.h:106] (style) misra violation (use --rule-texts=<file> to get proper output) (Undefined) [misra-c2012-7.3]
+[mpu_prototypes.h:107] (style) misra violation (use --rule-texts=<file> to get proper output) (Undefined) [misra-c2012-7.3]
+[mpu_prototypes.h:117] (style) misra violation (use --rule-texts=<file> to get proper output) (Undefined) [misra-c2012-7.3]
+[mpu_prototypes.h:200] (style) misra violation (use --rule-texts=<file> to get proper output) (Undefined) [misra-c2012-7.3]
+Checking mpu_prototypes.h.dump...
+Checking mpu_prototypes.h.dump, config ...
+
+MISRA rules violations found:
+	Undefined: 7
+
+MISRA rules violated:
+	misra-c2012-3.1 (-): 1
+	misra-c2012-7.3 (-): 6

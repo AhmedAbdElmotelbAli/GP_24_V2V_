@@ -1,0 +1,15 @@
+[BIT_MATH.h:13] (style) misra violation (use --rule-texts=<file> to get proper output) (Undefined) [misra-c2012-20.7]
+[BIT_MATH.h:14] (style) misra violation (use --rule-texts=<file> to get proper output) (Undefined) [misra-c2012-20.7]
+[BIT_MATH.h:15] (style) misra violation (use --rule-texts=<file> to get proper output) (Undefined) [misra-c2012-20.7]
+[BIT_MATH.h:16] (style) misra violation (use --rule-texts=<file> to get proper output) (Undefined) [misra-c2012-20.7]
+[UART.h:2] (style) misra violation (use --rule-texts=<file> to get proper output) (Undefined) [misra-c2012-21.1]
+[tm4c123gh6pm.h:41] (style) misra violation (use --rule-texts=<file> to get proper output) (Undefined) [misra-c2012-21.1]
+Checking MQTT.h.dump...
+Checking MQTT.h.dump, config ...
+
+MISRA rules violations found:
+	Undefined: 6
+
+MISRA rules violated:
+	misra-c2012-20.7 (-): 4
+	misra-c2012-21.1 (-): 2
