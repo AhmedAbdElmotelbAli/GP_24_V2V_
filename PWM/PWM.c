@@ -1,27 +1,15 @@
-/*
-*Ahmed Abdelmotelb Ali 
-*1901401
-*
-*
-*
-*/
-#include "config.h"
 #include "Type.h"
 #include "BITMATH.h"
 #include "GPIO.h"
 #include "tm4c123gh6pm.h"
 #include "PWM.h"
 
-#if (PWM_SWC_STATUS == SWC_STATUS_ENABLE)
 
 uint32_t Load ;
 
-#endif
 
-void PWMClockSet (PWM_Module module,PWM_Number number)
+void PWM_VoidClockSet (PWM_Module module,PWM_Number number)
 {
-#if (PWM_SWC_STATUS == SWC_STATUS_ENABLE)
-
     SET_BIT(SYSCTL_RCGCPWM_R,module);      /*Enable and provide a clock to PWM module  in Run mode*/
 		switch(module)
 		{
@@ -96,23 +84,17 @@ void PWMClockSet (PWM_Module module,PWM_Number number)
 			default: break;
 		}
 
-#endif
 }
 
-void PWMDiv(PWM_SYSCLK_DIV div)
+void PWM_VoidDiv(PWM_SYSCLK_DIV div)
 {
-#if (PWM_SWC_STATUS == SWC_STATUS_ENABLE)
-
     SET_BIT(SYSCTL_RCC_R,20);              /* Enable System Clock Divisor function  */
     SYSCTL_RCC_R|=(div<<17);
-    
-#endif  
+
 }
 
-void PWMPinConfigure(PWM_Module module,PWM_Number number)
+void PWM_VoidPinConfigure(PWM_Module module,PWM_Number number)
 {
-#if (PWM_SWC_STATUS == SWC_STATUS_ENABLE)
-
     switch(module)
     {
         case M0PWM:
@@ -128,7 +110,6 @@ void PWMPinConfigure(PWM_Module module,PWM_Number number)
     			    GPIO_PORTB_PCTL_R|=0x0400000;
 					GPIO_PORTB_DEN_R |=0x40;
                     break;
-
                 case PWM1:
                     GPIO_PORTB_LOCK_R= 0x4C4F434B;
                     GPIO_PORTB_CR_R  |=0x80;						
@@ -334,13 +315,11 @@ void PWMPinConfigure(PWM_Module module,PWM_Number number)
 
     }
 
-#endif
 }
 
 
-void PWMGenDisable(PWM_Module module,PWM_Number number)
+void PWM_VoidGenDisable(PWM_Module module,PWM_Number number)
 {
-#if (PWM_SWC_STATUS == SWC_STATUS_ENABLE)
 
     switch(module)
     {
@@ -389,13 +368,10 @@ void PWMGenDisable(PWM_Module module,PWM_Number number)
             /*Do Nothing */    break;
     }
 
-#endif
 }
 
-void PWMGenConfigure (PWM_Module module, PWM_Mode mode, PWM_Number number)
+void PWM_VoidGenConfigure (PWM_Module module, PWM_Mode mode, PWM_Number number)
 {
-#if (PWM_SWC_STATUS == SWC_STATUS_ENABLE)
-
   switch(module)
   { 
       case M0PWM:
@@ -737,13 +713,10 @@ void PWMGenConfigure (PWM_Module module, PWM_Mode mode, PWM_Number number)
 
   }
 
-#endif
 }
 
-void PWMGenPeriodSet(PWM_Module module, PWM_Number number, PWM_SYSCLK_DIV div, uint32_t Clock_Required)
+void PWM_VoidGenPeriodSet(PWM_Module module, PWM_Number number, PWM_SYSCLK_DIV div, uint32_t Clock_Required)
 {
-#if (PWM_SWC_STATUS == SWC_STATUS_ENABLE)
-
         uint32_t System_Clock=0;
         switch(div)
         {   
@@ -823,14 +796,12 @@ void PWMGenPeriodSet(PWM_Module module, PWM_Number number, PWM_SYSCLK_DIV div, u
             default:
                 /*Do Nothing */break;
         }
-
-#endif      
+   
 }
 
 
-void PWMDutyCycleSet(PWM_Module module, PWM_Number number, PWM_Mode mode, uint32_t duty_cycle)
+void PWM_VoidDutyCycleSet(PWM_Module module, PWM_Number number, PWM_Mode mode, uint32_t duty_cycle)
 {
-#if (PWM_SWC_STATUS == SWC_STATUS_ENABLE)
 
    /*	Load =System_Clock/Clock_Required;  */ 
    /*Load Value passed to  "PWMPulseWidthSet" function */
@@ -1143,13 +1114,12 @@ void PWMDutyCycleSet(PWM_Module module, PWM_Number number, PWM_Mode mode, uint32
 
   }
 
-#endif
+
 }
 
 
-void PWMGenEnable(PWM_Module module,PWM_Number number)
+void PWM_VoidGenEnable(PWM_Module module,PWM_Number number)
 {
-#if (PWM_SWC_STATUS == SWC_STATUS_ENABLE)
 
     switch(module)
     {
@@ -1220,5 +1190,17 @@ void PWMGenEnable(PWM_Module module,PWM_Number number)
             /*Do Nothing */  break; 
     }
 
-#endif
+}
+
+void PWM_VoidInit(PWM_Module module,PWM_Number number,PWM_SYSCLK_DIV div,PWM_Mode mode,uint32_t Clock_Required,uint32_t duty_cycle)
+{
+     PWM_VoidClockSet( module, number);
+     PWM_VoidDiv( div);
+     PWM_VoidPinConfigure( module, number);
+     PWM_VoidGenDisable( module, number);
+     PWM_VoidGenConfigure( module,  mode,  number);
+     PWM_VoidGenPeriodSet( module,  number,  div,  Clock_Required);
+     PWM_VoidDutyCycleSet( module,  number,  mode,  duty_cycle);
+     PWM_VoidGenEnable( module, number);
+
 }
