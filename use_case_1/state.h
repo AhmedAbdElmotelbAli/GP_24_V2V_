@@ -15,12 +15,12 @@
 /* State creation functions */
 
     /* defines new state function (function prototype)*/
-#define STATE_define(_stateFunc_)	void ST_##_stateFunc_()
+//#define STATE_define(_stateFunc_)	void ST_##_stateFunc_()
     /* get the address of the state function created */
-#define STATE(_stateFunc_)			ST_##_stateFunc_
+//#define STATE(_stateFunc_)			ST_##_stateFunc_
 
 /* state connections */
 /* Here write the connection functions prototype between two modules */
 void RWIFI_sendData(int local_data);
-void C_print_warning_state(int local_warning_state);
+void Controller_print_warning_state(int local_warning_state);
 #endif /* STATE_H_ */

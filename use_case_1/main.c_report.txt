@@ -1,0 +1,12 @@
+[../GPIO/GPIO.h:2] (style) misra violation (use --rule-texts=<file> to get proper output) (Undefined) [misra-c2012-21.1]
+[../GPIO/Type.h:2] (style) misra violation (use --rule-texts=<file> to get proper output) (Undefined) [misra-c2012-21.1]
+[../UART/Type.h:2] (style) misra violation (use --rule-texts=<file> to get proper output) (Undefined) [misra-c2012-21.1]
+[../UART/UART.h:2] (style) misra violation (use --rule-texts=<file> to get proper output) (Undefined) [misra-c2012-21.1]
+Checking main.c.dump...
+Checking main.c.dump, config ...
+
+MISRA rules violations found:
+	Undefined: 4
+
+MISRA rules violated:
+	misra-c2012-21.1 (-): 4

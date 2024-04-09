@@ -27,10 +27,10 @@ void RWIFI_sendData(int32_t local_data){
     case Controller_normal:
         if(local_data == 0){
             warning_state = 0;
-            Controller_state = STATE(Controller_normal);
+            Controller_state = ST_Controller_normal;
         }else if(local_data == 1){
             warning_state = 1;
-            Controller_state = STATE(Controller_emergency);
+            Controller_state = ST_Controller_emergency;
         }else{
             /* Misra required */
         }
@@ -38,10 +38,10 @@ void RWIFI_sendData(int32_t local_data){
     case Controller_emergency:
         if(local_data == 0){
             warning_state = 0;
-            Controller_state = STATE(Controller_normal);
+            Controller_state = ST_Controller_normal;
         }else if(local_data == 1){
             warning_state = 1;
-            Controller_state = STATE(Controller_emergency);
+            Controller_state = ST_Controller_emergency;
         }else{
             /* Misra required */
         }
@@ -51,21 +51,21 @@ void RWIFI_sendData(int32_t local_data){
         break;
     }
 }
-STATE_define(Controller_normal){
+void ST_Controller_normal(){
 	
     /* state name */
     Controller_state_id = Controller_normal;
 	/* state action */
     Controller_print_warning_state(warning_state);
     /* event check */
-    Controller_state = STATE(Controller_normal);
+    Controller_state = ST_Controller_normal;
 }
-STATE_define(Controller_emergency){
+void ST_Controller_emergency(){
 	
     /* state name */
     Controller_state_id = Controller_emergency;
 	/* state action */
     Controller_print_warning_state(warning_state);
     /* event check */
-    Controller_state = STATE(Controller_emergency);
+    Controller_state = ST_Controller_emergency;
 }

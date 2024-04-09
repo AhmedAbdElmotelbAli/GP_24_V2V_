@@ -19,14 +19,16 @@ extern void (*Recieve_Wifi_state)();
 static int32_t data = 0;
 /* functions and states */
 void Recieve_Wifi_Read_Data(int32_t* Pdata){
-    //Recieve Data from Wifi Here
+    if(!Pdata){
+        //Recieve Data from Wifi Here
+    }
 }
-STATE_define(Recieve_Wifi_busy){
+void ST_Recieve_Wifi_busy(){
     /* state name */
     Recieve_Wifi_state_id = Recieve_Wifi_busy;
     /* state action */
 	Recieve_Wifi_Read_Data(&data);
     Recieve_Wifi_sendData(data);
     /* event check */
-    Recieve_Wifi_state = STATE(Recieve_Wifi_busy);
+    Recieve_Wifi_state = ST_Recieve_Wifi_busy;
 }
