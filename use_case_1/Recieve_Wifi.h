@@ -21,7 +21,7 @@ enum{
 /* initialization */
 void Recieve_Wifi_Init();
 /* other functions and state functions */
-void ST_Recieve_Wifi_busy();
+STATE_define(Recieve_Wifi_busy);
 /* state pointer to function */
 void (*Recieve_Wifi_state)();
 /* end header guard */

@@ -27,9 +27,9 @@ void setup(){
     /* init block */
 
     /* set state pointers for each block */
-    Recieve_Wifi_state = ST_Recieve_Wifi_busy;
-    Controller_state = ST_Controller_normal;
-    LCD_Print_state = ST_LCD_Print_normal;
+    Recieve_Wifi_state = STATE(Recieve_Wifi_busy);
+    Controller_state = STATE(Controller_normal);
+    LCD_Print_state = STATE(LCD_Print_normal);
 }
 
 int32_t main(){

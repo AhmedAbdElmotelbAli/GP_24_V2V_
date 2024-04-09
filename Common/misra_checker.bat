@@ -15,7 +15,7 @@ python "C:\Program Files\Cppcheck\addons\misra.py" %fileName%.dump
 
 set /p generateReport="Do you want to generate a MISRA report? (Y/N): "
 if /i "%generateReport%"=="Y" (
-    python "C:\Program Files\Cppcheck\addons\misra.py" %fileName%.dump > %fileName%_report.txt
+    python "C:\Program Files\Cppcheck\addons\misra.py" %fileName%.dump  > %fileName%_report.txt
     echo MISRA report generated. Check report for details.
 )
 

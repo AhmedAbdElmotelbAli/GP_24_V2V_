@@ -33,26 +33,26 @@ void Controller_print_warning_state(int32_t local_warning_state){
     warning_state = local_warning_state;
     /* set new state */
     if(warning_state == 0){
-        LCD_Print_state = ST_LCD_Print_normal;
+        LCD_Print_state = STATE(LCD_Print_normal);
     }else if(warning_state == 1){
-        LCD_Print_state = ST_LCD_Print_warning;
+        LCD_Print_state = STATE(LCD_Print_warning);
     }else{
         /* Misra required */
     }
 }
-void ST_LCD_Print_normal(){
+STATE_define(LCD_Print_normal){
         /* state name */
         LCD_Print_state_id = LCD_Print_normal;
         /* state action */
         print_warning_state(warning_state);
         /* event check */
-        LCD_Print_state = ST_LCD_Print_normal;
+        LCD_Print_state = STATE(LCD_Print_normal);
 }
-void ST_LCD_Print_warning(){
+STATE_define(LCD_Print_warning){
         /* state name */
         LCD_Print_state_id = LCD_Print_warning;
         /* state action */
         print_warning_state(warning_state);
         /* event check */
-        LCD_Print_state = ST_LCD_Print_warning;
+        LCD_Print_state = STATE(LCD_Print_warning);
 }

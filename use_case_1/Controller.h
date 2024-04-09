@@ -21,8 +21,8 @@ enum{
 /* initialization */
 void Controller_Init();
 /* other functions and state functions */
-void ST_Controller_normal();
-void ST_Controller_emergency();
+STATE_define(Controller_normal);
+STATE_define(Controller_emergency);
 /* state pointer to function */
 void (*Controller_state)();
 /* end header guard */

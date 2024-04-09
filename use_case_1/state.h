@@ -15,9 +15,11 @@
 /* State creation functions */
 
     /* defines new state function (function prototype)*/
-//#define STATE_define(_stateFunc_)	void ST_##_stateFunc_()
+
+#define STATE_define(_stateFunc_)	void ST_##_stateFunc_()  // cppcheck-suppress misra-c2012-20.10
+
     /* get the address of the state function created */
-//#define STATE(_stateFunc_)			ST_##_stateFunc_
+#define STATE(_stateFunc_)			ST_##_stateFunc_        // cppcheck-suppress misra-c2012-20.10
 
 /* state connections */
 /* Here write the connection functions prototype between two modules */

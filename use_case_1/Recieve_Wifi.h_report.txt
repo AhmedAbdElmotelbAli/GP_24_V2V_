@@ -1,2 +1,8 @@
 Checking Recieve_Wifi.h.dump...
 Checking Recieve_Wifi.h.dump, config ...
+
+MISRA rules violations found:
+	Undefined: 2
+
+MISRA rules violated:
+	misra-c2012-20.10 (-): 2

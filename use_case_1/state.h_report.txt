@@ -1,2 +1,8 @@
 Checking state.h.dump...
 Checking state.h.dump, config ...
+
+MISRA rules violations found:
+	Undefined: 2
+
+MISRA rules violated:
+	misra-c2012-20.10 (-): 2

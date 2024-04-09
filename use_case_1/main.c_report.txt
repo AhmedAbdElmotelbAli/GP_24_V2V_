@@ -6,7 +6,8 @@ Checking main.c.dump...
 Checking main.c.dump, config ...
 
 MISRA rules violations found:
-	Undefined: 4
+	Undefined: 6
 
 MISRA rules violated:
+	misra-c2012-20.10 (-): 2
 	misra-c2012-21.1 (-): 4

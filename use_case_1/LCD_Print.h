@@ -22,8 +22,8 @@ enum{
 /* initialization */
 void Init();
 /* other functions and state functions */
-void ST_LCD_Print_normal();
-void ST_LCD_Print_warning();
+STATE_define(LCD_Print_normal);
+STATE_define(LCD_Print_warning);
 /* state pointer to function */
 void (*LCD_Print_state)();
 /* end header guard */
