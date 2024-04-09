@@ -44,20 +44,20 @@ void MI2C_voidInit(void){
         SET_BIT(GPIOB_ODR_APB,3);
         /* Configure the PMCn field in the GPIOPCTL reg to assign I2C signals to appropriate pins */
         //for pin B2
-        SET_BIT(GPIOB_CTL_APB,PMC2+0);
-        SET_BIT(GPIOB_CTL_APB,PMC2+1);
-        CLR_BIT(GPIOB_CTL_APB,PMC2+2);
-        CLR_BIT(GPIOB_CTL_APB,PMC2+3);
+        SET_BIT(GPIOB_CTL_APB,PMC2_0);
+        SET_BIT(GPIOB_CTL_APB,PMC2_1);
+        CLR_BIT(GPIOB_CTL_APB,PMC2_2);
+        CLR_BIT(GPIOB_CTL_APB,PMC2_3);
         //for pin B3
-        SET_BIT(GPIOB_CTL_APB,PMC3+0);
-        SET_BIT(GPIOB_CTL_APB,PMC3+1);
-        CLR_BIT(GPIOB_CTL_APB,PMC3+2);
-        CLR_BIT(GPIOB_CTL_APB,PMC3+3);
+        SET_BIT(GPIOB_CTL_APB,PMC3_0);
+        SET_BIT(GPIOB_CTL_APB,PMC3_1);
+        CLR_BIT(GPIOB_CTL_APB,PMC3_2);
+        CLR_BIT(GPIOB_CTL_APB,PMC3_3);
         /* Initialize the I2C Master by writing the I2CMCR register with a value of 0x0000.0010 */
         I2C0_MCR = 0x00000010;
         /* Set the desired SCL clock speed of 100 Kbps by writing I2CMTPR reg with the number of system clock periods in one SCL clock period */
         // TPR = (System Clock/(20*SCL_CLK))-1;
-        I2C0_MTPR |= (SYSTEM_CLK /(20 * SCL_CLK))-1;
+        I2C0_MTPR |= (SYSTEM_CLK /(2UL * SCL_CLK))-1UL;
         /* Acknowledgement */
         if(I2C_ACKNOWLEDGEMENT == ENABLED){
             SET_BIT(I2C0_MCS,ACK);
@@ -183,35 +183,33 @@ void MI2C_voidInit(void){
 I2C_ErrorState_t MI2C0_MasterStart(u8 slaveAddress,u8 RW,u8 FirstByte){
     I2C_ErrorState_t Local_ErrorState = enOK;
     /* Specify the slave address of the master and that the next operation using I2CMSA reg with value 0x0000.0076 */
-    if((slaveAddress != NULL)&&(RW != NULL))
-    {
         if((RW == I2C_ReadOperation)||(RW == I2C_WriteOperation)){
             /* Write Slave Address to I2CMSA */
             if(RW == I2C_ReadOperation)
             {//choose read operation and send slave address
-                I2C0_MSA = ((slaveAddress<<1)|1);
+                I2C0_MSA = ((slaveAddress<<1U)|1U);
             }
             else
             {//choose write operation and send slave address
-                I2C0_MSA = ((slaveAddress<<1)|0);
+                I2C0_MSA = ((slaveAddress<<1U)|0U);
             }
             /* write data to I2CMDR if taransmit*/
             if(RW == I2C_WriteOperation){
                 I2C0_MDR = FirstByte;
             }
             /* Wait until BUSBSY is 0 */
-            while(GET_BIT(I2C0_MCS,BUSBSY));
+            while(GET_BIT(I2C0_MCS,BUSBSY) == ONE){/* Wait */};
             /* Write ---0-011 to I2CMCS on transmit or ---01011 (ACK)*/
             if(RW == I2C_WriteOperation){
-                I2C0_MCS &= 11101011;
-                I2C0_MCS |= 00000011;
+                I2C0_MCS &= 0b11101011;
+                I2C0_MCS |= 0b00000011;
             }else{
-                I2C0_MCS &= 11101011;
-                I2C0_MCS |= 00001011;
+                I2C0_MCS &= 0b11101011;
+                I2C0_MCS |= 0b00001011;
             }
 
             /* Read I2CMCS (Busy bit wait) */
-            while(GET_BIT(I2C0_MCS,BUSY));
+            while(GET_BIT(I2C0_MCS,BUSY) == ZERO){/* Wait */};
             /* Check Error bit */
             if(GET_BIT(I2C0_MCS,ERROR) == ZERO){
                 //success
@@ -224,11 +222,7 @@ I2C_ErrorState_t MI2C0_MasterStart(u8 slaveAddress,u8 RW,u8 FirstByte){
         else{
             Local_ErrorState = enWrongInputs;
         }
-    }
-    else
-    {
-        Local_ErrorState = enWrongInputs;
-    }
+
     return Local_ErrorState;
 }
 
@@ -238,10 +232,10 @@ I2C_ErrorState_t MI2C0_MasterSendData(u8 DataByte){
         /* Write Data to I2CMDR */
         I2C0_MDR = DataByte;
         /* Write ---0-011 to I2CMCS (start condition + transmitting) */
-        I2C0_MCS &= 11101001;
-        I2C0_MCS |= 00000001;
+        I2C0_MCS &= 0b11101001;
+        I2C0_MCS |= 0b00000001;
         /* Check if sending busy */
-        while(GET_BIT(I2C0_MCS,BUSY));
+        while(GET_BIT(I2C0_MCS,BUSY) == ONE){/* Wait */};
         /* check the ERROR bit in the I2CMCS to confirm the transmit was acknowledged */
         if(GET_BIT(I2C0_MCS,ERROR) == ZERO){//No error occurred
             Local_ErrorState = enSuccess;
@@ -263,10 +257,10 @@ I2C_ErrorState_t MI2C0_MasterReceiveData(u8 *RecievedByte){
         /* Read Data from MDR */
         *RecievedByte = I2C0_MDR;
         /* Write ---01001 to I2CMCS*/
-        I2C0_MCS &= 11101001;
-        I2C0_MCS |= 00001001;
+        I2C0_MCS &= 0b11101001;
+        I2C0_MCS |= 0b00001001;
         /* Check if sending busy */
-        while(GET_BIT(I2C0_MCS,BUSY));
+        while(GET_BIT(I2C0_MCS,BUSY) == ONE){/* Wait */};
         /* check the ERROR bit in the I2CMCS to confirm the transmit was acknowledged */
         if(GET_BIT(I2C0_MCS,ERROR) == ZERO){//No error occurred
             local_ErrorState = enSuccess;
@@ -280,6 +274,6 @@ I2C_ErrorState_t MI2C0_MasterReceiveData(u8 *RecievedByte){
     return local_ErrorState;
 }
 
-void MI2C0_MasterStop(){
+void MI2C0_MasterStop(void){
     SET_BIT(I2C0_MCS,STOP);
 }

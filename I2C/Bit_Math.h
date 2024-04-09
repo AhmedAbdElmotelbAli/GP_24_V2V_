@@ -10,13 +10,13 @@
  */
 
 
-#ifndef _BIT_MATH_H_
-#define _BIT_MATH_H_
+#ifndef BIT_MATH_H_
+#define BIT_MATH_H_
 
-#define SET_BIT(Reg, bitnum)       	(Reg |=1<<bitnum)
-#define CLR_BIT(Reg, bitnum)     	(Reg &=~(1<<bitnum))
-#define TOG_BIT(Reg, bitnum)    	(Reg ^=(1<<bitnum))
-#define GET_BIT(Reg, bitnum)       	((Reg>>bitnum)& 0x01)
-#define SET_BYTE(Reg,value)         ( Reg = value )
+#define SET_BIT(Reg, bitnum)       	((Reg) |=1U<<(bitnum))
+#define CLR_BIT(Reg, bitnum)     	((Reg) &=~(1U<<(bitnum)))
+#define TOG_BIT(Reg, bitnum)    	((Reg) ^=(1U<<(bitnum)))
+#define GET_BIT(Reg, bitnum)       	(((Reg)>>(bitnum))& 0x01)
+#define SET_BYTE(Reg,value)         ( (Reg) = (value) )
 
 #endif

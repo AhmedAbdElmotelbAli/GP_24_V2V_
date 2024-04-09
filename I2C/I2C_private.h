@@ -110,22 +110,56 @@ GPIO Port F (AHB) base: 0x4005D000
 #define GPIOE_CTL_AHB       *((volatile u32*)(GPIO_PORTE_AHB_BASE+0x52C))
 #define GPIOF_CTL_AHB       *((volatile u32*)(GPIO_PORTF_AHB_BASE+0x52C))
 
-#define PMC0    0
-#define PMC1    4
-#define PMC2    8
-#define PMC3    12
-#define PMC4    16
-#define PMC5    20
-#define PMC6    24
-#define PMC7    28
+#define PMC0_0    0U
+#define PMC0_1    1U
+#define PMC0_2    2U
+#define PMC0_3    3U
 
 
-#define ONE     1
-#define ZERO    0
+#define PMC1_0    4U
+#define PMC1_1    5U
+#define PMC1_2    6U
+#define PMC1_3    7U
 
 
-#define DISABLED     0
-#define ENABLED      1
+
+#define PMC2_0    8U
+#define PMC2_1    9U
+#define PMC2_2    10U
+#define PMC2_3    11U
+
+#define PMC3_0    12U
+#define PMC3_1    13U
+#define PMC3_2    14U
+#define PMC3_3    15U
+
+#define PMC4_0    16U
+#define PMC4_1    17U
+#define PMC4_2    18U
+#define PMC4_3    19U
+
+#define PMC5_0    20U
+#define PMC5_1    21U
+#define PMC5_2    22U
+#define PMC5_3    23U
+
+#define PMC6_0    24U
+#define PMC6_1    25U
+#define PMC6_2    26U
+#define PMC6_3    27U
+
+#define PMC7_0    28U
+#define PMC7_1    29U
+#define PMC7_2    30U
+#define PMC7_3    31U
+
+
+#define ONE     1U
+#define ZERO    0U
+
+
+#define DISABLED     0U
+#define ENABLED      1U
 
 
 /* Registers */
@@ -133,12 +167,12 @@ GPIO Port F (AHB) base: 0x4005D000
 /* General */
 #define RCGCI2C         *((volatile u32*)0x400FE620)
 #define RCGCGPIO        *((volatile u32*)0x400FE608)
-#define R0  0
-#define R1  1
-#define R2  2
-#define R3  3
-#define R4  4
-#define R5  5
+#define R0  0U
+#define R1  1U
+#define R2  2U
+#define R3  3U
+#define R4  4U
+#define R5  5U
 /* I2C0 */
 #define I2C0_MSA        *((volatile u32*)(I2C0_Base+0x000))
 #define I2C0_MCS        *((volatile u32*)(I2C0_Base+0x004))
@@ -209,54 +243,54 @@ GPIO Port F (AHB) base: 0x4005D000
 /* Register bits */
 
 /* I2C_MSA 1*/
-#define R_S         0
-#define S_A         1
+#define R_S         0U
+#define S_A         1U
 /* I2C_MCS 2*/
 //RO
-#define BUSY        0
-#define ERROR       1
-#define ADRACK      2
-#define DATACK      3
-#define ARBLST      4
-#define IDLE        5
-#define BUSBSY      6
-#define CLKTO       7
+#define BUSY        0U
+#define ERROR       1U
+#define ADRACK      2U
+#define DATACK      3U
+#define ARBLST      4U
+#define IDLE        5U
+#define BUSBSY      6U
+#define CLKTO       7U
 ////WO
-#define RUN         0
-#define START       1
-#define STOP        2
-#define ACK         3
-#define HS          4
+#define RUN         0U
+#define START       1U
+#define STOP        2U
+#define ACK         3U
+#define HS          4U
 /* I2C_MDR 3*/
-#define DATA        0
+#define DATA        0U
 
 /* I2C_MTPR 4*/
 //Selects speed mode
-#define TPR         0
-#define HS          7
+#define TPR         0U
+#define HS          7U
 /* I2C_MIMR 5*/
-#define IM          0
-#define CLKIM       1
+#define IM          0U
+#define CLKIM       1U
 /* I2C_MMRIS 6*/
-#define RIS         0
-#define CLKRIS      1
+#define RIS         0U
+#define CLKRIS      1U
 /* I2C_MMIS 7*/
-#define MIS         0
-#define CLKMIS      1
+#define MIS         0U
+#define CLKMIS      1U
 /* I2C_MIMR 8*/
-#define IC          0
-#define CLKIC       1
+#define IC          0U
+#define CLKIC       1U
 /* I2C_MICR 9*/
-#define LPBK        0
-#define MFE         4
-#define SFE         5
-#define GFE         6
+#define LPBK        0U
+#define MFE         4U
+#define SFE         5U
+#define GFE         6U
 /* I2C_MCLKOCNT 10*/
-#define CNTL        0
+#define CNTL        0U
 /* I2C_MBMON 11*/
-#define SCL         0
-#define SDA         1
+#define SCL         0U
+#define SDA         1U
 /* I2C_MCR2 12*/
-#define GFPW        4
+#define GFPW        4U
 
 #endif

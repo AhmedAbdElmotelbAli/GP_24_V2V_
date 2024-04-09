@@ -1,9 +1,2 @@
-[Std_types.h:13] (style) misra violation (use --rule-texts=<file> to get proper output) (Undefined) [misra-c2012-21.1]
 Checking Std_types.h.dump...
 Checking Std_types.h.dump, config ...
-
-MISRA rules violations found:
-	Undefined: 1
-
-MISRA rules violated:
-	misra-c2012-21.1 (-): 1

@@ -9,8 +9,8 @@
  ============================================================================
  */
 
-#ifndef _STD_types_H_
-#define _STD_types_H_
+#ifndef STD_types_H_
+#define STD_types_H_
 
 typedef unsigned char u8;
 typedef unsigned short u16;
