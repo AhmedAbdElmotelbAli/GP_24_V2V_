@@ -1,16 +1,16 @@
-/*
- * Lcd.h
- *
- *  Created on: 12/2/2024
- *      Author: Ahmed Adel
- *      Author: Ahmed Abdelmotelb
- */
+/******************************************************************************
+ * File:        Lcd.h
+ * Author:      Ahmed Adel Hassan
+ * Created on:  12/2/2024
+ * Description: Header file for controlling an LCD module in an embedded system.
+ ******************************************************************************/
 
 #ifndef LCD_H_
 #define LCD_H_
 
 #define LCD_PORT_DATA
 #define LCD_PORT_DIR
+#include "Type.h" // Include necessary header file(s) for types used
 
 /*LCD command */
 #define LCD_CLEAR_COMMAND              0x01
@@ -26,49 +26,79 @@
 #define LCD_PORT_ID                    GPIO_PORTB
 
 #define LCD_RS_PORT_ID                 GPIO_PORTB
-#define LCD_RS_PIN_ID                  GPIO_PIN_3
+#define LCD_RS_PIN_ID                  GPIO_PIN_4
 
 #define LCD_E_PORT_ID                  GPIO_PORTB
-#define LCD_E_PIN_ID                   GPIO_PIN_1
+#define LCD_E_PIN_ID                   GPIO_PIN_7
 
 #define LCD_RW_PORT_ID                 GPIO_PORTB
-#define LCD_RW_PIN_ID                  GPIO_PIN_2
+#define LCD_RW_PIN_ID                  GPIO_PIN_5
 
 
-/* Description:
- * initialization function
- * set RS , RW , E and data port as output pins
- * */
-void Lcd_Init(void);
+/******************************************************************************
+ * Function:    Lcd_VoidInit
+ * Description: Initialization function.
+ *              Sets RS, RW, E, and data port as output pins.
+ * Parameters:  None
+ * Returns:     None
+ ******************************************************************************/
+void Lcd_VoidInit(void);
 
-/* Description:
- * this function used to clear the  of LCD
- * */
-void LCD_clearScreen(void);
+/******************************************************************************
+ * Function:    LCD_VoidclearScreen
+ * Description: Clears the screen of the LCD.
+ * Parameters:  None
+ * Returns:     None
+ ******************************************************************************/
+void LCD_VoidclearScreen(void);
 
-/*Description
- * this function used to display a string on the screen of the LCD
- * */
-void LCD_displayString(char * str);
+/******************************************************************************
+ * Function:    LCD_VoidDisplayString
+ * Description: Displays a string on the screen of the LCD.
+ * Parameters:
+ *              str: Pointer to the string to be displayed.
+ * Returns:     None
+ ******************************************************************************/
+void LCD_VoidDisplayString(char * str);
 
-/* Description:
- * this function used to move the cursor to specific row and column
- * */
-void LCD_moveCursorXY(unsigned char r, unsigned char col);
+/******************************************************************************
+ * Function:    LCD_VoidMoveCursorXY
+ * Description: Moves the cursor to a specific row and column.
+ * Parameters:
+ *              r: Row number (starting from 0).
+ *              col: Column number (starting from 0).
+ * Returns:     None
+ ******************************************************************************/
+void LCD_VoidMoveCursorXY(unsigned char r, unsigned char col);
 
-/*
- * Description :
- * Display the string in the required position on the screen
- */
-void LCD_displayStringRowColumn(uint08_t row,uint08_t col,const char *Str);
+/******************************************************************************
+ * Function:    LCD_VoidDisplayStringRowColumn
+ * Description: Displays the string in the required position on the screen.
+ * Parameters:
+ *              row: Row number (starting from 0).
+ *              col: Column number (starting from 0).
+ *              Str: Pointer to the string to be displayed.
+ * Returns:     None
+ ******************************************************************************/
+void LCD_VoidDisplayStringRowColumn(uint08_t row,uint08_t col,const char *Str);
 
-/*
- * Description :
- * Display the required decimal value on the screen
- */
-void LCD_intgerToString(sint16_t data);
+/******************************************************************************
+ * Function:    LCD_VoidIntgerToString
+ * Description: Displays the required decimal value on the screen.
+ * Parameters:
+ *              data: Integer value to be converted to string and displayed.
+ * Returns:     None
+ ******************************************************************************/
+void LCD_VoidIntgerToString(sint16_t data);
 
-void Data(uint08_t data);
+/******************************************************************************
+ * Function:    LCD_VoidData
+ * Description: Sends data to the LCD.
+ * Parameters:
+ *              data: Data to be sent to the LCD.
+ * Returns:     None
+ ******************************************************************************/
+void LCD_VoidData(uint08_t data);
 
 
 #endif /* LCD_H_ */
