@@ -1,0 +1,39 @@
+[fifo.c:50] (style) misra violation (use --rule-texts=<file> to get proper output) (Undefined) [misra-c2012-10.4]
+[fifo.c:81] (style) misra violation (use --rule-texts=<file> to get proper output) (Undefined) [misra-c2012-10.4]
+[fifo.c:36] (style) misra violation (use --rule-texts=<file> to get proper output) (Undefined) [misra-c2012-12.1]
+[fifo.c:16] (style) misra violation (use --rule-texts=<file> to get proper output) (Undefined) [misra-c2012-15.5]
+[fifo.c:28] (style) misra violation (use --rule-texts=<file> to get proper output) (Undefined) [misra-c2012-15.5]
+[fifo.c:31] (style) misra violation (use --rule-texts=<file> to get proper output) (Undefined) [misra-c2012-15.5]
+[fifo.c:48] (style) misra violation (use --rule-texts=<file> to get proper output) (Undefined) [misra-c2012-15.5]
+[fifo.c:51] (style) misra violation (use --rule-texts=<file> to get proper output) (Undefined) [misra-c2012-15.5]
+[fifo.c:69] (style) misra violation (use --rule-texts=<file> to get proper output) (Undefined) [misra-c2012-15.5]
+[fifo.c:72] (style) misra violation (use --rule-texts=<file> to get proper output) (Undefined) [misra-c2012-15.5]
+[fifo.c:79] (style) misra violation (use --rule-texts=<file> to get proper output) (Undefined) [misra-c2012-15.5]
+[fifo.c:82] (style) misra violation (use --rule-texts=<file> to get proper output) (Undefined) [misra-c2012-15.5]
+[fifo.c:15] (style) misra violation (use --rule-texts=<file> to get proper output) (Undefined) [misra-c2012-15.6]
+[fifo.c:27] (style) misra violation (use --rule-texts=<file> to get proper output) (Undefined) [misra-c2012-15.6]
+[fifo.c:30] (style) misra violation (use --rule-texts=<file> to get proper output) (Undefined) [misra-c2012-15.6]
+[fifo.c:36] (style) misra violation (use --rule-texts=<file> to get proper output) (Undefined) [misra-c2012-15.6]
+[fifo.c:38] (style) misra violation (use --rule-texts=<file> to get proper output) (Undefined) [misra-c2012-15.6]
+[fifo.c:47] (style) misra violation (use --rule-texts=<file> to get proper output) (Undefined) [misra-c2012-15.6]
+[fifo.c:50] (style) misra violation (use --rule-texts=<file> to get proper output) (Undefined) [misra-c2012-15.6]
+[fifo.c:57] (style) misra violation (use --rule-texts=<file> to get proper output) (Undefined) [misra-c2012-15.6]
+[fifo.c:59] (style) misra violation (use --rule-texts=<file> to get proper output) (Undefined) [misra-c2012-15.6]
+[fifo.c:68] (style) misra violation (use --rule-texts=<file> to get proper output) (Undefined) [misra-c2012-15.6]
+[fifo.c:71] (style) misra violation (use --rule-texts=<file> to get proper output) (Undefined) [misra-c2012-15.6]
+[fifo.c:78] (style) misra violation (use --rule-texts=<file> to get proper output) (Undefined) [misra-c2012-15.6]
+[fifo.c:81] (style) misra violation (use --rule-texts=<file> to get proper output) (Undefined) [misra-c2012-15.6]
+[fifo.c:36] (style) misra violation (use --rule-texts=<file> to get proper output) (Undefined) [misra-c2012-18.4]
+[fifo.c:57] (style) misra violation (use --rule-texts=<file> to get proper output) (Undefined) [misra-c2012-18.4]
+Checking fifo.c.dump...
+Checking fifo.c.dump, config ...
+
+MISRA rules violations found:
+	Undefined: 27
+
+MISRA rules violated:
+	misra-c2012-10.4 (-): 2
+	misra-c2012-12.1 (-): 1
+	misra-c2012-15.5 (-): 9
+	misra-c2012-15.6 (-): 13
+	misra-c2012-18.4 (-): 2
