@@ -1,150 +1,173 @@
-/****************************************************************************/
-/************************* Name: Ahmed Abdelmotelb Ali     ******************/
-/*************************    Date: 25/2/2024             ******************/
-/*************************      SWC: Motor          	   ******************/
-/*************************    Version: 2.0                 ******************/
-/****************************************************************************/
+/*
+ ============================================================================
+ File Name		: Motor.c
+ Author			: Ahmed Abdelmotelb Ali
+ Version		: 4.0
+ Date			: 5/4/2023
+ Description	: This file contains the implementation of Motor Driver
+ Notes			: 
+ ============================================================================
+ */
 
-#include "config.h"
 #include "Motor.h"
-#include "GPIO.h"
-#include "Port.h"
-#include "Type.h"
-#include "PWM.h"
+#include "Delay.h"
+#include "LED.h"
 
-uint16_t duty_cycle=25;
+uint16_t duty_cycle=50;
+uint32_t duty_cycle1;
 uint16_t freq =50;
 
 
-void Motor_Init(void)
+void Motor_VoidInit(void)
 {
-    /*****PWM_MOTOR_1****PORTF***PIN0*****/
-    PWM_Init(M1PWM, PWM4, PWM_SYSCLK_DIV_64, Count_DOWN, freq, duty_cycle);
-    /*****PWM_MOTOR_2****PORTF***PIN1*****/
-    PWM_Init(M1PWM, PWM5, PWM_SYSCLK_DIV_64, Count_DOWN, freq, duty_cycle);
-    /********MOTOR_1*******/
-     GPIO_Init(MOTOR_1_PORT,MOTOR_1_IN1);
-     GPIO_Init(MOTOR_1_PORT,MOTOR_1_IN2);
-     GPIO_SetPinDirection(MOTOR_1_PORT,MOTOR_1_IN1,GPIO_DIRECTION_OUTPUT);
-     GPIO_SetPinDirection(MOTOR_1_PORT,MOTOR_1_IN2,GPIO_DIRECTION_OUTPUT);
-     GPIO_SetPinState(MOTOR_1_PORT,MOTOR_1_IN1,GPIO_STATE_LOW);
-     GPIO_SetPinState(MOTOR_1_PORT,MOTOR_1_IN2,GPIO_STATE_LOW);
-    /************Motor_2********/
-    GPIO_Init(MOTOR_2_PORT,MOTOR_2_IN1);
-    GPIO_Init(MOTOR_2_PORT,MOTOR_2_IN2);
-    GPIO_SetPinDirection(MOTOR_2_PORT,MOTOR_2_IN1,GPIO_DIRECTION_OUTPUT);
-    GPIO_SetPinDirection(MOTOR_2_PORT,MOTOR_2_IN2,GPIO_DIRECTION_OUTPUT);
+	
 
+    // Initialize PWM for Motor 3 (Assuming M1PWM, PWM66 for IN1 and PWM77 for IN2)
+   PWM_VoidInit(M1PWM, PWM44, PWM_SYSCLK_DIV_64, Count_DOWN, freq, duty_cycle);
+   PWM_VoidInit(M1PWM, PWM66, PWM_SYSCLK_DIV_64, Count_DOWN, freq, duty_cycle);
 
-    GPIO_SetPinState(MOTOR_2_PORT,MOTOR_2_IN1,GPIO_STATE_LOW);
-    GPIO_SetPinState(MOTOR_2_PORT,MOTOR_2_IN2,GPIO_STATE_LOW);
+    // Initialize GPIO pins for Motor 3 (IN1 and IN2)
+    GPIO_Init(MOTOR_3_PORT, MOTOR_3_IN1);
+    GPIO_Init(MOTOR_3_PORT, MOTOR_3_IN2);
+    GPIO_SetPinDirection(MOTOR_3_PORT, MOTOR_3_IN1, GPIO_DIRECTION_OUTPUT);
+    GPIO_SetPinDirection(MOTOR_3_PORT, MOTOR_3_IN2, GPIO_DIRECTION_OUTPUT);
+
+    // Initialize GPIO pins for Motor 4 (IN1 and IN2)
+    GPIO_Init(MOTOR_4_PORT, MOTOR_4_IN1);
+    GPIO_Init(MOTOR_4_PORT, MOTOR_4_IN2);
+    GPIO_SetPinDirection(MOTOR_4_PORT, MOTOR_4_IN1, GPIO_DIRECTION_OUTPUT);
+    GPIO_SetPinDirection(MOTOR_4_PORT, MOTOR_4_IN2, GPIO_DIRECTION_OUTPUT);
+
+    // Initially set motor direction pins to low (stop)
+    GPIO_SetPinState(MOTOR_3_PORT, MOTOR_3_IN1, GPIO_STATE_LOW);
+    GPIO_SetPinState(MOTOR_3_PORT, MOTOR_3_IN2, GPIO_STATE_LOW);
+    GPIO_SetPinState(MOTOR_4_PORT, MOTOR_4_IN1, GPIO_STATE_LOW);
+    GPIO_SetPinState(MOTOR_4_PORT, MOTOR_4_IN2, GPIO_STATE_LOW);
 
 }
 
-
-void Motor_Start(void)
+void Motor_VoidStop(void)
 {
+       GPIO_SetPinState(MOTOR_3_PORT,MOTOR_3_IN1,GPIO_STATE_LOW);
+       GPIO_SetPinState(MOTOR_3_PORT,MOTOR_3_IN2,GPIO_STATE_LOW);
 
-     /*Enable Motor_1*/
-     PWMGenEnable(M1PWM,PWM4);
-     /*Enable Motor_2*/
-     PWMGenEnable(M1PWM,PWM5);
+    /************Motor_4********/
 
+      GPIO_SetPinState(MOTOR_4_PORT,MOTOR_4_IN1,GPIO_STATE_LOW);
+      GPIO_SetPinState(MOTOR_4_PORT,MOTOR_4_IN2,GPIO_STATE_LOW);
+			RED_LED_ON();
 }
 
-void Motor_Stop(void)
+void Motor_VoidBackward(void)
 {
 
-  /*Disable Motor_1*/
-  PWMGenDisable(M1PWM,PWM4);
-  /*Disable Motor_2*/
-  PWMGenDisable(M1PWM,PWM5);
-  /*Disable Motor_3*/
-}
 
-void Motor_GoForward(void)
-{
+    GPIO_SetPinState(MOTOR_3_PORT,MOTOR_3_IN1,GPIO_STATE_HIGH);
+    GPIO_SetPinState(MOTOR_3_PORT,MOTOR_3_IN2,GPIO_STATE_LOW);
 
-    /************Motor_1********/
+    /************Motor_4********/
 
-    GPIO_SetPinState(MOTOR_1_PORT,MOTOR_1_IN1,GPIO_STATE_HIGH);
-    GPIO_SetPinState(MOTOR_1_PORT,MOTOR_1_IN2,GPIO_STATE_LOW);
+    GPIO_SetPinState(MOTOR_4_PORT,MOTOR_4_IN1,GPIO_STATE_LOW);
+    GPIO_SetPinState(MOTOR_4_PORT,MOTOR_4_IN2,GPIO_STATE_HIGH);
+	  RED_LED_OFF();
 
-    /************Motor_2********/
-
-    GPIO_SetPinState(MOTOR_2_PORT,MOTOR_2_IN1,GPIO_STATE_HIGH);
-    GPIO_SetPinState(MOTOR_2_PORT,MOTOR_2_IN2,GPIO_STATE_LOW);
 
 
 }
-void Motor_Backward(void)
+void Motor_VoidGoForward(void)
 {
-    /************Motor_1********/
+   
+		    /************Motor_3********/
 
-    GPIO_SetPinState(MOTOR_1_PORT,MOTOR_1_IN1,GPIO_STATE_LOW);
-    GPIO_SetPinState(MOTOR_1_PORT,MOTOR_1_IN2,GPIO_STATE_HIGH);
+    GPIO_SetPinState(MOTOR_3_PORT,MOTOR_3_IN1,GPIO_STATE_LOW);
+    GPIO_SetPinState(MOTOR_3_PORT,MOTOR_3_IN2,GPIO_STATE_HIGH);
 
-    /************Motor_2********/
+    /************Motor_4********/
 
-    GPIO_SetPinState(MOTOR_2_PORT,MOTOR_2_IN1,GPIO_STATE_LOW);
-    GPIO_SetPinState(MOTOR_2_PORT,MOTOR_2_IN2,GPIO_STATE_HIGH);
+    GPIO_SetPinState(MOTOR_4_PORT,MOTOR_4_IN1,GPIO_STATE_HIGH);
+    GPIO_SetPinState(MOTOR_4_PORT,MOTOR_4_IN2,GPIO_STATE_LOW);
+	  RED_LED_OFF();
 
 
 }
-void Motor_LEFT(void)
+void Motor_VoidRight(void)
 {
-    /************Motor_1********/
-      GPIO_SetPinState(MOTOR_1_PORT,MOTOR_1_IN1,GPIO_STATE_LOW);
-      GPIO_SetPinState(MOTOR_1_PORT,MOTOR_1_IN2,GPIO_STATE_LOW);
 
-      /************Motor_2********/
+	/************Motor_3********/
+//    YELLOW_LED_ON_R();
+    GPIO_SetPinState(MOTOR_3_PORT,MOTOR_3_IN1,GPIO_STATE_LOW);
+    GPIO_SetPinState(MOTOR_3_PORT,MOTOR_3_IN2,GPIO_STATE_HIGH);
 
-      GPIO_SetPinState(MOTOR_2_PORT,MOTOR_2_IN1,GPIO_STATE_HIGH);
-      GPIO_SetPinState(MOTOR_2_PORT,MOTOR_2_IN2,GPIO_STATE_LOW);
+    /************Motor_4********/
+
+    GPIO_SetPinState(MOTOR_4_PORT,MOTOR_4_IN1,GPIO_STATE_LOW);
+    GPIO_SetPinState(MOTOR_4_PORT,MOTOR_4_IN2,GPIO_STATE_HIGH);
+	  RED_LED_OFF();
+//	  YELLOW_LED_ON_R();
 
 }
-void Motor_Right(void)
+void Motor_VoidLEFT(void)
 {
-	    /************Motor_1********/
+	/************Motor_3********/
+ //   YELLOW_LED_ON_L();
+    GPIO_SetPinState(MOTOR_3_PORT,MOTOR_3_IN1,GPIO_STATE_HIGH);
+    GPIO_SetPinState(MOTOR_3_PORT,MOTOR_3_IN2,GPIO_STATE_LOW);
 
-        GPIO_SetPinState(MOTOR_1_PORT,MOTOR_1_IN1,GPIO_STATE_HIGH);
-        GPIO_SetPinState(MOTOR_1_PORT,MOTOR_1_IN2,GPIO_STATE_LOW);
+    /************Motor_4********/
 
-        /************Motor_2********/
-
-        GPIO_SetPinState(MOTOR_2_PORT,MOTOR_2_IN1,GPIO_STATE_LOW);
-        GPIO_SetPinState(MOTOR_2_PORT,MOTOR_2_IN2,GPIO_STATE_LOW);
+    GPIO_SetPinState(MOTOR_4_PORT,MOTOR_4_IN1,GPIO_STATE_HIGH);
+    GPIO_SetPinState(MOTOR_4_PORT,MOTOR_4_IN2,GPIO_STATE_LOW);
+	  RED_LED_OFF();
+	//  YELLOW_LED_OFF_L(); 
+	
+}
+void Motor_VoidLEFT_B(void)
+{
+      Motor_VoidBackward();
+	    delay_milli(200);
+     	Motor_VoidLEFT();
+		  delay_milli(200);
+    	Motor_VoidStop();
+}
+void Motor_VoidRight_B(void)
+{
+	    Motor_VoidBackward();
+	    delay_milli(200);
+     	Motor_VoidRight();
+    	delay_milli(200);
+    	Motor_VoidStop();
+   
 }
 
-void Motor_SetSpeed(Motor_Speed_t speed)
+void Motor_VoidSetSpeed(uint16_t speed)
 {
-
-    if (speed == MOTOR_SPEED_LOW)
-    {
-        PWM_Init(M1PWM, PWM4, PWM_SYSCLK_DIV_64, Count_DOWN, freq,25);
-        PWM_Init(M1PWM, PWM5, PWM_SYSCLK_DIV_64, Count_DOWN, freq,25);
-        PWM_Init(M1PWM, PWM6, PWM_SYSCLK_DIV_64, Count_DOWN, freq,25);
-        PWM_Init(M1PWM, PWM7, PWM_SYSCLK_DIV_64, Count_DOWN, freq,25);
+	 
         
+        duty_cycle1=100-speed;
+	if(duty_cycle1==0){
+	    	PWM1_3_CMPA_R = duty_cycle1;
+			  PWM_VoidGenEnable(M1PWM,PWM66);
+				PWM1_2_CMPA_R=duty_cycle1;
+				PWM_VoidGenEnable(M1PWM,PWM77);
+	}else{
+	      duty_cycle1*=5000;
+      	duty_cycle1/=100;
+	      duty_cycle1-=1;
+        PWM1_3_CMPA_R = duty_cycle1;
+			  PWM_VoidGenEnable(M1PWM,PWM66);
+				PWM1_2_CMPA_R=duty_cycle1;
+				PWM_VoidGenEnable(M1PWM,PWM77);
 
-    }
-    else if (speed == MOTOR_SPEED_MID)
-    {
-        PWM_Init(M1PWM, PWM4, PWM_SYSCLK_DIV_64, Count_DOWN, freq,50);
-        PWM_Init(M1PWM, PWM5, PWM_SYSCLK_DIV_64, Count_DOWN, freq,50);
-        PWM_Init(M1PWM, PWM6, PWM_SYSCLK_DIV_64, Count_DOWN, freq,50);
-        PWM_Init(M1PWM, PWM7, PWM_SYSCLK_DIV_64, Count_DOWN, freq,50);
-        
-    }
-    else if (speed == MOTOR_SPEED_HIGH)
-    {
-        PWM_Init(M1PWM, PWM4, PWM_SYSCLK_DIV_64, Count_DOWN, freq,75);
-        PWM_Init(M1PWM, PWM5, PWM_SYSCLK_DIV_64, Count_DOWN, freq,75);
-        PWM_Init(M1PWM, PWM6, PWM_SYSCLK_DIV_64, Count_DOWN, freq,75);
-        PWM_Init(M1PWM, PWM7, PWM_SYSCLK_DIV_64, Count_DOWN, freq,75);
-      
-    }
-    else
-    {/*Do no thing*/}
+	}
+	
+}
 
+bool Motor_BoolCheckstop(void){
+	bool Stop = true;
+			if(GPIO_GetPinState(MOTOR_3_PORT,MOTOR_3_IN1)==GPIO_STATE_LOW&&GPIO_GetPinState(MOTOR_3_PORT,MOTOR_3_IN2)==GPIO_STATE_LOW&&GPIO_GetPinState(MOTOR_4_PORT,MOTOR_4_IN1)==GPIO_STATE_LOW&&GPIO_GetPinState(MOTOR_4_PORT,MOTOR_4_IN2)==GPIO_STATE_LOW){
+				Stop=true;
+				return Stop;
+			}
+			Stop=false;
+			return Stop;		
 }
