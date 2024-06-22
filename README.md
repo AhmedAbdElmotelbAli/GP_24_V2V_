@@ -7,6 +7,8 @@ Vehicle-to-vehicle (V2V) communication’s ability to wirelessly exchange inform
 ![image](https://github.com/AhmedAbdElmotelbAli/GP_24_V2V_/assets/104862736/18be1dbd-76d4-4a2d-9087-edf9903932ca)
 # Use Case 1 Diagram
 ![image](https://github.com/AhmedAbdElmotelbAli/GP_24_V2V_/assets/104862736/1ca16325-4e6d-45c9-98c8-6d51c23f79f2)
+# Use Case 2 Diagram
+
 
 
 
