@@ -1,7 +1,20 @@
+/*
+ ============================================================================
+ File Name		: PWM.h
+ Author			: Ahmed Abdelmotelb Ali
+ Version		: 4.0
+ Date			: 5/4/2023
+ Description	: This file contains the implementation of PWM Driver
+ Notes			: 
+ ============================================================================
+ */
 #ifndef _PWM_H_
 #define	_PWM_H_
-#include "type.h"
-
+#include <stdint.h>
+#include "BITMATH.h"
+#include "GPIO.h"
+#include "tm4c123gh6pm.h"
+extern uint32_t Load;
 
 typedef enum
 {
@@ -11,20 +24,21 @@ typedef enum
 }PWM_Module;
 
 
-typedef enum
-{ 
-  PWM0,
-	PWM1,
-	PWM2,
-  PWM3,
-	PWM4,
-	PWM5,
-	PWM6,
-	PWM7
-	
+
+
+typedef enum{
+	PWM00,
+	PWM11,
+	PWM22,
+	PWM33,
+	PWM44,
+	PWM55,
+	PWM66,
+	PWM77
+
+
 }PWM_Number;
-
-
+#if 0
 typedef enum
 {
   Generator_0,
@@ -33,8 +47,6 @@ typedef enum
 	Generator_3,
 	
 }PWM_Generator;
-
-
 typedef enum
 {
   Control_0,
@@ -43,7 +55,7 @@ typedef enum
 	Control_3,
 	
 }PWM_Control;
-
+#endif
 
 typedef enum
 { 
