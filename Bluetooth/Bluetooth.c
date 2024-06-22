@@ -10,22 +10,25 @@
  */
 
 #include "Bluetooth.h"
-
-
+#include "Motor.h"
+#include "LED.h"
 void Bluetooth_Voidinit(void)
 {
-    UART_INIT(5);
+    UART_INIT(UART_4);
+
+	
+
 }
-uint08_t Bluetooth_U8Read(void)
+uint8_t Bluetooth_U8Read(void)
 {
 
-       uint08_t data;
-       UART_RX(&data,5);
+       uint8_t data;
+       UART_RX(&data,UART_4);
        return  data;
 }
 void Bluetooth_VoidWrite(unsigned char data)
 {
-    UART_TX(data,5);
+    UART_TX(data,UART_4);
 }
 void Bluetooth_VoidWriteString(char *str)
 {
@@ -35,11 +38,10 @@ void Bluetooth_VoidWriteString(char *str)
     }
 }
 
-
 void Bluetooth_VoidControl(char data)
 {
-  /*char c ;
-	char static mesg[20];*/  /* string format of distance value */
+  //char c ;
+	//char static mesg[20];  //string format of distance value 
 	//uint32_t distance;  
 	switch (data)
               {
@@ -48,7 +50,7 @@ void Bluetooth_VoidControl(char data)
 										Motor_VoidGoForward();
 										Bluetooth_VoidWriteString("forword\n");
                       break;
-                  case 'B':
+                case 'B':
                     Motor_VoidBackward();
 										Bluetooth_VoidWriteString("Backward\n");
 										
@@ -60,23 +62,20 @@ void Bluetooth_VoidControl(char data)
 					
                       break;
                   case 'R':
-                      /*Medium Speed*/
+                      //Medium Speed
 							
                      Motor_VoidRight();
 											Bluetooth_VoidWriteString("Right\n");
 
                       break;
 										  case 'G':
-		
-									
-									Motor_VoidLEFT();
+								   	Motor_VoidLEFT();
 										Bluetooth_VoidWriteString("Farword LEFT\n");
 										
                       break;
                   case 'I':
-                      /*Medium Speed*/
-									
-                     Motor_VoidRight();
+                      //Medium Speed/
+                      Motor_VoidRight();
 											Bluetooth_VoidWriteString("Farword Right\n");
 										
                       break;
@@ -87,41 +86,28 @@ void Bluetooth_VoidControl(char data)
 										
                       break;
                   case 'J':
-											
-										
 											Motor_VoidRight_B();
 											Bluetooth_VoidWriteString("Back Right\n");
-										
                       break;
-										case '0': 
-										LCD_VoidclearScreen();											
-								   	Motor_VoidSetSpeed(MOTOR_SPEED_LOW);
-										Bluetooth_VoidWriteString("MOTOR SPEED LOW\n");
-									
+									case 'V':
+											Horn_ON();
                       break;
-										 case '5':
-										LCD_VoidclearScreen();
-                      /*Medium Speed*/
-									
-                    Motor_VoidSetSpeed(MOTOR_SPEED_MID);
-										Bluetooth_VoidWriteString("MOTOR SPEED MID\n");
-										LCD_VoidDisplayString("MOTOR SPEED HIGH");
-										LCD_VoidclearScreen();										
+									case 'v':
+										Horn_OFF();
                       break;
-                  case 'q':
-                    Motor_VoidSetSpeed(MOTOR_SPEED_HIGH);
-										Bluetooth_VoidWriteString("MOTOR SPEED HIGH\n");
-										
+									case 'U':
+											RED_LED_ON();
+                      break;
+									case 'u':
+										RED_LED_OFF();
                       break;
                   case 'S':
-									LCD_VoidclearScreen();
 									Motor_VoidStop();
 									Bluetooth_VoidWriteString("Stop\n");
                       break;
+								
 									
-                  default:
-                      /*Do nothing*/
-                      break;
               }
 
 }
+
