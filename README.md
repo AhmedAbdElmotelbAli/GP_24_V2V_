@@ -13,7 +13,6 @@ Vehicle-to-vehicle (V2V) communication’s ability to wirelessly exchange inform
 ![image](https://github.com/AhmedAbdElmotelbAli/GP_24_V2V_/assets/104862736/65da4024-c0dd-4f51-b0a9-287ba32ce342)
 # Project System Block Diagram
 ![image](https://github.com/AhmedAbdElmotelbAli/GP_24_V2V_/assets/104862736/976813ba-bf1c-4921-9faf-6d3fa5d9e14c)
-![image](https://github.com/AhmedAbdElmotelbAli/GP_24_V2V_/assets/104862736/65da4024-c0dd-4f51-b0a9-287ba32ce342)
 ![image](https://github.com/AhmedAbdElmotelbAli/GP_24_V2V_/assets/104862736/c643c29d-01e6-4187-b6d2-6be3cd9e2634)
 ![image](https://github.com/AhmedAbdElmotelbAli/GP_24_V2V_/assets/104862736/f44218ee-99a8-4581-8c02-d49429816776)
 
