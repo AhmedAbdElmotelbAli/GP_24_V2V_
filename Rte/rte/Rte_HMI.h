@@ -1,0 +1,51 @@
+
+ 
+#ifndef RTE_HMI_H
+#define RTE_HMI_H
+
+#include "Rte_HMI_Type.h"
+
+/* RTE APIs Prototype Declaration */
+Std_ReturnType Rte_Write_HMI_ppCarCtrlBtns_warningMessageSignal(MultiStateBtnType warningMessageSignal);
+Std_ReturnType Rte_Write_HMI_ppCarCtrlBtns_carIdSignal(MultiStateBtnType carIdSignal);
+Std_ReturnType Rte_Write_HMI_ppCarCtrlBtns_laneSignal(MultiStateBtnType laneSignal);
+Std_ReturnType Rte_Write_HMI_ppCarCtrlBtns_carTypeSignal(MultiStateBtnType carTypeSignal);
+Std_ReturnType Rte_Write_HMI_ppCarCtrlBtns_BluetoothBtnSignal_1(MultiStateBtnType carTypeSignal);
+Std_ReturnType Rte_Write_HMI_ppCarCtrlBtns_BluetoothBtnSignal_2(MultiStateBtnType carTypeSignal);
+Std_ReturnType Rte_Read_HMI_rpCarCtrlData_BluetoothBtnSignal_1(uint8* BluetoothBtnSignal_1);
+boolean Rte_IsUpdated_HMI_rpCarCtrlData_BluetoothBtnSignal_1(void);
+Std_ReturnType Rte_Read_HMI_rpCarCtrlData_BluetoothBtnSignal_2(uint8* BluetoothBtnSignal_2);
+boolean Rte_IsUpdated_HMI_rpCarCtrlData_BluetoothBtnSignal_2(void);
+Std_ReturnType Rte_Read_HMI_rpCarCtrlData_warningMessageSignal(uint8* warningMessageSignal);
+boolean Rte_IsUpdated_HMI_rpCarCtrlData_warningMessageSignal(void);
+Std_ReturnType Rte_Read_HMI_rpCarCtrlData_carIdSignal(uint8* carIdSignal);
+boolean Rte_IsUpdated_HMI_rpCarCtrlData_carIdSignal(void);
+Std_ReturnType Rte_Read_HMI_rpCarCtrlData_laneSignal(uint8* laneSignal);
+boolean Rte_IsUpdated_HMI_rpCarCtrlData_laneSignal(void);
+Std_ReturnType Rte_Read_HMI_rpCarCtrlData_carTypeSignal(uint8* carTypeSignal);
+boolean Rte_IsUpdated_HMI_rpCarCtrlData_carTypeSignal(void);
+
+#define Rte_Write_ppCarCtrlBtns_warningMessageSignal 				Rte_Write_HMI_ppCarCtrlBtns_warningMessageSignal
+#define Rte_Write_ppCarCtrlBtns_carIdSignal 									Rte_Write_HMI_ppCarCtrlBtns_carIdSignal
+#define Rte_Write_ppCarCtrlBtns_laneSignal 									Rte_Write_HMI_ppCarCtrlBtns_laneSignal
+#define Rte_Write_ppCarCtrlBtns_carTypeSignal								Rte_Write_HMI_ppCarCtrlBtns_carTypeSignal
+#define Rte_Write_ppCarCtrlBtns_BluetoothBtnSignal_1 				Rte_Write_HMI_ppCarCtrlBtns_BluetoothBtnSignal_1
+#define Rte_Write_ppCarCtrlBtns_BluetoothBtnSignal_2 				Rte_Write_HMI_ppCarCtrlBtns_BluetoothBtnSignal_2
+#define Rte_Read_rpCarCtrlData_BluetoothBtnSignal_1 					Rte_Read_HMI_rpCarCtrlData_BluetoothBtnSignal_1
+#define Rte_IsUpdated_rpCarCtrlData_BluetoothBtnSignal_1 		Rte_IsUpdated_HMI_rpCarCtrlData_BluetoothBtnSignal_1
+#define Rte_Read_rpCarCtrlData_BluetoothBtnSignal_2 					Rte_Read_HMI_rpCarCtrlData_BluetoothBtnSignal_2
+#define Rte_IsUpdated_rpCarCtrlData_BluetoothBtnSignal_2 		Rte_IsUpdated_HMI_rpCarCtrlData_BluetoothBtnSignal_2
+#define Rte_Read_rpCarCtrlData_warningMessageSignal					Rte_Read_HMI_rpCarCtrlData_warningMessageSignal
+#define Rte_IsUpdated_rpCarCtrlData_warningMessageSignal 		Rte_IsUpdated_HMI_rpCarCtrlData_warningMessageSignal
+#define Rte_Read_rpCarCtrlData_carIdSignal 							Rte_Read_HMI_rpCarCtrlData_carIdSignal
+#define Rte_IsUpdated_rpCarCtrlData_carIdSignal 							Rte_IsUpdated_HMI_rpCarCtrlData_carIdSignal
+#define Rte_Read_rpCarCtrlData_laneSignal 										Rte_Read_HMI_rpCarCtrlData_laneSignal
+#define Rte_IsUpdated_rpCarCtrlData_laneSignal 							Rte_IsUpdated_HMI_rpCarCtrlData_laneSignal
+#define Rte_Read_rpCarCtrlData_carTypeSignal									Rte_Read_HMI_rpCarCtrlData_carTypeSignal
+#define Rte_IsUpdated_rpCarCtrlData_carTypeSignal						Rte_IsUpdated_HMI_rpCarCtrlData_carTypeSignal
+
+/* Runnables Prototype Declaration */
+void HMI_Main (void);
+void HMI_CarModeChanged(void);
+
+#endif

@@ -1,0 +1,47 @@
+
+#ifndef RTE_CarMANAGER_H
+#define RTE_CarMANAGER_H
+
+#include "Rte_CarManager_Type.h"
+
+Std_ReturnType Rte_Call_CarManager_rpLcd_Lcd_Display(LcdType message,char * str, unsigned char r, unsigned char col);
+Std_ReturnType Rte_Call_CarManager_rpUltrasonicSensor_F_GetPosition(SensorPositionType* Position);
+Std_ReturnType Rte_Call_CarManager_rpUltrasonicSensor_R_GetPosition(SensorPositionType* Position);
+Std_ReturnType Rte_Call_CarManager_rpUltrasonicSensor_L_GetPosition(SensorPositionType* Position);
+Std_ReturnType Rte_Call_CarManager_rpMotor_Move(StepMotorStepType Step);
+Std_ReturnType Rte_Read_CarManager_rpCarCtrlBtns_warningMessageSignal(MultiStateBtnType* warningMessageSignal);
+Std_ReturnType Rte_Read_CarManager_rpCarCtrlBtns_carIdSignal(MultiStateBtnType* carIdSignal);
+Std_ReturnType Rte_Read_CarManager_rpCarCtrlBtns_laneSignal(MultiStateBtnType* laneSignal);
+Std_ReturnType Rte_Read_CarManager_rpCarCtrlBtns_carTypeSignal(MultiStateBtnType* carTypeSignal);
+Std_ReturnType Rte_Call_CarManager_rpIOSetMotor_IOCheckstop(boolean *check);
+Std_ReturnType Rte_Call_CarManager_rpLaneSensor_GetLane(SensorLaneType* lane);
+Std_ReturnType Rte_Read_CarManager_rpCarCtrlBtns_BluetoothBtnSignal_2(MultiStateBtnType* BluetoothBtnSignal_2);
+Std_ReturnType Rte_Read_CarManager_rpCarCtrlBtns_BluetoothBtnSignal_1(MultiStateBtnType* BluetoothBtnSignal_1);
+
+
+#define Rte_Call_rpLcd_Lcd_Display 										Rte_Call_CarManager_rpLcd_Lcd_Display
+#define Rte_Call_rpUltrasonic_FSensor_GetPosition 		Rte_Call_CarManager_rpUltrasonicSensor_F_GetPosition
+#define Rte_Call_rpUltrasonic_R_Sensor_GetPosition 		Rte_Call_CarManager_rpUltrasonicSensor_R_GetPosition
+#define Rte_Call_rpUltrasonic_LSensor_GetPosition 		Rte_Call_CarManager_rpUltrasonicSensor_L_GetPosition
+#define Rte_Call_rpMotor_Move 												Rte_Call_CarManager_rpMotor_Move
+#define Rte_Read_rpCarCtrlBtns_warningMessageSignal 	Rte_Read_CarManager_rpCarCtrlBtns_warningMessageSignal
+#define Rte_Read_rpCarCtrlBtns_carIdSignal 					Rte_Read_CarManager_rpCarCtrlBtns_carIdSignal
+#define Rte_Read_rpCarCtrlBtns_laneSignal 						Rte_Read_CarManager_rpCarCtrlBtns_laneSignal
+#define Rte_Read_rpCarCtrlBtns_carTypeSignal 				Rte_Read_CarManager_rpCarCtrlBtns_carTypeSignal
+#define Rte_Call_rpIOSetMotor_IOCheckstop 						Rte_Call_CarManager_rpIOSetMotor_IOCheckstop
+#define Rte_Call_rpLaneSensor_GetLane 								Rte_Call_CarManager_rpLaneSensor_GetLane
+#define Rte_Read_rpCarCtrlBtns_BluetoothBtnSignal_2 	Rte_Read_CarManager_rpCarCtrlBtns_BluetoothBtnSignal_2
+#define Rte_Read_rpCarCtrlBtns_BluetoothBtnSignal_1 	Rte_Read_CarManager_rpCarCtrlBtns_BluetoothBtnSignal_1
+
+
+
+/* Runnables Prototype Declaration */\
+void CarManager_task1(void);
+void CarManager_task2(void );
+void CarManager_task3(void );
+void CarManager_task4(void );
+void CarManager_task5(void );
+
+
+
+#endif
